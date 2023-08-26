@@ -12,6 +12,7 @@ function NavBar() {
 
   return (
     <>
+    
       <div class="topnav" id="myTopnav">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
