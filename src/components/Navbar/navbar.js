@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "./navbar.css";
 function NavBar() {
   function myFunctione() {
     var x = document.getElementById("myTopnav");

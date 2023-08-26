@@ -1,5 +1,4 @@
 import React from "react";
-import "./Home.css";
 import { GiPalm } from "react-icons/gi";
 import { BiSolidWinkSmile } from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

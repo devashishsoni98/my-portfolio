@@ -1,4 +1,3 @@
-import "./childComp.css";
 function ChildComp(props) {
   console.log(props);
   return (

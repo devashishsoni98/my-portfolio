@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+// ABOUT SECTION ===================================================================================>
 .about {
   background-color: #0d0d11;
   min-height: 100vh;
@@ -6,7 +6,6 @@
   color: #e0e0ce;
   text-align: center;
 }
-
 .about > h1 {
   padding: 0;
   background-color: #0d0d11;
@@ -15,17 +14,14 @@
   display: -webkit-inline-box;
   font-size: 4rem;
 }
-
 .colour {
   color: #f2af29;
   font-weight: 700;
 }
-
 .written > h2 {
   font-size: 3rem;
   margin-top: 0;
 }
-
 .written > p {
   font-size: 1.5rem;
   margin-top: 0;
@@ -36,23 +32,22 @@
   color: #e0e0ce;
   text-align: center;
 }
-
 .about .containerr {
   display: inline-flex;
   color: #f2af29;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
 }
-
 .containerr .textt {
   font-size: 3rem;
   border-right: 2px solid;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  animation: typingg 4s ease-in-out infinite, cursor 0.4s step-end infinite alternate;
+  animation: typingg 4s ease-in-out infinite,
+    cursor 0.4s step-end infinite alternate;
   animation-delay: 2s;
 }
-
 @keyframes cursor {
   50% {
     border-color: transparent;
@@ -63,6 +58,7 @@
     width: 0;
   }
 }
+
 .split {
   height: 100%;
   z-index: 1;
@@ -83,7 +79,6 @@
   width: -webkit-fill-available;
   justify-content: center;
 }
-
 img {
   width: 50%;
   margin: 0 50%;
@@ -98,79 +93,91 @@ img {
     width: 56vw;
     white-space: nowrap;
     overflow: hidden;
-    animation: typingg 4s ease-in-out infinite, cursor 0.4s step-end infinite alternate;
+    animation: typingg 4s ease-in-out infinite,
+      cursor 0.4s step-end infinite alternate;
   }
 }
+
+// ABOUT SECTION END ======================================================>
+
+//CONTACT SECTION ==========================================================>
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 .App {
   background-color: #0d0d11;
   min-height: 100vh;
 }
+.contact {
+  .c-h1 {
+    margin: 0;
+    margin-top: 1rem;
+    color: #f2af29;
+    filter: drop-shadow(0 0 1rem #86a397);
+    text-align: center;
+    font-size: 3.6rem;
+  }
 
-.contact .c-h1 {
-  margin: 0;
-  margin-top: 1rem;
-  color: #f2af29;
-  filter: drop-shadow(0 0 1rem #86a397);
-  text-align: center;
-  font-size: 3.6rem;
-}
-.contact .forum {
-  max-width: 420px;
-  margin: 50px auto;
-}
-.contact ::-moz-placeholder {
-  color: #e0e0ce;
-  opacity: 0.7;
-}
-.contact ::placeholder {
-  color: #e0e0ce;
-  opacity: 0.7;
-}
-.contact .feedback-input {
-  color: #e0e0ce;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  border-radius: 5px;
-  line-height: 22px;
-  background-color: transparent;
-  border: 2px solid #e0e0ce;
-  transition: all 0.3s;
-  padding: 13px;
-  margin-bottom: 15px;
-  width: 100%;
-  box-sizing: border-box;
-  outline: 0;
-}
-.contact .feedback-input:focus {
-  border: 2px solid #f2af29;
-}
-.contact textarea {
-  height: 150px;
-  line-height: 150%;
-  resize: vertical;
-  color: #e0e0ce;
-}
-.contact .form-btn {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  width: 100%;
-  background: #f2af29;
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-  color: white;
-  font-size: 24px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transition: all 0.3s;
-  margin-top: -4px;
-  font-weight: 700;
-}
-.contact .form-btn:hover {
-  background: #e0e0ce;
-  color: #000000;
+  .forum {
+    max-width: 420px;
+    margin: 50px auto;
+  }
+
+  ::placeholder {
+    color: #e0e0ce;
+    opacity: 0.7;
+  }
+
+  .feedback-input {
+    color: #e0e0ce;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #e0e0ce;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+  }
+
+  .feedback-input:focus {
+    border: 2px solid #f2af29;
+  }
+
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+    color: #e0e0ce;
+  }
+
+  .form-btn {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: #f2af29;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+  }
+  .form-btn:hover {
+    background: #e0e0ce;
+    color: #000000;
+  }
 }
 
+//CONTACT SECTION END ===========================>
+
+//HOME SECTION ========================================================>
 .container {
   background-color: #0d0d11;
   min-height: 100vh;
@@ -181,19 +188,16 @@ img {
   display: flex;
   text-align: center;
   justify-content: center;
-  height: -moz-min-content;
   height: min-content;
   height: min-content;
   margin: 2rem 0;
 }
-
 .h-con > h1 {
   display: flex;
   color: #e0e0ce;
   font-size: 4rem;
   margin: 0;
 }
-
 .h-con > h1:hover {
   transform: translateY(-0.4rem);
   cursor: pointer;
@@ -255,27 +259,37 @@ a.instagram {
   .container > h1 {
     font-size: 3rem;
   }
+
   .container > h2 {
     font-size: 2.5rem;
   }
+
   .container > h3 {
     font-size: 1.8rem;
   }
+
   .social-container {
     padding: 0.5rem 1rem;
     margin: 1rem 35%;
   }
+
   a.social {
     margin: 0 0.3rem;
   }
+
   .social-container {
     margin: 1rem auto;
     margin: 1rem auto;
   }
+
   a.social {
     margin: 0 0.3rem;
   }
 }
+
+//HOME SECTION END ========================================================>
+
+//BLOG-LIST SECTION ========================================================>
 .m-h2 {
   margin: 0;
   margin-top: 1rem;
@@ -295,7 +309,6 @@ a.instagram {
   width: 90%;
   margin: 0 5%;
 }
-
 .blog-item {
   display: flex;
   justify-content: center;
@@ -312,6 +325,10 @@ a.instagram {
   font-size: 3rem;
 }
 
+//BLOG-LIST SECTION END ========================================================>
+
+//COUNTER SECTION ========================================================>
+
 .First {
   background-color: rgb(46, 157, 217);
   color: white;
@@ -319,13 +336,11 @@ a.instagram {
   height: 100px;
   font-size: 80px;
 }
-
 .First:hover {
   border: 2px solid cyan;
   box-shadow: 0px 0px 22px rgb(56, 69, 217);
   scale: 1.1;
 }
-
 .Second {
   background-color: rgb(46, 157, 217);
   color: white;
@@ -333,13 +348,14 @@ a.instagram {
   height: 100px;
   font-size: 80px;
 }
-
 .Second:hover {
   border: 2px solid cyan;
   box-shadow: 0px 0px 22px rgb(56, 69, 217);
   scale: 1.1;
 }
+//COUNTER SECTION END ========================================================>
 
+//SINGLE POST SECTION ========================================================>
 .post-title {
   color: #f2af29;
   font-size: 4rem;
@@ -355,7 +371,6 @@ a.instagram {
   line-height: 2rem;
   margin: 0;
 }
-
 .photo-react {
   display: block;
   margin-left: auto;
@@ -364,7 +379,6 @@ a.instagram {
   margin-bottom: 0;
   transition: 0.6s ease-in-out;
 }
-
 .photo-react:hover {
   transform: scale(1.2);
   cursor: pointer;
@@ -388,7 +402,6 @@ a.instagram {
   padding-right: 0.2rem;
   font-size: smaller;
 }
-
 .btn-para {
   display: block;
   margin-left: auto;
@@ -403,16 +416,13 @@ a.instagram {
   transition: all 0.3s;
   font-weight: 700;
 }
-
 .btn-para:hover {
   background: #e0e0ce;
   color: #000000;
 }
-
 .like {
   padding-bottom: 5rem;
 }
-
 .gb {
   background-color: #f2af29;
   display: block;
@@ -422,6 +432,9 @@ a.instagram {
   font-size: 1.5rem;
 }
 
+//SINGLE POST SECTION END ========================================================>
+
+//NAVBAR SECTION ========================================================>
 body {
   margin: 0;
   font-family: Arial;
@@ -517,6 +530,7 @@ body {
     display: block;
   }
 }
+
 @media screen and (max-width: 600px) {
   .topnav.responsive {
     position: relative;
@@ -543,6 +557,10 @@ body {
     text-align: left;
   }
 }
+
+//NAVBAR SECTION END ========================================================>
+
+//PORTFOLIO SECTION  ========================================================>
 body {
   margin: 0;
   background-color: rgb(252, 247, 240);
@@ -560,15 +578,14 @@ body {
 #head:hover {
   text-decoration: underline;
   text-transform: capitalize;
-  -webkit-text-decoration: wavy;
-          text-decoration: wavy;
+  text-decoration: wavy;
   cursor: pointer;
 }
 
 #container {
   width: webkit-dev-available;
   text-align: left;
-  border: 4px solid rgb(227, 227, 227);
+  border: 4px solid rgb(227 227 227);
   border-radius: 20px;
   padding: 0 20px 20px 20px;
   background-color: white;
@@ -594,17 +611,19 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 @keyframes breath {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(0.91);
     background-color: blue;
   }
+
   50% {
     transform: scale(1);
     background-color: blue;
   }
 }
+
 #image:hover {
   border: 5px solid rgb(42, 42, 151);
   cursor: pointer;
@@ -652,6 +671,9 @@ body {
   max-width: 85%;
 }
 
+//PORTFOLIO SECTION END  ========================================================>
+
+//CHILD PROP SECTION  ========================================================>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -665,4 +687,5 @@ body {
 
 .container {
   padding: 2px 16px;
-}/*# sourceMappingURL=index.css.map */
+}
+//CHILD PROP SECTION END  ========================================================>

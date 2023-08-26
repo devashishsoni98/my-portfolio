@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { posts } from "../constant/data";
 import { Link, useParams } from "react-router-dom";
-import "./singlePost.css";
 import { BiArrowBack } from "react-icons/bi";
 
 const SinglePost = () => {

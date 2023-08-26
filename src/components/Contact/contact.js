@@ -1,10 +1,11 @@
-import "./contact.css";
+
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
   return (
     <>
+    <div className="contact">
       <h1 className="c-h1">Contact Me</h1>
       <div className="formm">
         <form className="forum">
@@ -32,6 +33,7 @@ const Contact = () => {
             onClick={handleSubmit}
           />
         </form>
+      </div>
       </div>
     </>
   );

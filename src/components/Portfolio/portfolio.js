@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./portfolio.css";
 function Portfolio() {
   const colors = [
     "#336699",
