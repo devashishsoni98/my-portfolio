@@ -27,7 +27,7 @@ function NavBar() {
             <Link to={"https://ds-weather-app.netlify.app/"} target="_blank">
               Weather checking Website
             </Link>
-            <Link to={"https:moviebazaar-48ma.onrender.com/"} target="_blank">
+            <Link to={"https://moviebazaar-48ma.onrender.com/"} target="_blank">
               MovieBazaar Website
             </Link>
             <Link to="/portfolio">Simple HTML Portfolio</Link>
