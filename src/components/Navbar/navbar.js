@@ -31,6 +31,9 @@ function NavBar() {
             <Link to={"https://moviebazaar-48ma.onrender.com/"} target="_blank">
               MovieBazaar Website
             </Link>
+            <Link to={"https://ds-flexstart-clone.netlify.app"} target="_blank">
+              FlexStart Clone Website
+            </Link>
             <Link to="/portfolio">Simple HTML Portfolio</Link>
           </div>
         </div>
