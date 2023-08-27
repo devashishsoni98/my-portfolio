@@ -4,6 +4,7 @@ import { posts } from "../constant/data";
 
 const BlogList = () => {
   return (
+    <>
     <div className="blog-list">
       <h2 className="m-h2">Blogs</h2>
       <ul className="bl-ul">
@@ -34,8 +35,9 @@ const BlogList = () => {
           );
         })}
       </ul>
-      <hr />
     </div>
+      <hr />
+      </>
   );
 };
 

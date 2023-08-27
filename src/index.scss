@@ -1,25 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 // ABOUT SECTION ===================================================================================>
-*{
-  font-family: 'Ubuntu', sans-serif;
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .about {
   background-color: #0d0d11;
   min-height: 100vh;
   padding: 0 0;
-  color: #EBE9E9;
+  color: #ebe9e9;
   text-align: center;
 }
 .about > h1 {
   padding: 0;
   background-color: #0d0d11;
-  color: #EBE9E9;
+  color: #ebe9e9;
   text-align: center;
   display: -webkit-inline-box;
   font-size: 4rem;
   margin: 2rem 0 0 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 .colour {
   color: #f2af29;
@@ -28,7 +32,7 @@
 .written > h2 {
   font-size: 3rem;
   margin: 2rem;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 .written > p {
   font-size: 1.5rem;
@@ -37,7 +41,7 @@
   margin-right: 10%;
   padding: 0;
   width: 80%;
-  color: #EBE9E9;
+  color: #ebe9e9;
   text-align: center;
 }
 .about .containerr {
@@ -87,7 +91,7 @@
   width: -webkit-fill-available;
   justify-content: center;
 }
-img {
+.imge {
   width: 50%;
   margin: 0 50%;
   padding: 0;
@@ -118,8 +122,8 @@ img {
   .c-h1 {
     margin: 0;
     margin-top: 1rem;
-    color: #EBE9E9;
-    filter: drop-shadow(0 0 .7rem #f2af29);
+    color: #ebe9e9;
+    filter: drop-shadow(0 0 0.7rem #f2af29);
     text-align: center;
     font-size: 3.6rem;
   }
@@ -130,19 +134,19 @@ img {
   }
 
   ::placeholder {
-    color: #EBE9E9;
+    color: #ebe9e9;
     opacity: 0.7;
   }
 
   .feedback-input {
-    color: #EBE9E9;
+    color: #ebe9e9;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: 18px;
     border-radius: 5px;
     line-height: 22px;
     background-color: transparent;
-    border: 2px solid #EBE9E9;
+    border: 2px solid #ebe9e9;
     transition: all 0.3s;
     padding: 13px;
     margin-bottom: 15px;
@@ -159,7 +163,7 @@ img {
     height: 150px;
     line-height: 150%;
     resize: vertical;
-    color: #EBE9E9;
+    color: #ebe9e9;
   }
 
   .form-btn {
@@ -178,7 +182,7 @@ img {
     font-weight: 700;
   }
   .form-btn:hover {
-    background: #EBE9E9;
+    background: #ebe9e9;
     color: #000000;
   }
 }
@@ -202,7 +206,7 @@ img {
 }
 .h-con > h1 {
   display: flex;
-  color: #EBE9E9;
+  color: #ebe9e9;
   font-size: 4rem;
   margin: 0;
 }
@@ -212,7 +216,7 @@ img {
 }
 
 .container > h1 {
-  color: #EBE9E9;
+  color: #ebe9e9;
   text-align: center;
   font-size: 4rem;
   margin: 1rem 0;
@@ -233,7 +237,7 @@ img {
 }
 
 .social-container {
-  background: #EBE9E9;
+  background: #ebe9e9;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -313,7 +317,7 @@ a.instagram {
 
 .bl-ul {
   background-color: #0d0d11;
-  color: #EBE9E9;
+  color: #ebe9e9;
 }
 
 .ex-tx {
@@ -377,7 +381,7 @@ a.instagram {
 }
 
 .post-content {
-  color: #EBE9E9;
+  color: #ebe9e9;
   padding: 3rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -429,7 +433,7 @@ a.instagram {
   font-weight: 700;
 }
 .btn-para:hover {
-  background: #EBE9E9;
+  background: #ebe9e9;
   color: #000000;
 }
 .like {
@@ -578,3 +582,65 @@ body {
   padding: 2px 16px;
 }
 //CHILD PROP SECTION END  ========================================================>
+
+//PROJECTS SECTION  ========================================================>
+.projects {
+  color: #ebe9e9;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    // margin-bottom: 3rem;
+
+    h1 {
+      padding: 0;
+      background-color: #0d0d11;
+      color: #ebe9e9;
+      text-align: center;
+      display: -webkit-inline-box;
+      font-size: 4rem;
+      margin: 2rem 0 2rem 0;
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin: 2rem;
+      text-align: -webkit-center;
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 0;
+      width: 80%;
+      color: #ebe9e9;
+      text-align: center;
+    }
+    .p-img{
+      width: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: .3s ease;
+      padding: 1rem 0;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+    .git-link{
+      color: #ebe9e9;
+      text-decoration: underline;
+    }
+  }
+}
+
+//PROJECTS SECTION END ========================================================>

@@ -4,18 +4,22 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .about {
   background-color: #0d0d11;
   min-height: 100vh;
   padding: 0 0;
-  color: #EBE9E9;
+  color: #ebe9e9;
   text-align: center;
 }
 
 .about > h1 {
   padding: 0;
   background-color: #0d0d11;
-  color: #EBE9E9;
+  color: #ebe9e9;
   text-align: center;
   display: -webkit-inline-box;
   font-size: 4rem;
@@ -41,7 +45,7 @@
   margin-right: 10%;
   padding: 0;
   width: 80%;
-  color: #EBE9E9;
+  color: #ebe9e9;
   text-align: center;
 }
 
@@ -92,7 +96,7 @@
   justify-content: center;
 }
 
-img {
+.imge {
   width: 50%;
   margin: 0 50%;
   padding: 0;
@@ -117,7 +121,7 @@ img {
 .contact .c-h1 {
   margin: 0;
   margin-top: 1rem;
-  color: #EBE9E9;
+  color: #ebe9e9;
   filter: drop-shadow(0 0 0.7rem #f2af29);
   text-align: center;
   font-size: 3.6rem;
@@ -127,22 +131,22 @@ img {
   margin: 50px auto;
 }
 .contact ::-moz-placeholder {
-  color: #EBE9E9;
+  color: #ebe9e9;
   opacity: 0.7;
 }
 .contact ::placeholder {
-  color: #EBE9E9;
+  color: #ebe9e9;
   opacity: 0.7;
 }
 .contact .feedback-input {
-  color: #EBE9E9;
+  color: #ebe9e9;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border: 2px solid #EBE9E9;
+  border: 2px solid #ebe9e9;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
@@ -157,7 +161,7 @@ img {
   height: 150px;
   line-height: 150%;
   resize: vertical;
-  color: #EBE9E9;
+  color: #ebe9e9;
 }
 .contact .form-btn {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -175,7 +179,7 @@ img {
   font-weight: 700;
 }
 .contact .form-btn:hover {
-  background: #EBE9E9;
+  background: #ebe9e9;
   color: #000000;
 }
 
@@ -197,7 +201,7 @@ img {
 
 .h-con > h1 {
   display: flex;
-  color: #EBE9E9;
+  color: #ebe9e9;
   font-size: 4rem;
   margin: 0;
 }
@@ -208,7 +212,7 @@ img {
 }
 
 .container > h1 {
-  color: #EBE9E9;
+  color: #ebe9e9;
   text-align: center;
   font-size: 4rem;
   margin: 1rem 0;
@@ -229,7 +233,7 @@ img {
 }
 
 .social-container {
-  background: #EBE9E9;
+  background: #ebe9e9;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -299,7 +303,7 @@ a.instagram {
 
 .bl-ul {
   background-color: #0d0d11;
-  color: #EBE9E9;
+  color: #ebe9e9;
 }
 
 .ex-tx {
@@ -361,7 +365,7 @@ a.instagram {
 }
 
 .post-content {
-  color: #EBE9E9;
+  color: #ebe9e9;
   padding: 3rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -417,7 +421,7 @@ a.instagram {
 }
 
 .btn-para:hover {
-  background: #EBE9E9;
+  background: #ebe9e9;
   color: #000000;
 }
 
@@ -556,4 +560,58 @@ body {
 
 .container {
   padding: 2px 16px;
+}
+
+.projects {
+  color: #ebe9e9;
+}
+.projects section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.projects section h1 {
+  padding: 0;
+  background-color: #0d0d11;
+  color: #ebe9e9;
+  text-align: center;
+  display: -webkit-inline-box;
+  font-size: 4rem;
+  margin: 2rem 0 2rem 0;
+  font-family: "Ubuntu", sans-serif;
+}
+.projects section h2 {
+  font-size: 2.5rem;
+  margin: 2rem;
+  text-align: -webkit-center;
+  font-family: "Ubuntu", sans-serif;
+}
+.projects section p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0;
+  width: 80%;
+  color: #ebe9e9;
+  text-align: center;
+}
+.projects section .p-img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 1rem 0;
+}
+.projects section .p-img:hover {
+  transform: scale(1.1);
+}
+.projects section .git-link {
+  color: #ebe9e9;
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */

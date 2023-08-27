@@ -105,7 +105,7 @@ function Navbar() {
               <Link to="/contact" className={`${styles.navLink}`}>Contact</Link>
             </li>
             <li onClick={removeActive}>
-              <Link to="/" className={`${styles.navLink}`}>Projects</Link>
+              <Link to="/projects" className={`${styles.navLink}`}>Projects</Link>
             </li>
           </ul>
 

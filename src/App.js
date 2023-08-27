@@ -7,6 +7,7 @@ import Portfolio from "./components/Portfolio/portfolio";
 import BlogList from "./components/MiniFunctions/blogList";
 import Home from "./components/Home/Home";
 import MiniFunctions from "./components/MiniFunctions/minifunctions";
+import Projects from "./components/Projects/projects";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/posts/:id" element={<SinglePost />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </div>
