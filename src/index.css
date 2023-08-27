@@ -1,20 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
 .about {
   background-color: #0d0d11;
   min-height: 100vh;
   padding: 0 0;
-  color: #e0e0ce;
+  color: #EBE9E9;
   text-align: center;
 }
 
 .about > h1 {
   padding: 0;
   background-color: #0d0d11;
-  color: #e0e0ce;
+  color: #EBE9E9;
   text-align: center;
   display: -webkit-inline-box;
   font-size: 4rem;
   margin: 2rem 0 0 0;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .colour {
@@ -25,6 +31,7 @@
 .written > h2 {
   font-size: 3rem;
   margin: 2rem;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .written > p {
@@ -34,7 +41,7 @@
   margin-right: 10%;
   padding: 0;
   width: 80%;
-  color: #e0e0ce;
+  color: #EBE9E9;
   text-align: center;
 }
 
@@ -110,8 +117,8 @@ img {
 .contact .c-h1 {
   margin: 0;
   margin-top: 1rem;
-  color: #f2af29;
-  filter: drop-shadow(0 0 1rem #86a397);
+  color: #EBE9E9;
+  filter: drop-shadow(0 0 0.7rem #f2af29);
   text-align: center;
   font-size: 3.6rem;
 }
@@ -120,22 +127,22 @@ img {
   margin: 50px auto;
 }
 .contact ::-moz-placeholder {
-  color: #e0e0ce;
+  color: #EBE9E9;
   opacity: 0.7;
 }
 .contact ::placeholder {
-  color: #e0e0ce;
+  color: #EBE9E9;
   opacity: 0.7;
 }
 .contact .feedback-input {
-  color: #e0e0ce;
+  color: #EBE9E9;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border: 2px solid #e0e0ce;
+  border: 2px solid #EBE9E9;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
@@ -150,7 +157,7 @@ img {
   height: 150px;
   line-height: 150%;
   resize: vertical;
-  color: #e0e0ce;
+  color: #EBE9E9;
 }
 .contact .form-btn {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -168,7 +175,7 @@ img {
   font-weight: 700;
 }
 .contact .form-btn:hover {
-  background: #e0e0ce;
+  background: #EBE9E9;
   color: #000000;
 }
 
@@ -190,7 +197,7 @@ img {
 
 .h-con > h1 {
   display: flex;
-  color: #e0e0ce;
+  color: #EBE9E9;
   font-size: 4rem;
   margin: 0;
 }
@@ -201,7 +208,7 @@ img {
 }
 
 .container > h1 {
-  color: #e0e0ce;
+  color: #EBE9E9;
   text-align: center;
   font-size: 4rem;
   margin: 1rem 0;
@@ -222,7 +229,7 @@ img {
 }
 
 .social-container {
-  background: #e0e0ce;
+  background: #EBE9E9;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -242,14 +249,17 @@ a.social:hover {
 
 a.github {
   color: #0d0d11;
+  padding: 0 1rem;
 }
 
 a.linkedin {
   color: #0077b5;
+  padding: 0 1rem;
 }
 
 a.instagram {
   color: rgb(190, 83, 176);
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
@@ -280,6 +290,7 @@ a.instagram {
 .m-h2 {
   margin: 0;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   background-color: #0d0d11;
   color: #f2af29;
   text-align: center;
@@ -288,7 +299,7 @@ a.instagram {
 
 .bl-ul {
   background-color: #0d0d11;
-  color: #e0e0ce;
+  color: #EBE9E9;
 }
 
 .ex-tx {
@@ -350,7 +361,7 @@ a.instagram {
 }
 
 .post-content {
-  color: #e0e0ce;
+  color: #EBE9E9;
   padding: 3rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -406,7 +417,7 @@ a.instagram {
 }
 
 .btn-para:hover {
-  background: #e0e0ce;
+  background: #EBE9E9;
   color: #000000;
 }
 
