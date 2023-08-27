@@ -12,7 +12,7 @@ const projectData = [
       title: "Weather checking Website",
       description: "This is a simple and responsive weather website which shows the live weather for any city!",
       image: "weather.png",
-      details: "This website is built using React Js and it collects data from the OpneWeatherMap API. It displays various information about the weather like temprature, humidity, what the area feels like and weather. It also have a toggle button which can be used to switch to a dark theme.",
+      details: "This website is built using React Js and it collects data from the OpenWeatherMap API. It displays various information about the weather like temprature, humidity, what the area feels like and weather. It also have a toggle button which can be used to switch to a dark theme.",
       githubLink: "https://github.com/devashishsoni98/weatherApp",
       liveLink: "https://ds-weather-app.netlify.app/",
       liveText: "Weather Website"
