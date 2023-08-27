@@ -607,7 +607,13 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    // margin-bottom: 3rem;
+
+    hr {
+      width: 100%;
+      margin-top: 3rem;
+      border: none;
+      border-top: 2px solid #ebe9e9;
+    }
 
     h1 {
       padding: 0;

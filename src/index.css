@@ -586,6 +586,12 @@ body {
   align-items: center;
   padding: 1rem;
 }
+.projects section hr {
+  width: 100%;
+  margin-top: 3rem;
+  border: none;
+  border-top: 2px solid #ebe9e9;
+}
 .projects section h1 {
   padding: 0;
   background-color: #0d0d11;
