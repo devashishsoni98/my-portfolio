@@ -1,7 +1,7 @@
 import { useState } from "react";
 function Counter() {
   const [count, setCount] = useState(0);
-  const [Heading, setHeading] = useState("This is my Counter:");
+  const [Heading, setHeading] = useState("This is my Counter :");
 
   function addCount() {
     console.log("check add");
@@ -11,14 +11,14 @@ function Counter() {
     if (count == 10) {
       setHeading("Huraay!!!🎉");
     } else if (count < 10) {
-      setHeading("This is my Counter:");
+      setHeading("This is my Counter :");
     }
   }
 
   function subCount() {
     console.log("check sub");
     if (count <= 10) {
-      setHeading("This is my Counter:");
+      setHeading("This is my Counter :");
     }
     if (count > 0) {
       setCount(count - 1);

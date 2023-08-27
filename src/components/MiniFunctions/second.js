@@ -43,12 +43,12 @@ function SecondComp() {
           marginBottom: "0",
           marginTop: "1rem",
           backgroundColor: "#0d0d11",
-          color: "#f2af29",
+          color: "#ebe9e9",
           textAlign: "center",
           fontSize: "1.8rem",
         }}
       >
-        My hero is {name}
+        My hero is <span className="def-col">{name}</span>
       </h1>
       <br></br>
       <div style={{ paddingBottom: "2rem" }}>
@@ -59,14 +59,14 @@ function SecondComp() {
             marginRight: "auto",
             fontSize: "2rem",
             borderRadius: "0.5rem",
-            background: "#f2af29",
+            background: "#ebe9e9",
             borderRadius: "5px",
             border: "0",
             cursor: "pointer",
-            color: "white",
+            color: "#0d0d11",
             transition: "all 0.3s",
             fontweight: "700",
-            paddingBottom: "0",
+            padding: "1rem",
           }}
           onClick={changeHeroFun}
         >

@@ -22,11 +22,11 @@ const Home = () => {
           <h1>e</h1>
         </div>
         <h2>
-          <GiPalm />
-          I'm Devashish Soni
+          <GiPalm className="def-col" />&nbsp;
+          I'm <span className="def-col">Devashish Soni</span>
         </h2>
         <h3>
-          This is my Portfolio <BiSolidWinkSmile />
+          This is my Portfolio <BiSolidWinkSmile className="def-col" />
         </h3>
         <div className="social-container">
           {/* <h3>Social Follow</h3> */}

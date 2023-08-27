@@ -33,10 +33,11 @@ function Portfolio() {
         <hr />
         <h3 class="mini-heading">About Me</h3>
         <p class="text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id totam
-          rerum, voluptatum praesentium vero repellendus quae dolorum magni
-          reprehenderit doloribus nisi nulla nostrum odio. Sit deleniti commodi
-          quidem velit in?
+          I am pursuing my B.Tech from PIET, Jaipur. I am interested in learning
+          new technologies in web development like JS, React Js, Next Js, SASS
+          and many more. I like to learn by applying theoretical knowledge into
+          projects to get a solid grip on fundamentals and learn how to deal
+          with errors.
         </p>
         <hr />
         <h3 class="mini-heading">Contact Info</h3>
@@ -44,9 +45,11 @@ function Portfolio() {
           <p>
             <strong>Email</strong>: devashishsoni0@gmail.com
           </p>
+          <br />
           <p>
             <strong>Mobile Number</strong>: (+91) 0123456789
           </p>
+          <br />
           <p>
             <strong>Website - </strong>
             <a
@@ -57,6 +60,7 @@ function Portfolio() {
               My Portfolio Website Link
             </a>
           </p>
+          <br />
         </div>
         <hr />
         <h1 class="mini-heading">Skills</h1>

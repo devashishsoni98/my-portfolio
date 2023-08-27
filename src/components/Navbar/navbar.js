@@ -88,7 +88,7 @@ function Navbar() {
 
 
           {/* logo */}
-          <a href='#home' className={`${styles.logo}`}>DS</a>
+          <Link to="/" className={`${styles.logo}`}>DS</Link>
 
 
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
@@ -99,13 +99,13 @@ function Navbar() {
               <Link to="/about" className={`${styles.navLink}`}>About</Link>
             </li>
             <li onClick={removeActive}>
+              <Link to="/projects" className={`${styles.navLink}`}>Projects</Link>
+            </li>
+            <li onClick={removeActive}>
               <Link to="/minifunctions" className={`${styles.navLink}`}>Mini Functions</Link>
             </li>
             <li onClick={removeActive}>
               <Link to="/contact" className={`${styles.navLink}`}>Contact</Link>
-            </li>
-            <li onClick={removeActive}>
-              <Link to="/projects" className={`${styles.navLink}`}>Projects</Link>
             </li>
           </ul>
 

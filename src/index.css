@@ -219,14 +219,14 @@ html {
 }
 
 .container > h2 {
-  color: #f2af29;
+  color: #ebe9e9;
   font-size: 3rem;
   text-align: center;
   margin: 4% 0;
 }
 
 .container > h3 {
-  color: #f2af29;
+  color: #ebe9e9;
   font-size: 2rem;
   text-align: center;
   margin: 4% 0;
@@ -357,10 +357,10 @@ a.instagram {
 }
 
 .post-title {
-  color: #f2af29;
+  color: #ebe9e9;
   font-size: 4rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem;
   text-decoration: underline;
 }
 
@@ -377,7 +377,8 @@ a.instagram {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
   transition: 0.6s ease-in-out;
 }
 
@@ -388,6 +389,7 @@ a.instagram {
 
 .like-button {
   color: #f2af29;
+  padding-bottom: 1rem;
 }
 
 .def-col {
@@ -418,6 +420,7 @@ a.instagram {
   color: white;
   transition: all 0.3s;
   font-weight: 700;
+  padding: 1rem;
 }
 
 .btn-para:hover {
@@ -430,12 +433,18 @@ a.instagram {
 }
 
 .gb {
-  background-color: #f2af29;
+  background-color: #ebe9e9;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  color: #000000;
+  color: #0d0d11;
   text-decoration: none;
+  cursor: pointer;
   font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 0.5rem;
 }
 
 body {
@@ -510,6 +519,8 @@ body {
   font-family: cursive;
   font-size: 32px;
   text-shadow: 3px 3px lightblue;
+  margin: 1rem 0;
+  display: inline-block;
 }
 
 #name:hover {
@@ -522,6 +533,7 @@ body {
 .text {
   font-family: cursive;
   font-size: 20px;
+  margin: 1rem 0;
 }
 
 .mini-heading {
@@ -529,6 +541,7 @@ body {
   font-family: cursive;
   font-size: 27px;
   text-shadow: 3px 3px lightblue;
+  margin: 1rem 0;
 }
 
 .mini-heading:hover {
@@ -541,6 +554,7 @@ body {
 .text-two {
   font-family: cursive;
   font-size: 16px;
+  margin: 1rem 0;
 }
 
 .t-area {
