@@ -235,10 +235,25 @@ html {
 .social-container {
   background: #ebe9e9;
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 4rem;
-  margin: 1rem 35%;
+  margin-bottom: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cv-container {
+  background: #ebe9e9;
+  padding: 1rem 1rem;
+  border-radius: 4rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
 }
 
 a.social {

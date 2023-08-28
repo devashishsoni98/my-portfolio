@@ -52,6 +52,16 @@ const Home = () => {
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
         </div>
+        <div className="cv-container">
+        <a
+            href="CV_DEVASHISH_ SONI.pdf"
+            download="CV_DevashishSoni"
+            className="ccv social"
+            target="_blank"
+          >
+            Download CV
+          </a>
+        </div>
       </div>
     </>
   );

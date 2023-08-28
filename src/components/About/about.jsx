@@ -25,7 +25,16 @@ const About = () => {
             </p>
           </div>
         </div>
-
+        <div className="cv-container" style={{marginTop:"1rem"}}>
+        <a 
+            href="CV_DEVASHISH_ SONI.pdf"
+            download="CV_DevashishSoni"
+            className="ccv social"
+            target="_blank"
+          >
+            Download CV
+          </a>
+        </div>
         <div class="split right">
           <img
           className="imge"
