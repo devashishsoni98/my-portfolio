@@ -126,6 +126,14 @@ html {
   text-align: center;
   font-size: 3.6rem;
 }
+.contact .label-text {
+  color: #ebe9e9;
+  font-size: 2rem;
+  text-align: center;
+}
+.contact .formm {
+  min-height: inherit;
+}
 .contact .forum {
   max-width: 420px;
   margin: 50px auto;
@@ -177,6 +185,7 @@ html {
   transition: all 0.3s;
   margin-top: -4px;
   font-weight: 700;
+  margin-bottom: 2rem;
 }
 .contact .form-btn:hover {
   background: #ebe9e9;
