@@ -5,7 +5,7 @@ import BlogList from "./blogList";
 
 const MiniFunctions = () => {
   return (
-    <div>
+    <div className="minifunction">
       <BlogList />
       <Counter />
       <SecondComp />

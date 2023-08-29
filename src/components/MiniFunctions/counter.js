@@ -31,7 +31,6 @@ function Counter() {
         style={{
           margin: "0",
           marginTop: "1rem",
-          backgroundColor: "#0d0d11",
           color: "#f2af29",
           textAlign: "center",
           fontSize: "2.8rem",
@@ -43,7 +42,6 @@ function Counter() {
         style={{
           marginBottom: "0",
           marginTop: "1rem",
-          backgroundColor: "#0d0d11",
           color: "#e0e0ce",
           width: "80%",
           marginLeft: "10%",
@@ -61,7 +59,6 @@ function Counter() {
         style={{
           marginBottom: "2rem",
           marginTop: "1rem",
-          backgroundColor: "#0d0d11",
           color: "#f2af29",
           textAlign: "center",
           fontSize: "1.8rem",

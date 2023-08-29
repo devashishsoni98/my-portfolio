@@ -3,16 +3,12 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-.App {
-  background-color: #0d0d11;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 .about {
-  background-color: #0d0d11;
+  background-color: #373A43;
   min-height: 100vh;
   padding: 0 0;
   color: #ebe9e9;
@@ -21,7 +17,6 @@ html {
 
 .about > h1 {
   padding: 0;
-  background-color: #0d0d11;
   color: #ebe9e9;
   text-align: center;
   display: -webkit-inline-box;
@@ -89,7 +84,6 @@ html {
 .left {
   width: webkit-fill-available;
   left: 0;
-  background-color: #0d0d11;
   text-align: center;
   padding-bottom: 0;
 }
@@ -117,7 +111,7 @@ html {
   }
 }
 .container {
-  background-color: #0d0d11;
+  background-color: #373A43;
   min-height: 100vh;
   padding: 2% 0;
 }
@@ -239,18 +233,20 @@ a.instagram {
     margin: 0 0.3rem;
   }
 }
+.minifunction {
+  background-color: #373A43;
+}
+
 .m-h2 {
   margin: 0;
-  margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: #0d0d11;
+  padding-top: 1rem;
   color: #f2af29;
   text-align: center;
   font-size: 2.8rem;
 }
 
 .bl-ul {
-  background-color: #0d0d11;
   color: #ebe9e9;
 }
 
@@ -263,14 +259,12 @@ a.instagram {
 .blog-item {
   display: flex;
   justify-content: center;
-  background-color: #0d0d11;
   color: #f2af29;
   text-align: center;
   font-size: 2rem;
 }
 
 .blog-item > li {
-  background-color: #0d0d11;
   color: #f2af29;
   text-align: center;
   font-size: 3rem;
@@ -525,6 +519,7 @@ body {
 }
 
 .projects {
+  background-color: #373A43;
   color: #ebe9e9;
 }
 .projects section {
@@ -542,13 +537,16 @@ body {
 }
 .projects section h1 {
   padding: 0;
-  background-color: #0d0d11;
   color: #ebe9e9;
   text-align: center;
   display: -webkit-inline-box;
   font-size: 4rem;
   margin: 2rem 0 2rem 0;
+  filter: drop-shadow(0rem 0rem 8rem rgb(255, 255, 255));
+  border-bottom: 6px solid #ebe9e9;
+  border-radius: 0.6rem;
   font-family: "Ubuntu", sans-serif;
+  padding-bottom: 0.5rem;
 }
 .projects section h2 {
   font-size: 2.5rem;

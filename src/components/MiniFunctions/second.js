@@ -15,7 +15,6 @@ function SecondComp() {
         style={{
           margin: "0",
           marginTop: "1rem",
-          backgroundColor: "#0d0d11",
           color: "#f2af29",
           textAlign: "center",
           fontSize: "2.8rem",
@@ -27,7 +26,6 @@ function SecondComp() {
         style={{
           marginBottom: "0",
           marginTop: "1rem",
-          backgroundColor: "#0d0d11",
           color: "#e0e0ce",
           width: "80%",
           marginLeft: "10%",
@@ -42,7 +40,6 @@ function SecondComp() {
         style={{
           marginBottom: "0",
           marginTop: "1rem",
-          backgroundColor: "#0d0d11",
           color: "#ebe9e9",
           textAlign: "center",
           fontSize: "1.8rem",
