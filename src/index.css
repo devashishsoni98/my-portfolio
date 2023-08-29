@@ -3,6 +3,10 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+.App {
+  background-color: #0d0d11;
+}
+
 html {
   scroll-behavior: smooth;
 }
