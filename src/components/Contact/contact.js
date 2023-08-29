@@ -1,7 +1,12 @@
+import React, { useEffect } from "react";
+import styles from "./ContactForm.css";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { BsGithub } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
-import React, { useRef } from "react";
-const Contact = () => {
+import { useRef } from "react";
+import { Link } from "react-router-dom";
 
+const Contact = () => {
   const userid = process.env.REACT_APP_USER_ID;
   const templateid = process.env.REACT_APP_TEMPLATE;
   const myapi = process.env.REACT_APP_EMAIL_API;
@@ -11,51 +16,89 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        userid,
-        templateid,
-        form.current,
-        myapi
-      )
-      .then(
-        (result) => {
-          e.target.reset();
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          alert("Something went wrong! Try again after some time.");
-        }
-      );
+    emailjs.sendForm(userid, templateid, form.current, myapi).then(
+      (result) => {
+        e.target.reset();
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        alert("Something went wrong! Try again after some time.");
+      }
+    );
   };
+
   return (
-    <>
-      <div className="contact">
-        <h1 className="c-h1">Contact Me</h1>
-        <div className="formm">
-          <form ref={form} onSubmit={sendEmail} className="forum">
-            <input
-              type="text"
-              name="user_name"
-              className="feedback-input"
-              placeholder="Name"
+    <div className={styles.containeer}>
+      <div className="containeer">
+        <span className="big-circle"></span>
+        <img src="square.png" className="square" alt="square-img" />
+        <div className="form">
+          <div className="contact-info">
+            <h3 className="title">Let's get in touch</h3>
+
+            <img
+              style={{ width: "100%", margin: "0" }}
+              src="contact.avif"
+              alt=""
             />
-            <input
-              type="email"
-              name="user_email"
-              className="feedback-input"
-              placeholder="Email"
-            />
-            <textarea
-              name="message"
-              className="feedback-input"
-              placeholder="Message"
-            />
-            <input type="submit" value="Send" className="form-btn" />
-          </form>
+
+            <div className="social-media">
+              <p>Connect with me :</p>
+              <div className="social-icons">
+                <Link
+                  to="https://linkedin.com/in/devashish-soni"
+                  target="_blank"
+                >
+                  <BiLogoLinkedin style={{ fontSize: "2rem" }} />
+                </Link>
+                <Link to="https://github.com/devashishsoni98" target="_blank">
+                  <BsGithub
+                    style={{ fontSize: "1.8rem", paddingTop: ".5rem" }}
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-form">
+            <span className="circle one"></span>
+            <span className="circle two"></span>
+
+            <form ref={form} onSubmit={sendEmail}>
+              <h3 className="title">Contact Me</h3>
+              <div className="input-containeer">
+                <input
+                  type="text"
+                  name="user_name"
+                  className="input"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div className="input-containeer">
+                <input
+                  type="email"
+                  name="user_email"
+                  className="input"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div className="input-containeer textarea">
+                <textarea
+                  name="message"
+                  className="input"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+              <input type="submit" value="Send" className="btn" />
+            </form>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
+
 export default Contact;
