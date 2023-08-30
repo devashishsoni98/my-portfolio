@@ -209,14 +209,14 @@ html {
   margin: 1rem 0;
 }
 
-.container .content > h2 {
+.home-h2 {
   color: #ebe9e9;
   font-size: 3rem;
   text-align: center;
   margin: 4% 0;
 }
 
-.container .content > h3 {
+.home-h3 {
   color: #ebe9e9;
   font-size: 2rem;
   text-align: center;
@@ -362,11 +362,15 @@ a.instagram {
   scale: 1.1;
 }
 
+.post-container {
+  background-color: #373A43;
+}
+
 .post-title {
   color: #ebe9e9;
   font-size: 4rem;
   text-align: center;
-  margin: 1.5rem;
+  padding: 1.5rem;
   text-decoration: underline;
 }
 
@@ -476,7 +480,12 @@ body {
 }
 
 #container {
-  width: webkit-dev-available;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-align: left;
   border: 4px solid rgb(227, 227, 227);
   border-radius: 20px;

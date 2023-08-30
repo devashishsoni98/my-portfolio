@@ -7,6 +7,7 @@ import {
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -14,7 +15,12 @@ const Home = () => {
       <div className="container">
         <video src="bgv3.mp4" autoPlay muted loop className="background-video" />
         <div className="content">
-        <div className="h-con">
+        <motion.div
+        initial={{ x: -75,}}
+        whileInView={{ x: 0, }}
+        viewport={{ once: true }}
+        transition={{duration:.75,}}
+        className="h-con">
           <h1>W</h1>
           <h1>e</h1>
           <h1>l</h1>
@@ -22,14 +28,33 @@ const Home = () => {
           <h1>o</h1>
           <h1>m</h1>
           <h1>e</h1>
-        </div>
-        <h2>
+        </motion.div>
+        <motion.div
+        initial={{ x: 75,}}
+        whileInView={{ x: 0, }}
+        viewport={{ once: true }}
+        transition={{duration:.75,}}
+        >
+        <h2 className="home-h2">
           &nbsp; I'm <span className="def-col">Devashish Soni</span><span className="hand">🤚</span>
         </h2>
-        <h3>
+        </motion.div>
+        <motion.div
+        initial={{ x: -75,}}
+        whileInView={{ x: 0, }}
+        viewport={{ once: true }}
+        transition={{duration:.75,}}
+        >
+        <h3 className="home-h3">
           This is my Portfolio <BiSolidWinkSmile className="def-col emoji" />
         </h3>
-        <div className="social-container">
+        </motion.div>
+        <motion.div 
+        initial={{ x: 75,}}
+        whileInView={{ x: 0, }}
+        viewport={{ once: true }}
+        transition={{duration:.75,}}
+        className="social-container">
           <a
             href="https://github.com/devashishsoni98"
             className="github social"
@@ -51,8 +76,13 @@ const Home = () => {
           >
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
-        </div>
-        <div className="cv-container">
+        </motion.div>
+        <motion.div 
+        initial={{ x: -75,}}
+        whileInView={{ x: 0, }}
+        viewport={{ once: true }}
+        transition={{duration:.75,}}
+        className="cv-container">
           <a
             href="CV_DEVASHISH_ SONI.pdf"
             download="CV_DevashishSoni"
@@ -61,8 +91,7 @@ const Home = () => {
           >
             Download CV
           </a>
-       
-        </div>
+        </motion.div>
         </div>
       </div>
     </>

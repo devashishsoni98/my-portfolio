@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+
 function Portfolio() {
   const colors = [
     "#336699",
@@ -18,6 +21,12 @@ function Portfolio() {
 
   return (
     <>
+    <motion.div
+    initial={{ scale: .5,}}
+    whileInView={{ scale: 1, }}
+    viewport={{ once: true }}
+    transition={{duration:.75,}}
+    >
       <header id="head" style={{ backgroundColor: bgcolor }}>
         <h1>Welcome to my Profile</h1>
         <br />
@@ -128,6 +137,7 @@ function Portfolio() {
           <input type="submit" value="Submit" />
         </form>
       </div>
+      </motion.div>
     </>
   );
 }

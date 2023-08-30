@@ -5,6 +5,8 @@ import { BsGithub } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 
 const Contact = () => {
   const userid = process.env.REACT_APP_USER_ID;
@@ -33,7 +35,12 @@ const Contact = () => {
         <span className="big-circle"></span>
         <img src="square.png" className="square" alt="square-img" />
         <div className="form">
-          <div className="contact-info">
+          <motion.div 
+          initial={{ x: -75,}}
+          whileInView={{ x: 0, }}
+          viewport={{ once: true }}
+          transition={{duration:.75,}}
+          className="contact-info">
             <h3 className="title">Let's get in touch</h3>
 
             <img
@@ -58,9 +65,14 @@ const Contact = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="contact-form">
+          <motion.div
+          initial={{ x: 75,}}
+          whileInView={{ x: 0, }}
+          viewport={{ once: true }}
+          transition={{duration:.75,}}
+          className="contact-form">
             <span className="circle one"></span>
             <span className="circle two"></span>
 
@@ -94,7 +106,7 @@ const Contact = () => {
               </div>
               <input type="submit" value="Send" className="btn" />
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

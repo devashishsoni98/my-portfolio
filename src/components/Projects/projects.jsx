@@ -2,15 +2,24 @@ import React from "react";
 import ProjectItem from "./ProjectItem";
 import projectData from "./projectData";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     <>
-      <div className="projects">
+      <div 
+      
+      className="projects">
+        <motion.div
+        initial={{ y: 75,}}
+        whileInView={{ y: 0, }}
+        viewport={{ once: true }}
+        transition={{duration:.75,}}
+        >
         {projectData.map((project, index) => (
           <ProjectItem key={index} project={project} />
         ))}
-      
+        </motion.div>
 
       <section>
         <h1>Simple HTML Portfolio</h1>

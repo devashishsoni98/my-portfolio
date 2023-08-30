@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { posts } from "../constant/data";
+import { motion } from "framer-motion";
 
 const BlogList = () => {
   return (
     <>
-    <div className="blog-list">
+    <motion.div 
+    initial={{ y: -28,x:-75}}
+    whileInView={{ y: 0,x: 0 }}
+    viewport={{ once: true }}
+    transition={{duration:.45,}}
+    className="blog-list">
       <h2 className="m-h2">Blogs</h2>
       <ul className="bl-ul">
         {posts.map((oneObj) => {
@@ -40,7 +46,7 @@ const BlogList = () => {
           );
         })}
       </ul>
-    </div>
+    </motion.div>
       <hr />
       </>
   );

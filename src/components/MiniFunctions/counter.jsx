@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+
 function Counter() {
   const [count, setCount] = useState(0);
   const [Heading, setHeading] = useState("This is my Counter :");
@@ -27,6 +30,12 @@ function Counter() {
 
   return (
     <>
+    <motion.div
+    initial={{ y: -25,x:75}}
+    whileInView={{ y: 0,x: 0 }}
+    viewport={{ once: true }}
+    transition={{duration:.45,}}
+    >
       <h1
         style={{
           margin: "0",
@@ -83,6 +92,7 @@ function Counter() {
         </button>
       </div>
       <hr />
+      </motion.div>
     </>
   );
 }

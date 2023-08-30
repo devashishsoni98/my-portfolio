@@ -2,6 +2,7 @@ import { useState } from "react";
 import { posts } from "../constant/data";
 import { Link, useParams } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const SinglePost = () => {
   const { id } = useParams();
@@ -15,6 +16,12 @@ const SinglePost = () => {
 
   return (
     <div className="post-container">
+      <motion.div
+      initial={{ y: 75, scale:.8}}
+      whileInView={{ y: 0, scale:1}}
+      viewport={{ once: true }}
+      transition={{duration:.75,}}
+      >
       <h2 className="post-title">React JS</h2>
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/180px-React-icon.svg.png"
@@ -49,6 +56,7 @@ const SinglePost = () => {
           </Link>
         </button>
       </div>
+      </motion.div>
     </div>
   );
 };

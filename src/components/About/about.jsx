@@ -1,4 +1,5 @@
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { motion } from "framer-motion";
 
 const About = () => {
 
@@ -9,12 +10,23 @@ const About = () => {
 
   return (
     <>
-      <div className="about">
+      <div
+      className="about">
       <video src="bgv3.mp4" autoPlay muted loop className="background-video-a" />
-      <div className="content">
+      <motion.div
+      initial={{ y: 75,}}
+      whileInView={{ y: 0, }}
+      viewport={{ once: true }}
+      transition={{duration:.75,}}
+      className="content">
         <h1>About Me</h1>
         <div class="split left">
-          <div class="written">
+          <motion.div 
+          initial={{ y: 75,}}
+          whileInView={{ y: 0, }}
+          viewport={{ once: true }}
+          transition={{duration:.75,}}
+          class="written">
             <h2>
               I'm{" "}<br/>
               <div className="containerr">
@@ -33,7 +45,7 @@ const About = () => {
               into projects to get a solid grip on fundamentals and learn how to
               deal with errors.
             </p>
-          </div>
+          </motion.div>
         </div>
         <div className="cv-container" style={{marginTop:"1rem"}}>
         <a 
@@ -45,14 +57,22 @@ const About = () => {
             Download CV
           </a>
         </div>
-        <div class="split right">
+        <br/>
+        <br/>
+        <br/>
+        <motion.div 
+        initial={{ y: 175,}}
+        whileInView={{ y: 0,}}
+        viewport={{ once: true }}
+        transition={{duration:1,}}
+        class="split right">
           <img
           className="imge"
             src="https://media3.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif?cid=ecf05e47wqpb46g73d0urbltntnwb8wpocb7g7cv9o846d2e&ep=v1_gifs_related&rid=giphy.gif&ct=g"
             alt="development-img"
           />
-        </div>
-        </div>
+        </motion.div>
+        </motion.div>
       </div>
     </>
   );
