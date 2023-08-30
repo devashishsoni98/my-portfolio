@@ -58,28 +58,10 @@ html {
 .about .containerr {
   display: inline-flex;
   color: #f2af29;
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode;
 }
 .containerr .textt {
   font-size: 3rem;
-  border-right: 2px solid;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typingg 4s ease-in-out infinite,
-    cursor 0.4s step-end infinite alternate;
-  animation-delay: 2s;
-}
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-@keyframes typingg {
-  from {
-    width: 0;
-  }
+  // border-right: 2px solid;
 }
 
 .split {
@@ -110,13 +92,7 @@ html {
 
 @media (max-width: 768px) {
   .containerr .textt {
-    font-size: 3rem;
-    border-right: 2px solid;
-    width: 56vw;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typingg 4s ease-in-out infinite,
-      cursor 0.4s step-end infinite alternate;
+    font-size: 2rem;
   }
 }
 

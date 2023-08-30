@@ -1,4 +1,12 @@
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
+
 const About = () => {
+
+  const [text] = useTypewriter({
+    words:['Devashish Soni','a Student', 'a Developer', 'a Designer'],
+    loop:{},
+  })
+
   return (
     <>
       <div className="about">
@@ -8,11 +16,11 @@ const About = () => {
         <div class="split left">
           <div class="written">
             <h2>
-              I'm{" "}
+              I'm{" "}<br/>
               <div className="containerr">
-                <p className="textt"> Devashish Soni</p>
-              </div>{" "}
-              , a Web Developer
+                <span className="textt">{text}{' '}<Cursor cursorStyle="\"/></span>
+                
+              </div>
             </h2>
             <p>
               I am pursuing my B.Tech from <span className="colour">PIET</span>,
