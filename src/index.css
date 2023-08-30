@@ -11,13 +11,27 @@ html {
   background-color: #373A43;
   min-height: 100vh;
   padding: 0 0;
-  color: #ebe9e9;
+  color: #fff;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.about > h1 {
+.background-video-a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.about .content > h1 {
   padding: 0;
-  color: #ebe9e9;
+  color: #fff;
   text-align: center;
   display: -webkit-inline-box;
   font-size: 4rem;
@@ -43,7 +57,7 @@ html {
   margin-right: 10%;
   padding: 0;
   width: 80%;
-  color: #ebe9e9;
+  color: #fff;
   text-align: center;
 }
 
@@ -94,8 +108,8 @@ html {
 }
 
 .imge {
-  width: 50%;
-  margin: 0 50%;
+  width: 75%;
+  margin: 0 25%;
   padding: 0;
   border-radius: 4rem;
 }
@@ -111,9 +125,81 @@ html {
   }
 }
 .container {
+  position: relative;
   background-color: #373A43;
   min-height: 100vh;
   padding: 2% 0;
+  overflow: hidden;
+}
+
+.hand {
+  animation-name: wave;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.emoji {
+  animation-name: emo;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+@keyframes emo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  opacity: 0.4;
 }
 
 .h-con {
@@ -126,14 +212,14 @@ html {
   margin: 2rem 0;
 }
 
-.h-con > h1 {
+.content .h-con > h1 {
   display: flex;
-  color: #ebe9e9;
+  color: #fff;
   font-size: 4rem;
   margin: 0;
 }
 
-.h-con > h1:hover {
+.content .h-con > h1:hover {
   transform: translateY(-0.4rem);
   cursor: pointer;
 }
@@ -145,14 +231,14 @@ html {
   margin: 1rem 0;
 }
 
-.container > h2 {
+.container .content > h2 {
   color: #ebe9e9;
   font-size: 3rem;
   text-align: center;
   margin: 4% 0;
 }
 
-.container > h3 {
+.container .content > h3 {
   color: #ebe9e9;
   font-size: 2rem;
   text-align: center;

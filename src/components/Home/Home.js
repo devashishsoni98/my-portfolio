@@ -12,6 +12,8 @@ const Home = () => {
   return (
     <>
       <div className="container">
+        <video src="bgv3.mp4" autoPlay muted loop className="background-video" />
+        <div className="content">
         <div className="h-con">
           <h1>W</h1>
           <h1>e</h1>
@@ -22,14 +24,12 @@ const Home = () => {
           <h1>e</h1>
         </div>
         <h2>
-          <GiPalm className="def-col" />&nbsp;
-          I'm <span className="def-col">Devashish Soni</span>
+          &nbsp; I'm <span className="def-col">Devashish Soni</span><span className="hand">🤚</span>
         </h2>
         <h3>
-          This is my Portfolio <BiSolidWinkSmile className="def-col" />
+          This is my Portfolio <BiSolidWinkSmile className="def-col emoji" />
         </h3>
         <div className="social-container">
-          {/* <h3>Social Follow</h3> */}
           <a
             href="https://github.com/devashishsoni98"
             className="github social"
@@ -53,7 +53,7 @@ const Home = () => {
           </a>
         </div>
         <div className="cv-container">
-        <a
+          <a
             href="CV_DEVASHISH_ SONI.pdf"
             download="CV_DevashishSoni"
             className="ccv social"
@@ -61,6 +61,8 @@ const Home = () => {
           >
             Download CV
           </a>
+       
+        </div>
         </div>
       </div>
     </>

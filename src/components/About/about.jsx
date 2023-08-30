@@ -2,6 +2,8 @@ const About = () => {
   return (
     <>
       <div className="about">
+      <video src="bgv3.mp4" autoPlay muted loop className="background-video-a" />
+      <div className="content">
         <h1>About Me</h1>
         <div class="split left">
           <div class="written">
@@ -38,9 +40,10 @@ const About = () => {
         <div class="split right">
           <img
           className="imge"
-            src="https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg"
+            src="https://media3.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif?cid=ecf05e47wqpb46g73d0urbltntnwb8wpocb7g7cv9o846d2e&ep=v1_gifs_related&rid=giphy.gif&ct=g"
             alt="development-img"
           />
+        </div>
         </div>
       </div>
     </>
