@@ -7,7 +7,7 @@ const ProjectItem = ({ project }) => {
   return (
     <section>
       <div className="p-div">
-      <h1>{project.title}</h1>
+      <h1><span className="def-col">{project.title}</span></h1>
       <h2>
         {project.description}
       </h2>
@@ -19,11 +19,11 @@ const ProjectItem = ({ project }) => {
         <div className="b-div">
         <button>
         <Link className="git-link" to={project.githubLink} target="_blank">
-          <FaGithub/>Github Repo
+          <FaGithub className="iicon"/>Github Repo
         </Link></button>
         <button>
         <Link className="git-link" to={project.liveLink} target="_blank">
-          <VscPreview/>Live Demo
+          <VscPreview className="iicon"/>Live Demo
         </Link></button>
         <br /><br />
         </div>

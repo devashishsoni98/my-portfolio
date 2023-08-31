@@ -38,10 +38,10 @@ const Projects = () => {
           <br />
           <br />
           <button className="s-btn">
-        <Link className="git-link" to="/portfolio" target="_blank">
-          <VscPreview/>Visit
+        <Link className="git-link" to="/portfolio">
+          <VscPreview className="iicon"/>Visit
         </Link></button>
-        </p>
+        </p><br />
         </div>
       </section>
       </div>
