@@ -7,6 +7,31 @@ html {
   scroll-behavior: smooth;
 }
 
+.top-btn > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5d00b4;
+  color: #f0f0f0;
+  box-shadow: 0 0 2px black;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 999;
+  cursor: pointer;
+  animation: gototop 1.2s linear infinite alternate-reverse;
+}
+
+@keyframes gototop {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    transform: translateY(0.2rem);
+  }
+}
 .about {
   background-color: #373A43;
   min-height: 100vh;
@@ -98,6 +123,9 @@ html {
 }
 
 @media (max-width: 768px) {
+  .top-btn > span {
+    right: 1rem;
+  }
   .containerr .textt {
     font-size: 2rem;
   }
@@ -273,14 +301,14 @@ a.instagram {
 }
 
 @media (max-width: 768px) {
-  .container > h1 {
-    font-size: 3rem;
-  }
-  .container > h2 {
+  .content .h-con > h1 {
     font-size: 2.5rem;
   }
-  .container > h3 {
-    font-size: 1.8rem;
+  .home-h2 {
+    font-size: 2rem;
+  }
+  .home-h3 {
+    font-size: 1.6rem;
   }
   .social-container {
     padding: 0.5rem 1rem;
@@ -294,7 +322,7 @@ a.instagram {
     margin: 1rem auto;
   }
   a.social {
-    margin: 0 0.3rem;
+    margin: 0 0rem;
   }
 }
 .minifunction {
@@ -613,16 +641,17 @@ body {
   color: #ebe9e9;
   text-align: center;
   display: -webkit-inline-box;
-  font-size: 4rem;
+  font-size: 2.8rem;
   margin: 2rem 0 2rem 0;
   filter: drop-shadow(0rem 0rem 8rem rgb(255, 255, 255));
   border-bottom: 6px solid #ebe9e9;
   border-radius: 0.6rem;
   font-family: "Ubuntu", sans-serif;
   padding-bottom: 0.5rem;
+  overflow-wrap: break-word;
 }
 .projects section h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 2rem;
   text-align: -webkit-center;
   font-family: "Ubuntu", sans-serif;

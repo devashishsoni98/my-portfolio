@@ -8,12 +8,14 @@ import BlogList from "./components/MiniFunctions/blogList";
 import Home from "./components/Home/Home";
 import MiniFunctions from "./components/MiniFunctions/minifunctions";
 import Projects from "./components/Projects/projects";
+import GoTop from "./components/Props/GoTop";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar />
+        <GoTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/minifunctions" element={<MiniFunctions />} />
