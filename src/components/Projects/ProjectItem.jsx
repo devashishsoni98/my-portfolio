@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {FaGithub} from 'react-icons/fa'
+import {VscPreview} from 'react-icons/vsc'
 
 const ProjectItem = ({ project }) => {
   return (
     <section>
+      <div className="p-div">
       <h1>{project.title}</h1>
       <h2>
         {project.description}
@@ -13,21 +16,20 @@ const ProjectItem = ({ project }) => {
         {project.details}
         <br />
         <br />
-        <br />
-        You can find the <span className="def-col">Github Repository</span>{" "}
-        for this project at :{" "}
+        <div className="b-div">
+        <button>
         <Link className="git-link" to={project.githubLink} target="_blank">
-          Github Repo
-        </Link>
-        <br />
-        <br />
-        <br />
-        You can also check it out <span className="def-col">live</span> at :{" "}
+          <FaGithub/>Github Repo
+        </Link></button>
+        <button>
         <Link className="git-link" to={project.liveLink} target="_blank">
-          {project.liveText}
-        </Link>
+          <VscPreview/>Live Demo
+        </Link></button>
+        <br /><br />
+        </div>
         </p>
-      <hr />
+      {/* <hr /> */}
+      </div>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import {VscPreview} from 'react-icons/vsc'
 import ProjectItem from "./ProjectItem";
 import projectData from "./projectData";
 import { Link } from "react-router-dom";
@@ -22,6 +23,7 @@ const Projects = () => {
         </motion.div>
 
       <section>
+        <div className="p-div">
         <h1>Simple HTML Portfolio</h1>
         <h2>This is a simple HTML Portfolio page!</h2>
         <img
@@ -35,12 +37,12 @@ const Projects = () => {
           <span className="def-col">JavaScript</span>
           <br />
           <br />
-          You can also check it out at :{" "}
-          <Link className="git-link" to="/portfolio">
-            {" "}
-            Simple Portfolio Website
-          </Link>
+          <button className="s-btn">
+        <Link className="git-link" to="/portfolio" target="_blank">
+          <VscPreview/>Visit
+        </Link></button>
         </p>
+        </div>
       </section>
       </div>
     </>

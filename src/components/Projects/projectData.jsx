@@ -27,7 +27,7 @@ const projectData = [
       liveText: "FlexStart Website"
     },
     {
-      title: "MovieBazaar Website",
+      title: "Movie Website",
       description: "This is a simple movie website which displays a list of movies by collecting data from a movie API",
       image: "moviebazaar.png",
       details: "This website is built using React JS and CSS. I have used multiple MUI Components to make this website.",
