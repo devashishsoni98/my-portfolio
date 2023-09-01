@@ -637,6 +637,7 @@ body {
   .p-div {
     border: 2px solid rgb(244, 244, 244);
     height: auto;
+    border-radius: 6rem;
     width: 85%;
     box-sizing: content-box;
     transition: .2s ease;
@@ -769,6 +770,20 @@ body {
   .projects .p-div h2 {
     margin-top: 0;
   }
+
+  .projects .p-div .b-div > button, .s-btn{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: 0.25s ease;
+    text-wrap: nowrap;
+}
+.projects .p-div .b-div{
+  justify-content: center;
+  display: grid;
+}
 }
 
 //PROJECTS SECTION END ========================================================>

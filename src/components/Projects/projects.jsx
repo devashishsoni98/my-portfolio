@@ -24,7 +24,7 @@ const Projects = () => {
 
       <section>
         <div className="p-div">
-        <h1>Simple HTML Portfolio</h1>
+        <h1><span className="def-col">Simple HTML Portfolio</span></h1>
         <h2>This is a simple HTML Portfolio page!</h2>
         <img
           className="p-img"
