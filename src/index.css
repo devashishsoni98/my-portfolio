@@ -301,13 +301,13 @@ a.instagram {
 
 @media (max-width: 768px) {
   .content .h-con > h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
   .home-h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .home-h3 {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
   }
   .social-container {
     padding: 0.5rem 1rem;
@@ -654,7 +654,8 @@ body {
   margin-right: 0.3rem;
   vertical-align: sub;
 }
-.projects section .b-div > button, .projects section .s-btn,
+.projects section .b-div > button,
+.projects section .s-btn,
 .projects .p-div .b-div > button,
 .projects .p-div .s-btn {
   background-color: #f0f0f0;
@@ -676,14 +677,16 @@ body {
        user-select: none;
   vertical-align: middle;
 }
-.projects section .b-div > button:hover, .projects section .s-btn:hover,
+.projects section .b-div > button:hover,
+.projects section .s-btn:hover,
 .projects .p-div .b-div > button:hover,
 .projects .p-div .s-btn:hover {
   transform: scale(1.2);
   background-color: #373a43;
   box-shadow: 0 0 5px white;
 }
-.projects section .b-div > button:hover .git-link, .projects section .s-btn:hover .git-link,
+.projects section .b-div > button:hover .git-link,
+.projects section .s-btn:hover .git-link,
 .projects .p-div .b-div > button:hover .git-link,
 .projects .p-div .s-btn:hover .git-link {
   color: #ebe9e9;
@@ -758,14 +761,15 @@ body {
   .projects .p-div h2 {
     margin-top: 0;
   }
-  .projects .p-div .b-div > button, .s-btn {
+  .projects .p-div .b-div > button,
+  .s-btn {
     font-size: 1rem;
     font-weight: 400;
     padding: 0.4rem 1rem;
     margin-bottom: 1rem;
     text-decoration: none;
     transition: 0.25s ease;
-    text-wrap: nowrap;
+    white-space: nowrap;
   }
   .projects .p-div .b-div {
     justify-content: center;

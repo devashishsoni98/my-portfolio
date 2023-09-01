@@ -7,7 +7,7 @@ const BlogList = () => {
   return (
     <>
     <motion.div 
-    initial={{ y: -28,x:-75}}
+    initial={{ y: 0,x:-75}}
     whileInView={{ y: 0,x: 0 }}
     viewport={{ once: true }}
     transition={{duration:.45,}}
