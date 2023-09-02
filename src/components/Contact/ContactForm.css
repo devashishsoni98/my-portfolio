@@ -16,7 +16,7 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -70,7 +70,7 @@ form {
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 
 .input-containeer {
@@ -99,7 +99,7 @@ form {
   pointer-events: none;
   font-size: 1.25rem;
   color: rgb(255, 255, 255);
-  opacity: .7;
+  opacity: 0.7;
   transition: 0.4s;
 }
 
@@ -112,7 +112,7 @@ form {
   background: #f2af29;
   border-right: 2px solid #fff;
   border-left: 2px solid #fff;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   opacity: 1;
 }
 

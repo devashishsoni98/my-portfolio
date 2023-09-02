@@ -5,6 +5,7 @@
     box-sizing: border-box;
   }
 
+
    /* header{
     position: sticky;
     top: 0;
@@ -32,6 +33,7 @@
     align-items: center;
     gap: 40px;
     min-height: 70px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   }
   
   

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import  styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';  
+import Headroom from 'react-headroom';
 
 
 
@@ -24,6 +25,15 @@ function Navbar() {
 
 
   return (
+    <>
+    <Headroom className='headr'
+    style={{
+      webkitTransition: 'all .5s ease',
+      mozTransition: 'all .5s ease',
+      oTransition: 'all .5s ease',
+      transition: 'all .5s ease'
+    }}
+    >
       <header className="App-header">
 
 
@@ -59,6 +69,8 @@ function Navbar() {
 
 
       </header>
+      </Headroom>
+      </>
   );
 }
 

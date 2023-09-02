@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
 // ABOUT SECTION ===================================================================================>
 * {
   font-family: "Ubuntu", sans-serif;
@@ -41,6 +42,7 @@ html {
   color: #fff;
   text-align: center;
   position: relative;
+  z-index: 0;
   overflow: hidden;
 }
 .background-video-a {
@@ -142,6 +144,7 @@ html {
   min-height: 100vh;
   padding: 2% 0;
   overflow: hidden;
+  z-index: 0;
 }
 
 .hand {
