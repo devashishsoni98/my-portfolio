@@ -22,6 +22,17 @@ const projectData = [
     liveText: "Weather Website",
   },
   {
+    title: "Movie Website",
+    description:
+      "This is a simple movie website which displays a list of movies by collecting data from a movie API. It also has a Firebase based Google Sign-In feature!",
+    image: "moviebazaar.png",
+    details:
+      "This website is built using React JS and CSS. I have used multiple MUI Components to make this website.",
+    githubLink: "https://github.com/devashishsoni98/moviebazaar",
+    liveLink: "https://ds-movie-app.netlify.app/",
+    liveText: "MovieBazaar Website",
+  },
+  {
     title: "FlexStart Clone Website",
     description: "This is a clone for a bootstrap template FlexStart!",
     image: "flexstart.png",
@@ -30,17 +41,6 @@ const projectData = [
     githubLink: "https://github.com/devashishsoni98/flexstart-clone",
     liveLink: "https://ds-flexstart-clone.netlify.app/",
     liveText: "FlexStart Website",
-  },
-  {
-    title: "Movie Website",
-    description:
-      "This is a simple movie website which displays a list of movies by collecting data from a movie API",
-    image: "moviebazaar.png",
-    details:
-      "This website is built using React JS and CSS. I have used multiple MUI Components to make this website.",
-    githubLink: "https://github.com/devashishsoni98/moviebazaar",
-    liveLink: "https://moviebazaar-48ma.onrender.com/",
-    liveText: "MovieBazaar Website",
   },
 ];
 
