@@ -5,9 +5,7 @@ function SecondComp() {
   const [name, setName] = useState("SpiderMan");
 
   function changeHeroFun() {
-    console.log("Check test");
-
-    setName("ShaktiMaan");
+    setName(name === "SpiderMan" ? "ShaktiMaan" : "SpiderMan");
   }
 
   return (
@@ -57,6 +55,7 @@ function SecondComp() {
         <br></br>
         <div style={{ paddingBottom: "2rem" }}>
           <button
+          className="change-btn"
             style={{
               display: "block",
               marginLeft: "auto",

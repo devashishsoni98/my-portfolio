@@ -9,11 +9,13 @@ import Home from "./components/Home/Home";
 import MiniFunctions from "./components/MiniFunctions/minifunctions";
 import Projects from "./components/Projects/projects";
 import GoTop from "./components/Props/GoTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop />
         <NavBar />
         <GoTop/>
         <Routes>

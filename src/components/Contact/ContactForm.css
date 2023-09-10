@@ -58,9 +58,11 @@
   left: -13px;
 }
 
+.z{
+  z-index: 1;
+}
 form {
   padding: 2.3rem 2.2rem;
-  z-index: 1;
   overflow: hidden;
   position: relative;
 }

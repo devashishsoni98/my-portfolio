@@ -76,7 +76,7 @@ const Contact = () => {
             <span className="circle one"></span>
             <span className="circle two"></span>
 
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail} className="z">
               <h3 className="title">Contact Me</h3>
               <div className="input-containeer">
                 <input

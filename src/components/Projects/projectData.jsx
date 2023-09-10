@@ -1,14 +1,13 @@
 const projectData = [
   {
-    title: "Flight Booking Website",
+    title: "Movie Website",
     description:
-      "This is a simple and responsive flight booking website with lots of effects and animations!",
-    image: "flight.png",
+      "This is a simple movie website which displays a list of movies by collecting data from a movie API. It also has a Firebase based Google Sign-In feature!",
+    image: "moviebazaar.png",
     details:
-      "This website is built using React Js and SCSS. It consists of multiple pages with different hover effects, transitions and inputs.",
-    githubLink: "https://github.com/devashishsoni98/flight-booking-website",
-    liveLink: "https://ds-flight-app.netlify.app/",
-    liveText: "Flight Website",
+      "This website is built using React JS and CSS. I have used multiple MUI Components to make this website.",
+    githubLink: "https://github.com/devashishsoni98/moviebazaar",
+    liveLink: "https://ds-movie-app.netlify.app/",
   },
   {
     title: "Weather checking Website",
@@ -19,18 +18,16 @@ const projectData = [
       "This website is built using React Js and it collects data from the OpenWeatherMap API. It displays various information about the weather like temprature, humidity, what the area feels like and weather. It also have a toggle button which can be used to switch to a dark theme.",
     githubLink: "https://github.com/devashishsoni98/weatherApp",
     liveLink: "https://ds-weather-app.netlify.app/",
-    liveText: "Weather Website",
   },
   {
-    title: "Movie Website",
+    title: "Flight Booking Website",
     description:
-      "This is a simple movie website which displays a list of movies by collecting data from a movie API. It also has a Firebase based Google Sign-In feature!",
-    image: "moviebazaar.png",
+      "This is a simple and responsive flight booking website with lots of effects and animations!",
+    image: "flight.png",
     details:
-      "This website is built using React JS and CSS. I have used multiple MUI Components to make this website.",
-    githubLink: "https://github.com/devashishsoni98/moviebazaar",
-    liveLink: "https://ds-movie-app.netlify.app/",
-    liveText: "MovieBazaar Website",
+      "This website is built using React Js and SCSS. It consists of multiple pages with different hover effects, transitions and inputs.",
+    githubLink: "https://github.com/devashishsoni98/flight-booking-website",
+    liveLink: "https://ds-flight-app.netlify.app/",
   },
   {
     title: "FlexStart Clone Website",
@@ -40,7 +37,15 @@ const projectData = [
       "This website is built using HTML5, CSS3 and JavaScript. It consists of multiple pages with different hover effects, transitions and animations. ",
     githubLink: "https://github.com/devashishsoni98/flexstart-clone",
     liveLink: "https://ds-flexstart-clone.netlify.app/",
-    liveText: "FlexStart Website",
+  },
+  {
+    title: "Simple HTML Portfolio",
+    description: "This is a simple HTML Portfolio page!",
+    image: "portfolio.png",
+    details:
+      "This website is built using HTML5, CSS3 and JavaScript. It consists of multiple pages with different hover effects, transitions and animations. ",
+    githubLink: "",
+    liveLink: "/portfolio"
   },
 ];
 
