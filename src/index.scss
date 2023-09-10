@@ -715,10 +715,10 @@ body {
 
     .b-div > button,
     .s-btn {
-      background-color: #f0f0f0;
-      border: 1px solid white;
+       background-color: #444; 
+      border: 1px solid #666; 
       border-radius: 0.4rem;
-      color: #212529;
+      color: #ebe9e9;
       cursor: pointer;
       display: inline-block;
       padding: 0.5rem;
@@ -732,14 +732,14 @@ body {
       vertical-align: middle;
     }
 
-    .b-div > button:hover,
+     .b-div > button:hover,
     .s-btn:hover {
       transform: scale(1.1);
-      background-color: #373a43;
-      box-shadow: 0 0 5px white;
+      background-color: #555; 
+      box-shadow: 0 0 5px #f2af29;
       .git-link {
-        color: #ebe9e9;
-        border: #ebe9e9;
+        color: #f0f0f0; 
+        border: #f2af29;
       }
     }
 
@@ -777,7 +777,7 @@ body {
     }
 
     .git-link {
-      color: #373a43;
+      color: #f2af29;
       text-decoration: none;
     }
   }
@@ -825,5 +825,4 @@ body {
     white-space: normal;
   }
 }
-
 //PROJECTS SECTION END ========================================================>

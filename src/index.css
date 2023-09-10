@@ -702,10 +702,10 @@ body {
 .projects section .s-btn,
 .projects .p-div .b-div > button,
 .projects .p-div .s-btn {
-  background-color: #f0f0f0;
-  border: 1px solid white;
+  background-color: #444;
+  border: 1px solid #666;
   border-radius: 0.4rem;
-  color: #212529;
+  color: #ebe9e9;
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem;
@@ -723,15 +723,15 @@ body {
 .projects .p-div .b-div > button:hover,
 .projects .p-div .s-btn:hover {
   transform: scale(1.1);
-  background-color: #373a43;
-  box-shadow: 0 0 5px white;
+  background-color: #555;
+  box-shadow: 0 0 5px #f2af29;
 }
 .projects section .b-div > button:hover .git-link,
 .projects section .s-btn:hover .git-link,
 .projects .p-div .b-div > button:hover .git-link,
 .projects .p-div .s-btn:hover .git-link {
-  color: #ebe9e9;
-  border: #ebe9e9;
+  color: #f0f0f0;
+  border: #f2af29;
 }
 .projects section h1,
 .projects .p-div h1 {
@@ -769,7 +769,7 @@ body {
 }
 .projects section .git-link,
 .projects .p-div .git-link {
-  color: #373a43;
+  color: #f2af29;
   text-decoration: none;
 }
 
