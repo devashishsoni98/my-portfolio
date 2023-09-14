@@ -25,16 +25,7 @@ const BlogList = () => {
                 <br />
                 <li className="blog-item">
                   <Link
-                    style={{
-                      color: "#0d0d11",
-                      textTransform: "capitalize",
-                      textDecoration:"underline",
-                      fontSize:"1.5rem",
-                      backgroundColor:"#ebe9e9",
-                      padding:".5rem",
-                      borderRadius:".5rem"
-                      
-                    }}
+                    className="bl-a"
                     to={`/posts/${oneObj.id}`}
                   >
                     {oneObj.title}

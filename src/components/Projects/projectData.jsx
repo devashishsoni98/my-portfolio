@@ -2,7 +2,7 @@ const projectData = [
   {
     title: "Movie Website",
     description:
-      "This is a simple movie website which displays a list of movies by collecting data from a movie API. It also has a Firebase based Google Sign-In feature!",
+      "This is a movie website which displays a list of movies by collecting data from TMDB movie API. It also has a Firebase based Google Sign-In feature and movie search options!",
     image: "moviebazaar.png",
     details:
       "This website is built using React JS and CSS. I have used multiple MUI Components to make this website.",

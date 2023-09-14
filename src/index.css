@@ -363,17 +363,28 @@ a.instagram {
   color: #f2af29;
   text-align: center;
   font-size: 2rem;
-  transition: 0.3s ease;
-}
-
-.blog-item:hover {
-  transform: scale(0.9);
 }
 
 .blog-item > li {
   color: #f2af29;
   text-align: center;
   font-size: 3rem;
+  transition: 0.3s ease;
+}
+
+.bl-a {
+  color: #0d0d11;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  background-color: #ebe9e9;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.bl-a:hover {
+  transform: scale(0.9);
 }
 
 .First {
