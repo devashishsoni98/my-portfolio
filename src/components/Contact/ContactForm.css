@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #cecece;
+  background-color: #323539;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@
 .form {
   width: 100%;
   max-width: 820px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
   z-index: 0;
@@ -229,7 +229,7 @@ textarea.input {
   position: absolute;
   width: 360px;
   height: 360px;
-  background-color: #ebe9e9;
+  background-color: #323539;
   border-radius: 50%;
   top: calc(50% - 180px);
   left: calc(50% - 180px);

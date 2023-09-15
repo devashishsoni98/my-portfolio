@@ -33,7 +33,7 @@ html {
   }
 }
 .about {
-  background-color: #373a43;
+  background-color: #24262c;
   min-height: 100vh;
   padding: 0 0;
   color: #fff;
@@ -139,7 +139,7 @@ html {
 }
 .container {
   position: relative;
-  background-color: #373a43;
+  background-color: #24262c;
   min-height: 100vh;
   padding: 2% 0;
   overflow: hidden;
@@ -223,7 +223,7 @@ html {
   height: -moz-min-content;
   height: min-content;
   height: min-content;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 
 .content .h-con > h1 {
@@ -335,7 +335,7 @@ a.instagram {
   }
 }
 .minifunction {
-  background-color: #373a43;
+  background-color: #24262c;
 }
 
 .m-h2 {
@@ -363,6 +363,7 @@ a.instagram {
   color: #f2af29;
   text-align: center;
   font-size: 2rem;
+  transition: 0.3s ease;
 }
 
 .blog-item > li {
@@ -418,7 +419,7 @@ a.instagram {
 }
 
 .post-container {
-  background-color: #373a43;
+  background-color: #24262c;
 }
 
 .post-title {
@@ -672,7 +673,7 @@ body {
   }
 }
 .projects {
-  background-color: #373a43;
+  background-color: #24262c;
   color: #ebe9e9;
 }
 .projects .p-div {

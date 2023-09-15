@@ -12,7 +12,7 @@ const About = () => {
     <>
       <div
       className="about">
-      <video src="bgv3.mp4" autoPlay muted loop className="background-video-a" />
+      {/* <video src="bgv4.mp4" autoPlay muted loop className="background-video-a" /> */}
       <motion.div
       initial={{ y: 75,}}
       whileInView={{ y: 0, }}

@@ -1,6 +1,7 @@
 import React from "react";
 import { GiPalm } from "react-icons/gi";
 import { BiSolidWinkSmile } from "react-icons/bi";
+import LazyLoad from "react-lazyload";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -13,11 +14,13 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <video src="bgv3.mp4" autoPlay muted loop className="background-video" />
+      <LazyLoad height={200} offset={100}>
+          <video src="bgv5.mp4" autoPlay muted loop className="background-video" />
+        </LazyLoad>
         <div className="content">
         <motion.div
-        initial={{ x: -75,}}
-        whileInView={{ x: 0, }}
+        initial={{ x: -75,opacity:0}}
+        whileInView={{ x: 0, opacity:1}}
         viewport={{ once: true }}
         transition={{duration:.75,}}
         className="h-con">

@@ -36,7 +36,7 @@ html {
 }
 
 .about {
-  background-color: #373a43;
+  background-color: #24262c;
   min-height: 100vh;
   padding: 0 0;
   color: #fff;
@@ -140,7 +140,7 @@ html {
 //HOME SECTION ========================================================>
 .container {
   position: relative;
-  background-color: #373a43;
+  background-color: #24262c;
   min-height: 100vh;
   padding: 2% 0;
   overflow: hidden;
@@ -221,7 +221,7 @@ html {
   justify-content: center;
   height: min-content;
   height: min-content;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 .content .h-con > h1 {
   display: flex;
@@ -340,7 +340,7 @@ a.instagram {
 //BLOG-LIST SECTION ========================================================>
 
 .minifunction {
-  background-color: #373a43;
+  background-color: #24262c;
 }
 
 .m-h2 {
@@ -367,6 +367,7 @@ a.instagram {
   color: #f2af29;
   text-align: center;
   font-size: 2rem;
+  transition: .3s ease;
 }
 
 .blog-item > li {
@@ -424,7 +425,7 @@ a.instagram {
 
 //SINGLE POST SECTION ========================================================>
 .post-container {
-  background-color: #373a43;
+  background-color: #24262c;
 }
 
 .post-title {
@@ -685,7 +686,7 @@ body {
 }
 
 .projects {
-  background-color: #373a43;
+  background-color: #24262c;
   color: #ebe9e9;
 
   .p-div {
