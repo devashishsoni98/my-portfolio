@@ -684,7 +684,7 @@ body {
   position: relative;
   box-sizing: content-box;
   transition: 0.2s ease;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: linear-gradient(to top, #2e2e2e 0%, rgb(62, 62, 62) 100%);
 }
 .projects .p-div:hover {
   border: 2px solid #f2af29;
