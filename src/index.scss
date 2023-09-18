@@ -327,10 +327,10 @@ a.instagram {
   a.social {
     margin: 0 0rem;
   }
-  .cv-container{
+  .cv-container {
     margin-top: 2rem;
   }
-  .cv-container>a{
+  .cv-container > a {
     font-size: 1rem !important;
   }
 }
@@ -367,28 +367,28 @@ a.instagram {
   color: #f2af29;
   text-align: center;
   font-size: 2rem;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .blog-item > li {
   color: #f2af29;
   text-align: center;
   font-size: 3rem;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
-.bl-a{
+.bl-a {
   color: #0d0d11;
   text-transform: capitalize;
   text-decoration: underline;
   font-size: 1.5rem;
   background-color: #ebe9e9;
-  padding: .5rem;
-  border-radius: .5rem;
-  transition: .3s ease;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
 }
-.bl-a:hover{
-  transform: scale(.9);
+.bl-a:hover {
+  transform: scale(0.9);
 }
 
 //BLOG-LIST SECTION END ========================================================>
@@ -401,7 +401,7 @@ a.instagram {
   width: 100px;
   height: 100px;
   font-size: 80px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 .First:hover {
   border: 2px solid cyan;
@@ -414,7 +414,7 @@ a.instagram {
   width: 100px;
   height: 100px;
   font-size: 80px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 .Second:hover {
   border: 2px solid cyan;
@@ -510,21 +510,21 @@ a.instagram {
   font-size: 1.5rem;
   border-radius: 0.5rem;
   border: 0;
-  transition: .2s ease;
+  transition: 0.2s ease;
   padding: 0.2rem;
 }
-.gb:hover{
-  transform: scale(.9);
+.gb:hover {
+  transform: scale(0.9);
 }
 
 //SINGLE POST SECTION END ========================================================>
 
 //SECOND SECTION END ========================================================>
-.change-btn{
-  transition: .2s ease;
+.change-btn {
+  transition: 0.2s ease;
 }
-.change-btn:hover{
-  transform: scale(.9);
+.change-btn:hover {
+  transform: scale(0.9);
 }
 //SECOND SECTION END ========================================================>
 
@@ -727,8 +727,8 @@ body {
 
     .b-div > button,
     .s-btn {
-       background-color: #444; 
-      border: 1px solid #666; 
+      background-color: #444;
+      border: 1px solid #666;
       border-radius: 0.4rem;
       color: #ebe9e9;
       cursor: pointer;
@@ -736,6 +736,9 @@ body {
       padding: 0.5rem;
       text-align: center;
       text-decoration: none;
+      font-size: 20px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 500;
       margin: 0.5rem 1rem;
       transition: 0.25s ease;
       -webkit-user-select: none;
@@ -744,20 +747,22 @@ body {
       vertical-align: middle;
     }
 
-     .b-div > button:hover,
+    .b-div > button:hover,
     .s-btn:hover {
       transform: scale(1.1);
-      background-color: #555; 
+      background-color: #555;
+      color: #f2af29;
+      border: #f2af29;
       box-shadow: 0 0 5px #f2af29;
       .git-link {
-        color: #f0f0f0; 
+        color: #f2af29;
         border: #f2af29;
       }
     }
 
     h1 {
       padding: 0;
-      color: #ebe9e9;
+      color: #f2af29;
       text-align: center;
       font-size: 2.2rem;
       filter: drop-shadow(0rem 0rem 8rem rgb(255, 255, 255));
@@ -789,8 +794,43 @@ body {
     }
 
     .git-link {
-      color: #f2af29;
+      color: #ebe9e9;
       text-decoration: none;
+    }
+
+    .v-txt {
+      font-size: 20px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 500;
+      background: none;
+      border: none;
+    }
+
+    .v-btn {
+      background-color: #444;
+      border: 1px solid #666;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.25s ease;
+      -webkit-user-select: none;
+      width: 100%;
+      user-select: none;
+    }
+    .v-btn:hover {
+      transform: scale(1.1);
+      background-color: #555;
+      box-shadow: 0 0 5px #f2af29;
+      .git-link {
+        color: #f2af29;
+        border: #f2af29;
+      }
     }
   }
 }
@@ -820,10 +860,19 @@ body {
     margin-bottom: 1rem;
   }
 
-  .projects .p-div .b-div {
-    justify-content: space-around;
-    display: grid;
-    gap: 1rem;
+  .projects .p-div .b-div .s-btn {
+    display: block;
+    margin: 0rem 1rem 2rem 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .projects section .v-btn,
+  .projects .p-div .v-btn {
+    margin-top: 0;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .projects .p-div .b-div > button,
@@ -836,5 +885,20 @@ body {
     transition: 0.25s ease;
     white-space: normal;
   }
+}
+//PROJECTS SECTION END ========================================================>
+
+//PROJECTS DETAILS SECTION ========================================================>
+.project-details{
+  min-height: 100vh;
+  background-color: #24262c;
+}
+
+.project-details-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #ebe9e9;
 }
 //PROJECTS SECTION END ========================================================>

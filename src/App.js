@@ -10,6 +10,7 @@ import MiniFunctions from "./components/MiniFunctions/minifunctions";
 import Projects from "./components/Projects/projects";
 import GoTop from "./components/Props/GoTop";
 import ScrollToTop from "./components/ScrollToTop";
+import ProjectDetails from "./components/Projects/ProjectsDetails";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/blog" element={<BlogList />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projectdetails/:id" element={<ProjectDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

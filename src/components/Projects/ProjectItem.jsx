@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
-import { VscPreview } from "react-icons/vsc";
-import { motion, useAnimation } from "framer-motion";
+import { VscPreview, VscThreeBars } from "react-icons/vsc";
+import { easeInOut, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import projectData from "./projectData";
 
 const ProjectItem = ({ project, index, projectData }) => {
   const { ref, inView } = useInView({
@@ -27,11 +28,15 @@ const ProjectItem = ({ project, index, projectData }) => {
   }, [inView]);
 
   const lastIndexOfArray = projectData.length - 1;
-  console.log(lastIndexOfArray);
 
   return (
     <section>
-      <motion.div ref={ref} animate={animation} className="p-div">
+      <motion.div
+        ref={ref}
+        animate={animation}
+        transition={{ ease: "easeInOut" }}
+        className="p-div"
+      >
         <img
           className="p-img"
           src={project.image}
@@ -39,33 +44,36 @@ const ProjectItem = ({ project, index, projectData }) => {
         />
         <h1>{project.title}</h1>
         <h2>{project.description}</h2>
-        <p>
+        <div className="a-btns">
           <div className="b-div">
             {project.githubLink && (
-              <button>
-                <Link
-                  className="git-link"
-                  to={project.githubLink}
-                  target={index <= lastIndexOfArray - 1 ? "_blank" : undefined}
-                >
-                  <FaGithub className="iicon" />
-                  Github Repo
-                </Link>
-              </button>
-            )}
-            <button>
               <Link
-                className="git-link"
-                to={project.liveLink}
+                to={project.githubLink}
                 target={index <= lastIndexOfArray - 1 ? "_blank" : undefined}
               >
+                <button className="s-btn git-link">
+                  <FaGithub className="iicon" />
+                  Github Repo
+                </button>
+              </Link>
+            )}
+            <Link
+              to={project.liveLink}
+              target={index <= lastIndexOfArray - 1 ? "_blank" : undefined}
+            >
+              <button className="s-btn git-link">
                 <VscPreview className="iicon" />
                 Live Demo
-              </Link>
-            </button>
+              </button>
+            </Link>
             <br />
           </div>
-        </p>
+          <Link className="v-btn" to={`/projectdetails/${project.id}`} key={project.id}>
+            <button className="git-link v-txt">
+              <VscThreeBars className="iicon"/>
+              View Details</button>
+          </Link>
+        </div>
       </motion.div>
     </section>
   );

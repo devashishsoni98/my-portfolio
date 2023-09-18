@@ -723,6 +723,9 @@ body {
   padding: 0.5rem;
   text-align: center;
   text-decoration: none;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
   margin: 0.5rem 1rem;
   transition: 0.25s ease;
   -webkit-user-select: none;
@@ -736,19 +739,21 @@ body {
 .projects .p-div .s-btn:hover {
   transform: scale(1.1);
   background-color: #555;
+  color: #f2af29;
+  border: #f2af29;
   box-shadow: 0 0 5px #f2af29;
 }
 .projects section .b-div > button:hover .git-link,
 .projects section .s-btn:hover .git-link,
 .projects .p-div .b-div > button:hover .git-link,
 .projects .p-div .s-btn:hover .git-link {
-  color: #f0f0f0;
+  color: #f2af29;
   border: #f2af29;
 }
 .projects section h1,
 .projects .p-div h1 {
   padding: 0;
-  color: #ebe9e9;
+  color: #f2af29;
   text-align: center;
   font-size: 2.2rem;
   filter: drop-shadow(0rem 0rem 8rem rgb(255, 255, 255));
@@ -781,8 +786,46 @@ body {
 }
 .projects section .git-link,
 .projects .p-div .git-link {
-  color: #f2af29;
+  color: #ebe9e9;
   text-decoration: none;
+}
+.projects section .v-txt,
+.projects .p-div .v-txt {
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  background: none;
+  border: none;
+}
+.projects section .v-btn,
+.projects .p-div .v-btn {
+  background-color: #444;
+  border: 1px solid #666;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.25s ease;
+  -webkit-user-select: none;
+  width: 100%;
+  -moz-user-select: none;
+       user-select: none;
+}
+.projects section .v-btn:hover,
+.projects .p-div .v-btn:hover {
+  transform: scale(1.1);
+  background-color: #555;
+  box-shadow: 0 0 5px #f2af29;
+}
+.projects section .v-btn:hover .git-link,
+.projects .p-div .v-btn:hover .git-link {
+  color: #f2af29;
+  border: #f2af29;
 }
 
 @media (max-width: 768px) {
@@ -806,10 +849,18 @@ body {
   .projects .p-div img {
     margin-bottom: 1rem;
   }
-  .projects .p-div .b-div {
-    justify-content: space-around;
-    display: grid;
-    gap: 1rem;
+  .projects .p-div .b-div .s-btn {
+    display: block;
+    margin: 0rem 1rem 2rem 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  .projects section .v-btn,
+  .projects .p-div .v-btn {
+    margin-top: 0;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
   }
   .projects .p-div .b-div > button,
   .s-btn {
@@ -821,4 +872,16 @@ body {
     transition: 0.25s ease;
     white-space: normal;
   }
+}
+.project-details {
+  min-height: 100vh;
+  background-color: #24262c;
+}
+
+.project-details-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #ebe9e9;
 }/*# sourceMappingURL=index.css.map */
