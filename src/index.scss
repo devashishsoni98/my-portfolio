@@ -961,6 +961,21 @@ body {
   border: none;
   font-size: 1.8rem;
   vertical-align: middle;
+  transition: .3s ease;
+  animation: goback 1.2s linear infinite alternate-reverse;
+}
+
+.back-button:hover{
+  color: #5d00b4;
+}
+
+@keyframes goback {
+  0% {
+    transform: translateX(-0.05rem);
+  }
+  100% {
+    transform: translateX(0.05rem);
+  }
 }
 
 @media (max-width: 768px) {
