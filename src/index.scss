@@ -900,5 +900,49 @@ body {
   justify-content: center;
   text-align: center;
   color: #ebe9e9;
+
+  h1{
+    font-size: 4rem;
+    margin: 2rem 0 ;
+    color: #f2af29;
+    text-align: center;
+  }
+  h2{
+    font-size: 2rem;
+    width: 60%;
+    text-align: center;
+    margin: 0 20% 2rem 20%;
+  }
+  h3{
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0rem 10% 2rem 10%;
+    text-align: start;
+    font-weight: 400;
+  }
+  span{
+    font-size: 2rem;
+    text-align: start;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  p{
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0rem 10% 2rem 10%;
+    text-align: start;
+  }
 }
+
+.pd-img{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+
 //PROJECTS SECTION END ========================================================>

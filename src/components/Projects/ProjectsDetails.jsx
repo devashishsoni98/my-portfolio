@@ -14,7 +14,12 @@ const ProjectDetails = () => {
     <div className="project-details">
     <div className='project-details-div'>
     <h1>{project.title}</h1>
-    <p>{project.description}</p>
+    <h2>{project.description}</h2>
+    <img className='pd-img' src={project.image} alt={`${project.title}-img`} />
+    <span className='def-col'>Context :</span>
+    <h3>{project.context}</h3>
+    <span className='def-col'>Description :</span>
+    <p>{project.details}</p>
   </div>
   </div>
   </>
