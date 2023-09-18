@@ -927,6 +927,24 @@ body {
   border-radius: 1rem;
 }
 
+.gb-div {
+  display: flex;
+  justify-content: center;
+}
+
+.back-button {
+  position: fixed;
+  padding: 0.2rem;
+  border-radius: 50%;
+  left: 3%;
+  bottom: 6%;
+  background-color: #ebe9e9;
+  color: #24262c;
+  border: none;
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) {
   .project-details-div h1 {
     font-size: 2.3rem;
@@ -939,10 +957,17 @@ body {
   .project-details-div span {
     font-size: 1.7rem;
   }
-  .project-details-div h3, .project-details-div p {
+  .project-details-div h3,
+  .project-details-div p {
     text-align: justify;
+  }
+  .project-details-div p {
+    margin-bottom: 5rem;
   }
   .pd-img {
     width: 90%;
   }
+}
+.back-button {
+  bottom: 4%;
 }/*# sourceMappingURL=index.css.map */

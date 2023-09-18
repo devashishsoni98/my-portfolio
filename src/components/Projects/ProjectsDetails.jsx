@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import projectData from './projectData'
+import GoBack from '../Props/GoBack'
 
 const ProjectDetails = () => {
     const { id } = useParams();
@@ -13,6 +14,7 @@ const ProjectDetails = () => {
     <>
     <div className="project-details">
     <div className='project-details-div'>
+      <GoBack/>
     <h1>{project.title}</h1>
     <h2>{project.description}</h2>
     <img className='pd-img' src={project.image} alt={`${project.title}-img`} />

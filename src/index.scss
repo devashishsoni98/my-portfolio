@@ -886,10 +886,11 @@ body {
     white-space: normal;
   }
 }
+
 //PROJECTS SECTION END ========================================================>
 
 //PROJECTS DETAILS SECTION ========================================================>
-.project-details{
+.project-details {
   min-height: 100vh;
   background-color: #24262c;
 }
@@ -901,33 +902,33 @@ body {
   text-align: center;
   color: #ebe9e9;
 
-  h1{
+  h1 {
     font-size: 4rem;
-    margin: 2rem 0 ;
+    margin: 2rem 0;
     color: #f2af29;
     text-align: center;
   }
-  h2{
+  h2 {
     font-size: 2rem;
     width: 60%;
     text-align: center;
     margin: 0 20% 2rem 20%;
   }
-  h3{
+  h3 {
     font-size: 1.5rem;
     width: 80%;
     margin: 0rem 10% 2rem 10%;
     text-align: justify;
     font-weight: 400;
   }
-  span{
+  span {
     font-size: 2rem;
     text-align: start;
     margin-left: 10%;
     margin-bottom: 1rem;
     font-weight: 700;
   }
-  p{
+  p {
     font-size: 1.5rem;
     width: 80%;
     margin: 0rem 10% 2rem 10%;
@@ -935,7 +936,7 @@ body {
   }
 }
 
-.pd-img{
+.pd-img {
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -944,27 +945,51 @@ body {
   border-radius: 1rem;
 }
 
-@media (max-width: 768px){
-  .project-details-div{
-    h1{
+.gb-div{
+  display: flex;
+  justify-content: center;
+}
+
+.back-button {
+  position: fixed;
+  padding: .2rem;
+  border-radius: 50%;
+  left: 3%;
+  bottom: 6%;
+  background-color: #ebe9e9;
+  color: #24262c;
+  border: none;
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .project-details-div {
+    h1 {
       font-size: 2.3rem;
     }
-    h2{
+    h2 {
       font-size: 1.8rem;
       width: 90%;
       margin: 0 5% 2rem 5%;
     }
-    span{
+    span {
       font-size: 1.7rem;
     }
-    h3,p{
+    h3,
+    p {
       text-align: justify;
     }
+    p{
+      margin-bottom: 5rem;
+    }
   }
-  .pd-img{
+  .pd-img {
     width: 90%;
   }
 }
-
+.back-button{
+  bottom: 4%;
+}
 
 //PROJECTS SECTION END ========================================================>
