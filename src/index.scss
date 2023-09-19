@@ -934,6 +934,43 @@ body {
     margin: 0rem 10% 2rem 10%;
     text-align: justify;
   }
+  .tech {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+    .time {
+      margin: 2rem 0 0rem 0;
+      color: #f2af29;
+      font-weight: 500;
+    }
+  }
+  .technology {
+    display: flex;
+    flex-direction: column;
+    .techno {
+      margin: 0rem 10% 0.5rem 10%;
+      text-align: center;
+    }
+    .names {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 50%;
+      align-self: center;
+      li {
+        background-color: #666;
+        color: #f2af29;
+        font-weight: 500;
+        border-radius: 2rem;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        margin: 0.3rem;
+      }
+      li:hover{
+        box-shadow: 0 0 6px #f2af29;
+      }
+    }
+  }
 }
 
 .pd-img {
@@ -945,14 +982,14 @@ body {
   border-radius: 1rem;
 }
 
-.gb-div{
+.gb-div {
   display: flex;
   justify-content: center;
 }
 
 .back-button {
   position: fixed;
-  padding: .2rem;
+  padding: 0.2rem;
   border-radius: 50%;
   left: 3%;
   bottom: 6%;
@@ -961,11 +998,11 @@ body {
   border: none;
   font-size: 1.8rem;
   vertical-align: middle;
-  transition: .3s ease;
+  transition: 0.3s ease;
   animation: goback 1.2s linear infinite alternate-reverse;
 }
 
-.back-button:hover{
+.back-button:hover {
   color: #5d00b4;
 }
 
@@ -995,16 +1032,42 @@ body {
     p {
       text-align: justify;
     }
-    p{
+    p {
       margin-bottom: 5rem;
+    }
+    .frame{
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .tech {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: 0;
+      .time {
+        text-align: right;
+      }
+    }
+    .technology {
+      .names {
+        width: 80%;
+        margin-bottom: 2rem;
+      }
     }
   }
   .pd-img {
     width: 90%;
   }
 }
-.back-button{
+.back-button {
   bottom: 4%;
 }
-
+@media (max-width: 990px){
+  .project-details-div{
+    .technology{
+      .names{
+        width: 65%;
+      }
+    }
+  }
+}
 //PROJECTS SECTION END ========================================================>
