@@ -65,17 +65,18 @@ To run this project, you will need to add the following environment variables to
 Use your email js Service ID as\
 REACT_APP_USER_ID
 
-Use your email js Template ID as REACT_APP_TEMPLATE
+Use your email js Template ID as\
+ REACT_APP_TEMPLATE
 
-Use your email js Public Key as
+Use your email js Public Key as\
 REACT_APP_EMAIL_API
 
 ##
 
 Enter you API data as :
 
-`REACT_APP_USER_ID = "enterhere"`
-`REACT_APP_TEMPLATE = "enterhere"`
+`REACT_APP_USER_ID = "enterhere"`\
+`REACT_APP_TEMPLATE = "enterhere"`\
 `REACT_APP_EMAIL_API = "enterhere"`
 
 replace "enterhere" with your credentials in .env file.
@@ -83,9 +84,9 @@ replace "enterhere" with your credentials in .env file.
 ##
 
 After setting up your API keys execute this start command in vs code terminal.
-
-`npm start`
-
+```bash
+npm start
+```
 ##
 
 **Note:** If your contact form is not working, make sure to restart the local host server if you started if before putting in the Environment Variables in .env file.
