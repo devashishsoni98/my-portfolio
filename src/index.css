@@ -55,7 +55,8 @@ html {
   opacity: 0.15;
 }
 
-.about .content > h1 {
+.about .content > h1,
+.skill-h1 {
   padding: 0;
   color: #fff;
   text-align: center;
@@ -123,12 +124,51 @@ html {
   border-radius: 4rem;
 }
 
+.skills-div {
+  margin: 3rem 2rem;
+}
+
+.skills {
+  background-color: rgb(44, 60, 82);
+  background-image: linear-gradient(to top, #2e2e2e 0%, rgb(62, 62, 62) 100%);
+  border-radius: 1rem;
+  border: 2px solid #ebe9e9;
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  margin: 0 1rem;
+  width: 220px;
+  flex-direction: column;
+  transition: 300ms ease-in-out;
+  transform: scale(0.89);
+}
+
+.skills > h1 {
+  font-size: 1.6rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.skills:hover {
+  transform: scale(0.95);
+  border: 2px solid #f2af29;
+  box-shadow: 0 0 5px #f2af29;
+  color: #f2af29;
+}
+
 @media (max-width: 768px) {
   .written > h2 {
     font-size: 2rem;
   }
-  .about .content > h1 {
-    font-size: 2.5rem;
+  .about .content > h1,
+  .skill-h1 {
+    font-size: 2.8rem;
+  }
+  .skills {
+    width: 150px;
+  }
+  .skills h1 {
+    font-size: 1.1rem;
   }
   .top-btn > span {
     right: 1rem;
@@ -386,6 +426,30 @@ a.instagram {
 
 .bl-a:hover {
   transform: scale(0.9);
+}
+
+.line-styling {
+  height: 4rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.line-styling .style-circle {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #ebe9e9;
+  border-radius: 50%;
+}
+
+.line-styling .style-line {
+  width: 93%;
+  height: 0.2rem;
+  border-radius: 0.7rem;
+  background-color: #ebe9e9;
 }
 
 .First {
