@@ -56,6 +56,19 @@
     },
     {
       id: 5,
+      title: "Skyline Hotel Management",
+      description: "This is a Hotel Management system with lots of features and functionalities.",
+      image: "/skyline.png",
+      context: "This project is being build for my second year NSP project with my teammate using HTML , CSS , JavaScript and Bootstrap. The purpose is to create a fully functioning Hotel Mangement system with multiple dynamic features like booking rooms, payment methods, admin and customer databse, manage rooms, reviews and users etc. This project will use mySql for the backend which will be integrated later on.",
+      details:
+        "This website is built using HTML5, CSS3 and JavaScript. It consists of multiple pages with different effects, transitions and features. ",
+      timeframe: "October 2023 - Present",
+      technologies: ["HTML", "CSS", "JS", "Bootstrap"],
+      githubLink: "https://github.com/devashishsoni98/Web-Based-Skyline-Management-System",
+      liveLink: "https://skyline1.netlify.app/",
+    },
+    {
+      id: 6,
       title: "Simple HTML Portfolio",
       description: "This is a simple HTML Portfolio page!",
       image: "/portfolio.png",
