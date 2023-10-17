@@ -13,7 +13,7 @@ const About = () => {
   return (
     <>
       <div className="about">
-        {/* <video src="bgv4.mp4" autoPlay muted loop className="background-video-a" /> */}
+        {/* <video src="bgv5.mp4" autoPlay muted loop className="background-video-a" /> */}
         <motion.div
           initial={{ y: 75 }}
           whileInView={{ y: 0 }}
@@ -39,15 +39,16 @@ const About = () => {
                 </div>
               </h2>
               <p>
-                I am pursuing my B.Tech from{" "}
+                I am currently pursuing my B.Tech from{" "}
                 <span className="colour">PIET</span>, Jaipur.
               </p>
               <p>
-                I am interested in learning new technologies in web development
+                I am a second-year CS student, 
+                interested in learning new technologies in web development
                 like <span className="colour">JS, React Js, Next Js, SASS</span>{" "}
-                and many more. I like to learn by applying theoretical knowledge
+                and many more. <br /><br /> I like to learn by applying theoretical knowledge
                 into projects to get a solid grip on fundamentals and learn how
-                to deal with errors.
+                to deal with errors. 
               </p>
             </motion.div>
           </div>
