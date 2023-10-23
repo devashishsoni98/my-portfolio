@@ -7,7 +7,7 @@
       image: "/moviebazaar.png",
       context: "This project was built during my First Year internship where I was learning about front end development using react js. The purpose was to build a project which uses a movie Api to display a list of movies and integrate different features such as fetching, searching and sorting data to learn new concepts of React JavaScript.",
       details:
-        "This website is built using React JS and CSS. I have used multiple MUI Components to make this website.",
+        "This website is built using React JS and CSS. I have used multiple MUI Components to make this website. It is a movie display website which displays new trending movies on the home page by using the TMDB API. You can also search of any movie by using the search option in the navbar, it searches from the input data into the API database and display the best results.",
       timeframe: "August 2023 - September 2023",
       technologies: ["React JS", "Firebase", "HTML", "CSS"],
       githubLink: "https://github.com/devashishsoni98/moviebazaar",
