@@ -21,7 +21,7 @@
       image: "/weather.png",
       context: "This project was built during my First Year internship where I was learning about front end development using react js. The purpose was to build a simple and responsive weather app which could be used to check weather for any city. I also wanted to try out the theme switching (light and dark theme) feature in this project. Overall, this purpose of this project was to learn how to deal with api and learn theme switching using css and js.",
       details:
-        "This website is built using React Js and it collects data from the OpenWeatherMap API. It displays various information about the weather like temprature, humidity, what the area feels like and weather. It also have a toggle button which can be used to switch to a dark theme.",
+        "This website is built using React Js and it collects data from the OpenWeatherMap API. It displays various information about the weather like temprature, humidity, what the area feels like and weather. It also have a toggle button which can be used to switch to a dark theme. I have also added the feature to activate search by clicking on the enter button only.",
         timeframe: "August 2023 - September 2023",
         technologies: ["React JS", "API", "HTML", "CSS"],
       githubLink: "https://github.com/devashishsoni98/weatherApp",
