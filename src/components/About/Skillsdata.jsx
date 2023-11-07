@@ -26,6 +26,11 @@ const skillsdata = [
   },
   {
     id: 6,
+    title: "Tailwind",
+    img: "/tailwind.png",
+  },
+  {
+    id: 7,
     title: "Node JS",
     img: "/nodejs.png",
   },
