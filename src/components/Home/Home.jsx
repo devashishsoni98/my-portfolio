@@ -95,12 +95,12 @@ const Home = () => {
             className="cv-container"
           >
             <a
-              href="CV_DEVASHISH_ SONI.pdf"
-              download="CV_DevashishSoni"
+              href="Resume_DEVASHISH_ SONI.pdf"
+              download="Resume_DevashishSoni"
               className="ccv social"
               target="_blank"
             >
-              Download CV
+              Download Resume
             </a>
           </motion.div>
         </div>

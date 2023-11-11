@@ -397,6 +397,7 @@ a.instagram {
   font-size: 2rem;
   width: 90%;
   margin: 0 5%;
+  text-align: center;
 }
 .blog-item {
   display: flex;
@@ -502,6 +503,7 @@ a.instagram {
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 0;
+  text-align: justify;
 }
 .photo-react {
   display: block;
@@ -572,6 +574,7 @@ a.instagram {
   border: 0;
   transition: 0.2s ease;
   padding: 0.2rem;
+  width: fit-content;
 }
 .gb:hover {
   transform: scale(0.9);

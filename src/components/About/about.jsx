@@ -45,7 +45,7 @@ const About = () => {
               <p>
                 I am a second-year CS student, 
                 interested in learning new technologies in web development
-                like <span className="colour">JS, React Js, Next Js, SASS</span>{" "}
+                like <span className="colour">JS, React Js, Next Js</span>{" "}
                 and many more. <br /><br /> I like to learn by applying theoretical knowledge
                 into projects to get a solid grip on fundamentals and learn how
                 to deal with errors. 
@@ -54,12 +54,12 @@ const About = () => {
           </div>
           <div className="cv-container" style={{ marginTop: "1rem" }}>
             <a
-              href="CV_DEVASHISH_ SONI.pdf"
-              download="CV_DevashishSoni"
+              href="Resume_DEVASHISH_ SONI.pdf"
+              download="Resume_DevashishSoni"
               className="ccv social"
               target="_blank"
             >
-              Download CV
+              Download Resume
             </a>
           </div>
           <br />

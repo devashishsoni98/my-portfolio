@@ -49,12 +49,12 @@ const SinglePost = () => {
           Like
         </button>
         <br />
-        <button className="gb">
           <Link className="gb" to="/minifunctions">
+        <button className="gb">
             <BiArrowBack className="iccon" />
             Go Back
-          </Link>
         </button>
+          </Link>
       </div>
       </motion.div>
     </div>
