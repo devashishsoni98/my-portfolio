@@ -309,6 +309,13 @@ html {
   margin-right: auto;
   width: fit-content;
   align-items: center;
+  border: 3px solid transparent;
+}
+
+
+.cv-container:hover{
+  border: 3px solid #f2af29;
+  transition: .42s ease-in-out;
 }
 
 a.social {
@@ -318,7 +325,7 @@ a.social {
 }
 
 a.social:hover {
-  transform: translateY(-0.3rem);
+  transform: scale(.98);
 }
 
 a.github {

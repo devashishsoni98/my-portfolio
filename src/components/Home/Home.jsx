@@ -9,6 +9,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 
+const ResumeClick = () => {
+  document.getElementById("resume-a").click();
+}
+
 const Home = () => {
   return (
     <>
@@ -93,12 +97,14 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.75 }}
             className="cv-container"
+            onClick={ResumeClick}
           >
             <a
               href="Resume_DEVASHISH_ SONI.pdf"
               download="Resume_DevashishSoni"
               className="ccv social"
               target="_blank"
+              id="resume-a"
             >
               Download Resume
             </a>

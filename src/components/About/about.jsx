@@ -4,6 +4,10 @@ import SkillsCard from "./skillscard";
 import skillsdata from "./Skillsdata";
 import Marquee from "react-fast-marquee";
 
+const ResumeClick = () => {
+  document.getElementById("resume-a").click();
+}
+
 const About = () => {
   const [text] = useTypewriter({
     words: ["Devashish Soni", "a Student", "a Developer", "a Designer"],
@@ -52,18 +56,17 @@ const About = () => {
               </p>
             </motion.div>
           </div>
-          <div className="cv-container" style={{ marginTop: "1rem" }}>
+          <div className="cv-container" style={{ marginTop: "2rem" }} onClick={ResumeClick}>
             <a
               href="Resume_DEVASHISH_ SONI.pdf"
               download="Resume_DevashishSoni"
               className="ccv social"
               target="_blank"
+              id="resume-a"
             >
               Download Resume
             </a>
           </div>
-          <br />
-          <br />
           <br />
           <motion.div
             initial={{ x: 175 }}

@@ -176,6 +176,10 @@ html {
   .containerr .textt {
     font-size: 1.6rem;
   }
+  .written > p {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 .container {
   position: relative;
@@ -314,6 +318,12 @@ html {
   width: -moz-fit-content;
   width: fit-content;
   align-items: center;
+  border: 3px solid transparent;
+}
+
+.cv-container:hover {
+  border: 3px solid #f2af29;
+  transition: 0.42s ease-in-out;
 }
 
 a.social {
@@ -323,7 +333,7 @@ a.social {
 }
 
 a.social:hover {
-  transform: translateY(-0.3rem);
+  transform: scale(0.98);
 }
 
 a.github {
