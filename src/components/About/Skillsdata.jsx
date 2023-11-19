@@ -21,16 +21,21 @@ const skillsdata = [
   },
   {
     id: 5,
+    title: "Next JS",
+    img: "/nextjs.png",
+  },
+  {
+    id: 6,
     title: "SASS",
     img: "/sass.png",
   },
   {
-    id: 6,
+    id: 7,
     title: "Tailwind",
     img: "/tailwind.png",
   },
   {
-    id: 7,
+    id: 8,
     title: "Node JS",
     img: "/nodejs.png",
   },
