@@ -45,8 +45,8 @@ const Contact = () => {
 
             <img
               style={{ width: "100%", margin: "0" }}
-              src="contact.avif"
-              alt=""
+              src="./contact.png"
+              alt="contact"
             />
 
             <div className="social-media">

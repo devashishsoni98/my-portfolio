@@ -15,19 +15,9 @@ import Loader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [screenLoading, setScreenLoading] = useState(false);
-
-useEffect(() => {
-  setScreenLoading(true);
-  setTimeout(() => {
-    setScreenLoading(false);
-  }, 1600);
-}, []);
+  
   return (
     <div className="App">
-      {screenLoading ? (
-        <Loader/>
-        ) : (
       <BrowserRouter>
       <ScrollToTop />
         <NavBar />
@@ -44,7 +34,6 @@ useEffect(() => {
           <Route path="/projectdetails/:id" element={<ProjectDetails />} />
         </Routes>
       </BrowserRouter>
-        )}
     </div>
   );
 }
