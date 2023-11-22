@@ -307,12 +307,6 @@ html {
   margin-bottom: 2rem;
   width: -moz-fit-content;
   width: fit-content;
-  border: 4px solid transparent;
-  transition: 0.45s ease-in-out;
-}
-
-.social-container:hover {
-  border: 4px solid #f2af29;
 }
 
 .cv-container {
@@ -325,12 +319,6 @@ html {
   width: -moz-fit-content;
   width: fit-content;
   align-items: center;
-  border: 3px solid transparent;
-  transition: 0.45s ease-in-out;
-}
-
-.cv-container:hover {
-  border: 3px solid #f2af29;
 }
 
 a.social {
