@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 const ResumeClick = () => {
   document.getElementById("resume-a").click();
-}
+};
 
 const About = () => {
   const [text] = useTypewriter({
@@ -38,25 +38,35 @@ const About = () => {
                 I'm <br />
                 <div className="containerr">
                   <span className="textt">
-                    {text} <Cursor cursorStyle="\" />
+                    {text}<Cursor cursorStyle="|" />
                   </span>
                 </div>
               </h2>
-              <p>
-                I am currently pursuing my B.Tech from{" "}
-                <span className="colour">PIET</span>, Jaipur.
-              </p>
-              <p>
-                I am a second-year CS student, 
-                interested in learning new technologies in web development
-                like <span className="colour">JS, React Js, Next Js</span>{" "}
-                and many more. <br /><br /> I like to learn by applying theoretical knowledge
-                into projects to get a solid grip on fundamentals and learn how
-                to deal with errors. 
-              </p>
+              <div className="abt-r-l">
+                <div className="abt-l">
+                  <p>
+                    I am currently pursuing my B.Tech from{" "}
+                    <span className="colour">PIET</span>, Jaipur. <br /> <br /> I am a
+                    second-year CS student, interested in learning new
+                    technologies in web development like{" "}
+                    <span className="colour">JS, React Js, Next Js</span> and
+                    many more. <br />
+                    <br /> I like to learn by applying theoretical knowledge
+                    into projects to get a solid grip on fundamentals and learn
+                    how to deal with errors.
+                  </p>
+                </div>
+                <div className="abt-r">
+                  <img className="abt-pic" src="17.jpg" alt="self-pic" />
+                </div>
+              </div>
             </motion.div>
           </div>
-          <div className="cv-container" style={{ marginTop: "2rem" }} onClick={ResumeClick}>
+          <div
+            className="cv-container"
+            style={{ marginTop: "2rem" }}
+            onClick={ResumeClick}
+          >
             <a
               href="Resume_DEVASHISH_ SONI.pdf"
               download="Resume_DevashishSoni"
