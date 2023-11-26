@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { IoMdAdd } from "react-icons/io";
+import { RiSubtractFill } from "react-icons/ri";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -79,15 +81,13 @@ function Counter() {
             style={{ margin: "0 1rem", borderRadius: "1.5rem" }}
             className="First"
             onClick={addCount}
-          >
-            +
-          </button>
+          ><IoMdAdd className="counter-icon"/></button>
           <button
             style={{ marginBottom: "2rem", borderRadius: "1.5rem" }}
             className="Second"
             onClick={subCount}
           >
-            -
+            <RiSubtractFill className="counter-icon"/>
           </button>
         </div>
         <div className="line-styling">

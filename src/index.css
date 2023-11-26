@@ -360,7 +360,7 @@ html {
   height: -moz-min-content;
   height: min-content;
   height: min-content;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .content .h-con > h1 {
@@ -463,6 +463,11 @@ a.instagram {
   .cv-container > a {
     font-size: 1rem !important;
   }
+  .h-con {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-bottom: -2rem;
+  }
 }
 .minifunction {
   background-color: #161616;
@@ -549,6 +554,7 @@ a.instagram {
   width: 100px;
   height: 100px;
   font-size: 80px;
+  text-align: center;
   transition: 0.3s ease;
 }
 
@@ -571,6 +577,12 @@ a.instagram {
   border: 2px solid cyan;
   box-shadow: 0px 0px 22px rgb(56, 69, 217);
   scale: 1.1;
+}
+
+.counter-icon {
+  font-size: 4rem;
+  display: flex;
+  margin-inline: auto;
 }
 
 .post-container {
@@ -841,6 +853,7 @@ body {
   height: 500px;
   position: relative;
   box-sizing: content-box;
+  margin: 2rem 0;
   transition: 0.2s ease;
   background-color: #232323;
 }

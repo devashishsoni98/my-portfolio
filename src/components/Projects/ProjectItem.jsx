@@ -7,34 +7,38 @@ import { useInView } from "react-intersection-observer";
 import projectData from "./projectData";
 
 const ProjectItem = ({ project, index, projectData }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-  });
-  const animation = useAnimation();
+  // const { ref, inView } = useInView({
+  //   threshold: 0.3,
+  // });
+  // const animation = useAnimation();
 
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        opacity: 1,
-        scale: 1,
-        transition: {
-          duration: 0.25,
-        },
-      });
-    }
-    if (!inView) {
-      animation.start({ opacity: 0, scale: 0.6 });
-    }
-  }, [inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     animation.start({
+  //       opacity: 1,
+  //       scale: 1,
+  //       transition: {
+  //         duration: 0.25,
+  //       },
+  //     });
+  //   }
+  //   if (!inView) {
+  //     animation.start({ opacity: 0, scale: 0.6 });
+  //   }
+  // }, [inView]);
 
   const lastIndexOfArray = projectData.length - 1;
 
   return (
     <section>
       <motion.div
-        ref={ref}
-        animate={animation}
-        transition={{ ease: "easeInOut" }}
+        // ref={ref}
+        // animate={animation}
+        // transition={{ ease: "easeInOut" }}
+        initial={{ opacity: 0}}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.75}}
         className="p-div"
       >
         <img
