@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #323539;
+  background-color: #161616;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -229,7 +229,7 @@ textarea.input {
   position: absolute;
   width: 360px;
   height: 360px;
-  background-color: #323539;
+  background-color: #161616;
   border-radius: 50%;
   top: calc(50% - 180px);
   left: calc(50% - 180px);

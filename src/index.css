@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;300;400;500;600;700;800&display=swap");
 * {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Playpen Sans", cursive;
 }
 
 html {
@@ -33,7 +34,7 @@ html {
   }
 }
 .about {
-  background-color: #24262c;
+  background-color: #161616;
   min-height: 100vh;
   padding: 0 0;
   color: #fff;
@@ -98,8 +99,8 @@ html {
 }
 
 .abt-pic {
-  width: 70% !important;
-  border-radius: 3rem;
+  width: 100%;
+  border-radius: 24px;
   vertical-align: middle;
   border: 2px solid #ebe9e9;
   box-shadow: 12px 12px 0px rgba(208, 208, 208, 0.19);
@@ -107,12 +108,12 @@ html {
 
 .abt-r-l {
   display: flex;
-  padding: 3rem 0;
+  padding: 3rem 2rem 3rem 0;
   justify-content: space-between;
   margin: 2rem 0;
   border: 1px solid white;
   border-radius: 24px;
-  width: 85%;
+  width: 90%;
 }
 
 @media (max-width: 1024px) {
@@ -145,6 +146,7 @@ html {
   }
   .abt-r {
     width: 100% !important;
+    padding: 0 1rem;
   }
   .abt-pic {
     display: block;
@@ -152,6 +154,8 @@ html {
     margin-right: auto;
     width: 12rem !important;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 8px 8px 0px rgba(208, 208, 208, 0.19);
   }
 }
 .abt-l {
@@ -159,7 +163,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 5rem;
+  padding: 0 2rem 0 5rem;
 }
 
 .abt-l > p {
@@ -208,9 +212,14 @@ html {
 }
 
 .skills-div {
-  margin: 3rem 2rem;
+  margin: 3rem 1rem;
 }
 
+@media (max-width: 600px) {
+  .skills-div {
+    margin: 3rem 0.8rem;
+  }
+}
 .skills {
   background-color: rgb(44, 60, 82);
   background-image: linear-gradient(to top, #2e2e2e 0%, rgb(62, 62, 62) 100%);
@@ -267,7 +276,7 @@ html {
 }
 .container {
   position: relative;
-  background-color: #24262c;
+  background-color: #161616;
   min-height: 100vh;
   padding: 2% 0;
   overflow: hidden;
@@ -456,7 +465,7 @@ a.instagram {
   }
 }
 .minifunction {
-  background-color: #24262c;
+  background-color: #161616;
 }
 
 .m-h2 {
@@ -565,7 +574,7 @@ a.instagram {
 }
 
 .post-container {
-  background-color: #24262c;
+  background-color: #161616;
 }
 
 .post-title {
@@ -822,7 +831,7 @@ body {
   }
 }
 .projects {
-  background-color: #24262c;
+  background-color: #161616;
   color: #ebe9e9;
 }
 .projects .p-div {
@@ -833,7 +842,7 @@ body {
   position: relative;
   box-sizing: content-box;
   transition: 0.2s ease;
-  background-image: linear-gradient(to top, #2e2e2e 0%, rgb(62, 62, 62) 100%);
+  background-color: #232323;
 }
 .projects .p-div:hover {
   border: 2px solid #f2af29;
@@ -1024,7 +1033,7 @@ body {
 }
 .project-details {
   min-height: 100vh;
-  background-color: #24262c;
+  background-color: #161616;
 }
 
 .project-details-div {
@@ -1125,7 +1134,7 @@ body {
   left: 3%;
   bottom: 6%;
   background-color: #ebe9e9;
-  color: #24262c;
+  color: #161616;
   border: none;
   font-size: 1.8rem;
   vertical-align: middle;

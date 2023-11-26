@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;300;400;500;600;700;800&display=swap');
 
 // ABOUT SECTION ===================================================================================>
 * {
-  font-family: "Ubuntu", sans-serif;
+  // font-family: "Ubuntu", sans-serif;
+  font-family: 'Playpen Sans', cursive;
 }
 
 html {
@@ -36,7 +38,7 @@ html {
 }
 
 .about {
-  background-color: #24262c;
+  background-color: #161616;
   min-height: 100vh;
   padding: 0 0;
   color: #fff;
@@ -92,40 +94,40 @@ html {
   font-size: 3rem;
   // border-right: 2px solid;
 }
-.abt-pic{
-  width: 70% !important;
-  border-radius: 3rem;
+.abt-pic {
+  width: 100%;
+  border-radius: 24px;
   vertical-align: middle;
   border: 2px solid #ebe9e9;
   box-shadow: 12px 12px 0px rgba(208, 208, 208, 0.19);
 }
-.abt-r-l{
+.abt-r-l {
   display: flex;
-  padding: 3rem 0;
+  padding: 3rem 2rem 3rem 0;
   justify-content: space-between;
   margin: 2rem 0;
   border: 1px solid white;
   border-radius: 24px;
-  width: 85%;
+  width: 90%;
 }
-@media (max-width: 1024px){
-  .abt-l > p{
+@media (max-width: 1024px) {
+  .abt-l > p {
     font-size: 1.05rem !important;
   }
 }
-@media (max-width: 768px){
-  .abt-l > p{
-    font-size: .82rem !important;
+@media (max-width: 768px) {
+  .abt-l > p {
+    font-size: 0.82rem !important;
   }
-  .abt-r-l{
+  .abt-r-l {
     margin: 1rem 0;
   }
-  .abt-l{
+  .abt-l {
     padding: 0 2rem !important;
   }
 }
-@media (max-width: 600px){
-  .abt-r-l{
+@media (max-width: 600px) {
+  .abt-r-l {
     display: flex !important;
     flex-direction: column !important;
     padding: 1rem 0;
@@ -133,32 +135,35 @@ html {
   .abt-l {
     width: 100% !important;
   }
-  .abt-l > p{
+  .abt-l > p {
     text-align: justify !important;
   }
-  .abt-r{
+  .abt-r {
     width: 100% !important;
+    padding: 0 1rem;
   }
-  .abt-pic{
+  .abt-pic {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 12rem !important;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 8px 8px 0px rgba(208, 208, 208, 0.19);
   }
 }
-.abt-l{
+.abt-l {
   width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 5rem;
+  padding: 0 2rem 0 5rem;
 }
 .abt-l > p {
   font-size: 1.65rem;
   text-align: left;
 }
-.abt-r{
+.abt-r {
   width: 35%;
   display: flex;
   justify-content: center;
@@ -177,10 +182,10 @@ html {
   padding-bottom: 0;
   justify-content: center;
 }
-.written{
+.written {
   display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .right {
   width: -webkit-fill-available;
@@ -194,7 +199,12 @@ html {
 }
 
 .skills-div {
-  margin: 3rem 2rem;
+  margin: 3rem 1rem;
+}
+@media (max-width:600px){
+  .skills-div{
+    margin: 3rem .8rem;
+  }
 }
 .skills {
   background-color: rgb(44 60 82);
@@ -214,7 +224,7 @@ html {
   font-size: 1.6rem;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
-  margin-top: .45rem;
+  margin-top: 0.45rem;
 }
 .skills:hover {
   transform: scale(0.95);
@@ -242,7 +252,7 @@ html {
   .containerr .textt {
     font-size: 1.6rem;
   }
-  .written>p{
+  .written > p {
     font-size: 1rem;
     text-align: center;
   }
@@ -256,7 +266,7 @@ html {
 //HOME SECTION ========================================================>
 .container {
   position: relative;
-  background-color: #24262c;
+  background-color: #161616;
   min-height: 100vh;
   padding: 2% 0;
   overflow: hidden;
@@ -366,7 +376,7 @@ html {
 
 .social-container {
   background: #ebe9e9;
-  padding: .8rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -386,7 +396,6 @@ html {
   align-items: center;
 }
 
-
 a.social {
   margin: 0 0.5rem;
   transition: transform 250ms;
@@ -394,7 +403,7 @@ a.social {
 }
 
 a.social:hover {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 a.github {
@@ -428,11 +437,9 @@ a.instagram {
     margin: 2rem 0;
   }
 
-
   a.social {
     margin: 0 0.3rem;
   }
-
 
   a.social {
     margin: 0 0rem;
@@ -450,7 +457,7 @@ a.instagram {
 //BLOG-LIST SECTION ========================================================>
 
 .minifunction {
-  background-color: #24262c;
+  background-color: #161616;
 }
 
 .m-h2 {
@@ -559,7 +566,7 @@ a.instagram {
 
 //SINGLE POST SECTION ========================================================>
 .post-container {
-  background-color: #24262c;
+  background-color: #161616;
 }
 
 .post-title {
@@ -822,7 +829,7 @@ body {
 }
 
 .projects {
-  background-color: #24262c;
+  background-color: #161616;
   color: #ebe9e9;
 
   .p-div {
@@ -833,7 +840,8 @@ body {
     position: relative;
     box-sizing: content-box;
     transition: 0.2s ease;
-    background-image: linear-gradient(to top, #2e2e2e 0%, rgb(62, 62, 62) 100%);
+    // background-image: linear-gradient(to top, #2e2e2e 0%, rgb(62, 62, 62) 100%);
+    background-color: #232323;
   }
 
   .p-div:hover {
@@ -1028,7 +1036,7 @@ body {
 //PROJECTS DETAILS SECTION ========================================================>
 .project-details {
   min-height: 100vh;
-  background-color: #24262c;
+  background-color: #161616;
 }
 
 .project-details-div {
@@ -1130,7 +1138,7 @@ body {
   left: 3%;
   bottom: 6%;
   background-color: #ebe9e9;
-  color: #24262c;
+  color: #161616;
   border: none;
   font-size: 1.8rem;
   vertical-align: middle;
