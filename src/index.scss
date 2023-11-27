@@ -129,7 +129,7 @@ html {
 @media (max-width: 600px) {
   .abt-r-l {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     padding: 1rem 0;
   }
   .abt-l {
@@ -137,6 +137,7 @@ html {
   }
   .abt-l > p {
     text-align: justify !important;
+    font-size: .85rem !important;
   }
   .abt-r {
     width: 100% !important;
@@ -148,7 +149,7 @@ html {
     margin-right: auto;
     width: 12rem !important;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     box-shadow: 8px 8px 0px rgba(208, 208, 208, 0.19);
   }
 }
