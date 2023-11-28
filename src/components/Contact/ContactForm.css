@@ -109,7 +109,7 @@ form {
 .input:valid ~ span {
   color: #fff;
   transform: translateX(1.6rem) translateY(-0.6rem);
-  font-size: 1rem;
+  font-size: .85rem;
   padding: 0rem 0.3rem;
   background: #f2af29;
   border-right: 2px solid #fff;

@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./ContactForm.css";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
 
 const Contact = () => {
   const userid = process.env.REACT_APP_USER_ID;
@@ -14,9 +13,15 @@ const Contact = () => {
   const myapi = process.env.REACT_APP_EMAIL_API;
 
   const form = useRef();
+  const [isValidEmail, setIsValidEmail] = useState(true);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!isValidEmail) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
     emailjs.sendForm(userid, templateid, form.current, myapi).then(
       (result) => {
@@ -29,20 +34,26 @@ const Contact = () => {
     );
   };
 
+  const handleEmailChange = (e) => {
+    const enteredEmail = e.target.value;
+    setIsValidEmail(/\S+@\S+\.\S+/.test(enteredEmail));
+  };
+
   return (
     <div className={styles.containeer}>
       <div className="containeer">
         <span className="big-circle"></span>
         <img src="square.png" className="square" alt="square-img" />
         <div className="form">
-          <motion.div 
-          initial={{ x: -75,}}
-          whileInView={{ x: 0, }}
-          viewport={{ once: true }}
-          transition={{duration:.75,}}
-          className="contact-info">
+          <motion.div
+            initial={{ x: -75 }}
+            whileInView={{ x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.75 }}
+            className="contact-info"
+          >
             <h3 className="title">Let's get in touch</h3>
-
+            
             <img
               style={{ width: "100%", margin: "0" }}
               src="./contact.png"
@@ -68,11 +79,12 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-          initial={{ x: 75,}}
-          whileInView={{ x: 0, }}
-          viewport={{ once: true }}
-          transition={{duration:.75,}}
-          className="contact-form">
+            initial={{ x: 75 }}
+            whileInView={{ x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.75 }}
+            className="contact-form"
+          >
             <span className="circle one"></span>
             <span className="circle two"></span>
 
@@ -89,19 +101,16 @@ const Contact = () => {
               </div>
               <div className="input-containeer">
                 <input
-                  type="email"
+                  type="text"
                   name="user_email"
-                  className="input"
+                  className={`input ${!isValidEmail ? "invalid" : ""}`}
                   required
+                  onChange={handleEmailChange}
                 />
                 <span>E-Mail</span>
               </div>
               <div className="input-containeer textarea">
-                <textarea
-                  name="message"
-                  className="input"
-                  required
-                />
+                <textarea name="message" className="input" required />
                 <span>Message</span>
               </div>
               <input type="submit" value="Send" className="btn" />
