@@ -15,9 +15,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5d00b4;
+  background-color: #08040c;
   color: #f0f0f0;
-  box-shadow: 0 0 2px black;
   border-radius: 50%;
   font-size: 2.5rem;
   position: fixed;
@@ -28,12 +27,16 @@ html {
   animation: gototop 1.2s linear infinite alternate-reverse;
 }
 
+.top-btn > span:hover{
+  background-color: #5d00b4;
+}
+
 @keyframes gototop {
   0% {
-    transform: translateY(-0.2rem);
+    transform: translateY(-0.1rem);
   }
   100% {
-    transform: translateY(0.2rem);
+    transform: translateY(0.1rem);
   }
 }
 
