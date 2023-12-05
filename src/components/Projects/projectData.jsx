@@ -1,7 +1,7 @@
   const projectData = [
     {
       id: 1,
-      title: "Movie Website",
+      title: "Movie Listing Website",
       description:
         "This is a movie website which displays a list of movies by collecting data from TMDB movie API. It also has a Firebase based Google Sign-In feature and movie search options!",
       image: "/moviebazaar.png",
@@ -44,7 +44,7 @@
       id: 4,
       title: "Flight Booking Website",
       description:
-        "This is a simple and responsive flight booking website with lots of effects and animations!",
+        "This is a simple and responsive frontend flight booking website with lots of effects and animations!",
       image: "/flight.png",
       context: "This project was built during my First Year internship where I was learning about front end development using react js. This project was made with the help of an online youtube tutorial by IsraTech. The purpose of this project was to learn about SASS and how it apply it for multipage website and learn new css attributes and effects.",
       details:
