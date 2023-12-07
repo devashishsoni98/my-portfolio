@@ -47,7 +47,7 @@ const ProjectItem = ({ project, index, projectData }) => {
           alt={`${project.title}-img`}
         />
         <h1>{project.title}</h1>
-        <h2>{project.description}</h2>
+        {/* <h2>{project.description}</h2> */}
         <div className="a-btns">
           <div className="b-div">
             {project.githubLink && (
