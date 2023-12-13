@@ -3,7 +3,7 @@
       id: 1,
       title: "Movie Listing Website",
       description:
-        "This is a movie website which displays a list of movies by collecting data from TMDB movie API. It also has a Firebase based Google Sign-In feature and movie search options!",
+        "This is a movie website which displays a list of movies by collecting data from TMDB movie API. It also offers Firebase based Google Sign-In feature and movie search options!",
       image: "/moviebazaar.png",
       context: "This project was built during my First Year internship where I was learning about front end development using react js. The purpose was to build a project which uses a movie Api to display a list of movies and integrate different features such as fetching, searching and sorting data to learn new concepts of React JavaScript.",
       details:
