@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;300;400;500;600;700;800&display=swap");
 * {
-  font-family: "Playpen Sans", cursive;
+  font-family: "Ubuntu", sans-serif;
 }
 
 html {
@@ -281,7 +281,7 @@ html {
 .container {
   position: relative;
   background-color: #161616;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 2% 0;
   overflow: hidden;
   z-index: 0;
