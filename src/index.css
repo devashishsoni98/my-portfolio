@@ -391,6 +391,11 @@ html {
   font-size: 2rem;
   text-align: center;
   margin: 4% 0;
+  transition: 0.3s ease;
+}
+
+.home-h3:hover {
+  text-shadow: 0 0 3px #ab861e, 0 0 6px #2a2a2a;
 }
 
 .social-container {
