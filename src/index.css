@@ -914,7 +914,6 @@ body {
 .projects section .s-btn:hover,
 .projects .p-div .b-div > button:hover,
 .projects .p-div .s-btn:hover {
-  transform: scale(1.1);
   background-color: #555;
   color: #f2af29;
   border: #f2af29;
@@ -960,10 +959,6 @@ body {
   border-radius: 20px 20px 0 0;
   transition: 0.3s ease;
 }
-.projects section .p-img:hover,
-.projects .p-div .p-img:hover {
-  transform: scale(1.1);
-}
 .projects section .git-link,
 .projects .p-div .git-link {
   color: #ebe9e9;
@@ -998,7 +993,6 @@ body {
 }
 .projects section .v-btn:hover,
 .projects .p-div .v-btn:hover {
-  transform: scale(1.1);
   background-color: #555;
   box-shadow: 0 0 5px #f2af29;
 }

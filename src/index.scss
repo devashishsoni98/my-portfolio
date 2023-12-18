@@ -871,9 +871,7 @@ body {
   section,
   .p-div {
     flex-direction: column;
-    // justify-content: space-around;
     align-items: center;
-    // padding: 1.3rem;
     display: flex;
 
     .iicon {
@@ -911,7 +909,6 @@ body {
 
     .b-div > button:hover,
     .s-btn:hover {
-      transform: scale(1.1);
       background-color: #555;
       color: #f2af29;
       border: #f2af29;
@@ -953,9 +950,6 @@ body {
       overflow: hidden;
       border-radius: 20px 20px 0  0;
       transition: 0.3s ease;
-      &:hover {
-        transform: scale(1.1);
-      }
     }
 
     .git-link {
@@ -989,7 +983,6 @@ body {
       user-select: none;
     }
     .v-btn:hover {
-      transform: scale(1.1);
       background-color: #555;
       box-shadow: 0 0 5px #f2af29;
       .git-link {
