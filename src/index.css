@@ -390,12 +390,19 @@ html {
   color: #ebe9e9;
   font-size: 2rem;
   text-align: center;
-  margin: 4% 0;
+  margin: 4% auto;
+  width: -moz-max-content;
+  width: max-content;
   transition: 0.3s ease;
+  background-image: url(https://media.istockphoto.com/id/1390512992/vector/colorful-line-doodle-seamless-pattern.jpg?s=612x612&w=0&k=20&c=I6BUaoCNsnu-ahWb7HDYUgXOW6sZnlNFtBlzm9JMFiM=);
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .home-h3:hover {
-  text-shadow: 0 0 3px #ab861e, 0 0 6px #2a2a2a;
+  color: transparent;
 }
 
 .social-container {
