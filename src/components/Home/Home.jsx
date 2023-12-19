@@ -58,7 +58,15 @@ const Home = () => {
             transition={{ duration: 0.75 }}
           >
             <h3 className="home-h3">
-              I love to design and code simple beautiful things!{" "}
+               <span>I</span>
+               <span> love</span> 
+               <span> to</span>
+               <span> design</span>
+               <span> and</span>
+               <span> code</span>
+               <span> simple</span>
+               <span> beautiful</span>
+               <span> things!</span>{" "}
               <BiSolidWinkSmile className="def-col emoji" />
             </h3>
           </motion.div>

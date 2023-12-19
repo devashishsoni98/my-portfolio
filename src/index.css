@@ -401,7 +401,11 @@ html {
   -webkit-background-clip: text;
 }
 
-.home-h3:hover {
+.home-h3 span {
+  transition: all 0.3s ease;
+}
+
+.home-h3 span:hover {
   color: transparent;
 }
 
