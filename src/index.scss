@@ -638,6 +638,32 @@ a.instagram {
   color: #f2af29;
 }
 
+
+.def-name{
+  color: #ebe9e9;
+  width: max-content;
+  position: relative;
+  transition: all 1s ease;
+}
+.def-name:hover{
+  color: #f2af29;
+}
+.def-name::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f2af29;
+  transform: scaleX(0);
+  transition: all 1s ease;
+}
+.def-name:hover::after{
+  transform: scaleX(1);
+}
+
+
 .b-para {
   display: flex;
   justify-content: center;

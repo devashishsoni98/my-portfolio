@@ -47,7 +47,7 @@ const Home = () => {
             transition={{ duration: 0.75 }}
           >
             <h2 className="home-h2">
-              &nbsp; I'm <span className="def-col">Devashish Soni</span>
+              &nbsp; I'm <span className="def-name">Devashish Soni</span>
               <span className="hand">🤚</span>
             </h2>
           </motion.div>
