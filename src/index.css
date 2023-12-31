@@ -468,8 +468,8 @@ a.instagram {
     margin: 2rem 0;
   }
   .home-h3 {
-    font-size: 2rem;
-    margin: 2rem 0;
+    font-size: 1.5rem;
+    margin: 2rem auto;
   }
   a.social {
     margin: 0 0.3rem;
@@ -487,6 +487,26 @@ a.instagram {
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-bottom: -2rem;
+  }
+}
+@media (max-width: 600px) {
+  .home-h3 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 426px) {
+  .home-h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 376px) {
+  .home-h3 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 321px) {
+  .home-h3 {
+    font-size: 0.75rem;
   }
 }
 .minifunction {
