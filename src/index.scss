@@ -1052,7 +1052,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .projects-container {
     padding: 2rem;
     justify-content: center;
@@ -1088,6 +1088,7 @@ body {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    width: 80%;
   }
 
   .projects .p-div .b-div > button,
@@ -1099,6 +1100,12 @@ body {
     text-decoration: none;
     transition: 0.25s ease;
     white-space: normal;
+  }
+}
+@media (max-width: 426px){
+  .projects section .v-btn,
+  .projects .p-div .v-btn  {
+    width: 70%;
   }
 }
 
