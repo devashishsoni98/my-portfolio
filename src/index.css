@@ -1109,6 +1109,27 @@ body {
   .projects .p-div .v-btn {
     width: 70%;
   }
+  .projects section .iicon, .projects .p-div .iicon {
+    font-size: 1rem;
+    margin-right: 0.3rem;
+    vertical-align: sub;
+  }
+  .projects .p-div .b-div .s-btn {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 376px) {
+  .projects section .iicon, .projects .p-div .iicon {
+    font-size: 0.8rem;
+    margin-right: 0.3rem;
+    vertical-align: sub;
+  }
+  .projects .p-div .b-div .s-btn {
+    font-size: 0.65rem;
+  }
+  .projects section .v-txt, .projects .p-div .v-txt {
+    font-size: 15px;
+  }
 }
 .project-details {
   min-height: 100vh;
