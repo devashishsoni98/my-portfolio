@@ -1112,10 +1112,14 @@ body {
   .projects section .iicon, .projects .p-div .iicon {
     font-size: 1rem;
     margin-right: 0.3rem;
-    vertical-align: sub;
+    vertical-align: middle;
   }
   .projects .p-div .b-div .s-btn {
     font-size: 0.7rem;
+  }
+  .projects section h1, .projects .p-div h1 {
+    font-size: 1.55rem;
+    margin: 1.35rem 0;
   }
 }
 @media (max-width: 376px) {
