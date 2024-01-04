@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;300;400;500;600;700;800&display=swap');
 
+$text: #ecf0f6;
+$background: #05080c;
+$secondary: #1d1d1d;
+$accent: #EFBA1A;
+
+
+
 // ABOUT SECTION ===================================================================================>
 * {
   font-family: "Ubuntu", sans-serif;
@@ -14,8 +21,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #08040c;
-  color: #f0f0f0;
+  background-color: $background;
+  color: $text;
   border-radius: 50%;
   font-size: 2.5rem;
   position: fixed;
@@ -40,10 +47,10 @@ html {
 }
 
 .about {
-  background-color: #161616;
+  background-color: $secondary;
   min-height: 100vh;
   padding: 0 0;
-  color: #fff;
+  color: $text;
   text-align: center;
   position: relative;
   z-index: 0;
@@ -62,7 +69,7 @@ html {
 .about .content > h1,
 .skill-h1 {
   padding: 0;
-  color: #fff;
+  color: $text;
   text-align: center;
   display: -webkit-inline-box;
   font-size: 4rem;
@@ -70,7 +77,7 @@ html {
   font-family: "Ubuntu", sans-serif;
 }
 .colour {
-  color: #f2af29;
+  color: $accent;
   font-weight: 700;
 }
 .written > h2 {
@@ -85,12 +92,12 @@ html {
   margin-right: 10%;
   padding: 0;
   width: 80%;
-  color: #fff;
+  color: $text;
   text-align: center;
 }
 .about .containerr {
   display: inline-flex;
-  color: #f2af29;
+  color: $accent;
 }
 .containerr .textt {
   font-size: 3rem;
@@ -100,7 +107,7 @@ html {
   width: 100%;
   border-radius: 24px;
   vertical-align: middle;
-  border: 2px solid #ebe9e9;
+  border: 2px solid text;
   box-shadow: 12px 12px 0px rgba(208, 208, 208, 0.19);
 }
 .abt-r-l {
@@ -108,7 +115,7 @@ html {
   padding: 3rem 2rem 3rem 0;
   justify-content: space-between;
   margin: 2rem 0;
-  border: 1px solid white;
+  border: 1px solid $text;
   border-radius: 24px;
   width: 90%;
 }
@@ -231,9 +238,9 @@ html {
 }
 .skills:hover {
   transform: scale(0.95);
-  border: 2px solid #f2af29;
-  box-shadow: 0 0 5px #f2af29;
-  color: #f2af29;
+  border: 2px solid $accent;
+  box-shadow: 0 0 5px $accent;
+  color: $accent;
 }
 @media (max-width: 768px) {
   .written > h2 {
@@ -269,7 +276,7 @@ html {
 //HOME SECTION ========================================================>
 .container {
   position: relative;
-  background-color: #161616;
+  background-color: $secondary;
   min-height: 100dvh;
   padding: 2% 0;
   overflow: hidden;
@@ -354,9 +361,10 @@ html {
 }
 .content .h-con > h1 {
   display: flex;
-  color: #fff;
+  color: $text;
   font-size: 4rem;
   margin: 0;
+  transition: .2s ease;
 }
 .content .h-con > h1:hover {
   transform: translateY(-0.4rem);
@@ -364,14 +372,14 @@ html {
 }
 
 .home-h2 {
-  color: #ebe9e9;
+  color: $text;
   font-size: 3rem;
   text-align: center;
   margin: 4% 0;
 }
 
 .home-h3 {
-  color: #ebe9e9;
+  color: $text;
   font-size: 2rem;
   text-align: center;
   margin: 4% auto;
@@ -392,7 +400,7 @@ html {
 
 
 .social-container {
-  background: #ebe9e9;
+  background: $text;
   padding: 0.8rem 1.5rem;
   display: block;
   margin-left: auto;
@@ -404,7 +412,7 @@ html {
 
 
 .cv-container {
-  background: #ebe9e9;
+  background: $text;
   padding: 1rem 1rem;
   border-radius: 4rem;
   display: block;
@@ -426,7 +434,7 @@ a.social:hover {
 }
 
 a.github {
-  color: #0d0d11;
+  color: $background;
   padding: 0 1rem;
 }
 
@@ -502,20 +510,20 @@ a.instagram {
 //BLOG-LIST SECTION ========================================================>
 
 .minifunction {
-  background-color: #161616;
+  background-color: $secondary;
 }
 
 .m-h2 {
   margin: 0;
   margin-bottom: 1rem;
   padding-top: 1rem;
-  color: #f2af29;
+  color: $accent;
   text-align: center;
   font-size: 2.8rem;
 }
 
 .bl-ul {
-  color: #ebe9e9;
+  color: $text;
 }
 
 .ex-tx {
@@ -527,21 +535,21 @@ a.instagram {
 .blog-item {
   display: flex;
   justify-content: center;
-  color: #f2af29;
+  color: $accent;
   text-align: center;
   font-size: 2rem;
   transition: 0.3s ease;
 }
 
 .blog-item > li {
-  color: #f2af29;
+  color: $accent;
   text-align: center;
   font-size: 3rem;
   transition: 0.3s ease;
 }
 
 .bl-a {
-  color: #0d0d11;
+  color: $background;
   text-transform: capitalize;
   text-decoration: underline;
   font-size: 1.5rem;
@@ -567,14 +575,14 @@ a.instagram {
 .line-styling .style-circle {
   width: 0.6rem;
   height: 0.6rem;
-  background-color: #ebe9e9;
+  background-color: $text;
   border-radius: 50%;
 }
 .line-styling .style-line {
   width: 93%;
   height: 0.2rem;
   border-radius: 0.7rem;
-  background-color: #ebe9e9;
+  background-color: $text;
 }
 
 //BLOG-LIST SECTION END ========================================================>
@@ -583,7 +591,7 @@ a.instagram {
 
 .First {
   background-color: rgb(46, 157, 217);
-  color: white;
+  color: $text;
   width: 100px;
   height: 100px;
   font-size: 80px;
@@ -597,7 +605,7 @@ a.instagram {
 }
 .Second {
   background-color: rgb(46, 157, 217);
-  color: white;
+  color: $text;
   width: 100px;
   height: 100px;
   font-size: 80px;
@@ -617,11 +625,11 @@ a.instagram {
 
 //SINGLE POST SECTION ========================================================>
 .post-container {
-  background-color: #161616;
+  background-color: $secondary;
 }
 
 .post-title {
-  color: #ebe9e9;
+  color: $text;
   font-size: 4rem;
   text-align: center;
   padding: 1.5rem;
@@ -629,7 +637,7 @@ a.instagram {
 }
 
 .post-content {
-  color: #ebe9e9;
+  color: $text;
   padding: 3rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -651,23 +659,23 @@ a.instagram {
 }
 
 .like-button {
-  color: #f2af29;
+  color: $accent;
   padding-bottom: 1rem;
 }
 
 .def-col {
-  color: #f2af29;
+  color: $accent;
 }
 
 
 .def-name{
-  color: #ebe9e9;
+  color: $text;
   width: max-content;
   position: relative;
   transition: all 1s ease;
 }
 .def-name:hover{
-  color: #f2af29;
+  color: $accent;
 }
 .def-name::after{
   content: "";
@@ -676,7 +684,7 @@ a.instagram {
   bottom: 0;
   width: 100%;
   height: 3px;
-  background-color: #f2af29;
+  background-color: $accent;
   transform: scaleX(0);
   transition: all 1s ease;
 }
@@ -701,29 +709,29 @@ a.instagram {
   margin-right: auto;
   font-size: 2rem;
   border-radius: 0.5rem;
-  background: #f2af29;
+  background: $accent;
   border-radius: 5px;
   border: 0;
   cursor: pointer;
-  color: white;
+  color: $text;
   transition: all 0.3s;
   font-weight: 700;
   padding: 1rem;
 }
 .btn-para:hover {
-  background: #ebe9e9;
-  color: #000000;
+  background: $text;
+  color: $background;
 }
 .like {
   padding-bottom: 5rem;
 }
 .gb {
-  background-color: #ebe9e9;
+  background-color: $text;
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #0d0d11;
+  color: $background;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.5rem;
@@ -906,8 +914,8 @@ body {
 }
 
 .projects {
-  background-color: #161616;
-  color: #ebe9e9;
+  background-color: $secondary;
+  color: $text;
 
   .p-div {
     border: 2px solid rgb(244, 244, 244);
@@ -919,12 +927,12 @@ body {
     margin: 2rem 0;
     transition: 0.2s ease;
     // background-image: linear-gradient(to top, #2e2e2e 0%, rgb(62, 62, 62) 100%);
-    background-color: #232323;
+    background-color: $secondary;
   }
 
   .p-div:hover {
-    border: 2px solid #f2af29;
-    box-shadow: 0 0 5px #f2af29;
+    border: 2px solid $accent;
+    box-shadow: 0 0 5px $accent;
   }
 
   section,
@@ -969,18 +977,18 @@ body {
     .b-div > button:hover,
     .s-btn:hover {
       background-color: #555;
-      color: #f2af29;
-      border: #f2af29;
-      box-shadow: 0 0 5px #f2af29;
+      color: $accent;
+      border: $accent;
+      box-shadow: 0 0 5px $accent;
       .git-link {
-        color: #f2af29;
-        border: #f2af29;
+        color: $accent;
+        border: $accent;
       }
     }
 
     h1 {
       padding: 0;
-      color: #f2af29;
+      color: $accent;
       text-align: center;
       margin: 2rem 0;
       font-size: 2.2rem;
@@ -997,7 +1005,7 @@ body {
     p {
       font-size: 1rem;
       width: 90%;
-      color: #ebe9e9;
+      color: $text;
       text-align: center;
     }
 
@@ -1012,7 +1020,7 @@ body {
     }
 
     .git-link {
-      color: #ebe9e9;
+      color: $text;
       text-decoration: none;
     }
 
@@ -1043,10 +1051,10 @@ body {
     }
     .v-btn:hover {
       background-color: #555;
-      box-shadow: 0 0 5px #f2af29;
+      box-shadow: 0 0 5px $accent;
       .git-link {
-        color: #f2af29;
-        border: #f2af29;
+        color: $accent;
+        border: $accent;
       }
     }
   }
@@ -1140,7 +1148,7 @@ body {
 //PROJECTS DETAILS SECTION ========================================================>
 .project-details {
   min-height: 100vh;
-  background-color: #161616;
+  background-color: $secondary;
 }
 
 .project-details-div {
@@ -1148,12 +1156,12 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: #ebe9e9;
+  color: $text;
 
   h1 {
     font-size: 4rem;
     margin: 2rem 0;
-    color: #f2af29;
+    color: $accent;
     text-align: center;
   }
   h2 {
@@ -1188,7 +1196,7 @@ body {
     margin-bottom: 2rem;
     .time {
       margin: 2rem 0 0rem 0;
-      color: #f2af29;
+      color: $accent;
       font-weight: 500;
     }
   }
@@ -1206,7 +1214,7 @@ body {
       align-self: center;
       li {
         background-color: #666;
-        color: #f2af29;
+        color: $accent;
         font-weight: 500;
         border-radius: 2rem;
         cursor: pointer;
@@ -1215,7 +1223,7 @@ body {
         margin: 0.3rem;
       }
       li:hover {
-        box-shadow: 0 0 6px #f2af29;
+        box-shadow: 0 0 6px $accent;
       }
     }
   }
@@ -1241,8 +1249,8 @@ body {
   border-radius: 50%;
   left: 3%;
   bottom: 6%;
-  background-color: #ebe9e9;
-  color: #161616;
+  background-color: $text;
+  color: $background;
   border: none;
   font-size: 1.8rem;
   vertical-align: middle;

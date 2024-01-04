@@ -11,7 +11,6 @@ import Projects from "./components/Projects/projects";
 import GoTop from "./components/Props/GoTop";
 import ScrollToTop from "./components/ScrollToTop";
 import ProjectDetails from "./components/Projects/ProjectsDetails";
-import Loader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
 
 function App() {

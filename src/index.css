@@ -12,8 +12,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #08040c;
-  color: #f0f0f0;
+  background-color: #05080c;
+  color: #ecf0f6;
   border-radius: 50%;
   font-size: 2.5rem;
   position: fixed;
@@ -37,10 +37,10 @@ html {
   }
 }
 .about {
-  background-color: #161616;
+  background-color: #1d1d1d;
   min-height: 100vh;
   padding: 0 0;
-  color: #fff;
+  color: #ecf0f6;
   text-align: center;
   position: relative;
   z-index: 0;
@@ -62,7 +62,7 @@ html {
 .about .content > h1,
 .skill-h1 {
   padding: 0;
-  color: #fff;
+  color: #ecf0f6;
   text-align: center;
   display: -webkit-inline-box;
   font-size: 4rem;
@@ -71,7 +71,7 @@ html {
 }
 
 .colour {
-  color: #f2af29;
+  color: #EFBA1A;
   font-weight: 700;
 }
 
@@ -88,13 +88,13 @@ html {
   margin-right: 10%;
   padding: 0;
   width: 80%;
-  color: #fff;
+  color: #ecf0f6;
   text-align: center;
 }
 
 .about .containerr {
   display: inline-flex;
-  color: #f2af29;
+  color: #EFBA1A;
 }
 
 .containerr .textt {
@@ -105,7 +105,7 @@ html {
   width: 100%;
   border-radius: 24px;
   vertical-align: middle;
-  border: 2px solid #ebe9e9;
+  border: 2px solid text;
   box-shadow: 12px 12px 0px rgba(208, 208, 208, 0.19);
 }
 
@@ -114,7 +114,7 @@ html {
   padding: 3rem 2rem 3rem 0;
   justify-content: space-between;
   margin: 2rem 0;
-  border: 1px solid white;
+  border: 1px solid #ecf0f6;
   border-radius: 24px;
   width: 90%;
 }
@@ -248,9 +248,9 @@ html {
 
 .skills:hover {
   transform: scale(0.95);
-  border: 2px solid #f2af29;
-  box-shadow: 0 0 5px #f2af29;
-  color: #f2af29;
+  border: 2px solid #EFBA1A;
+  box-shadow: 0 0 5px #EFBA1A;
+  color: #EFBA1A;
 }
 
 @media (max-width: 768px) {
@@ -280,7 +280,7 @@ html {
 }
 .container {
   position: relative;
-  background-color: #161616;
+  background-color: #1d1d1d;
   min-height: 100dvh;
   padding: 2% 0;
   overflow: hidden;
@@ -369,9 +369,10 @@ html {
 
 .content .h-con > h1 {
   display: flex;
-  color: #fff;
+  color: #ecf0f6;
   font-size: 4rem;
   margin: 0;
+  transition: 0.2s ease;
 }
 
 .content .h-con > h1:hover {
@@ -380,14 +381,14 @@ html {
 }
 
 .home-h2 {
-  color: #ebe9e9;
+  color: #ecf0f6;
   font-size: 3rem;
   text-align: center;
   margin: 4% 0;
 }
 
 .home-h3 {
-  color: #ebe9e9;
+  color: #ecf0f6;
   font-size: 2rem;
   text-align: center;
   margin: 4% auto;
@@ -410,7 +411,7 @@ html {
 }
 
 .social-container {
-  background: #ebe9e9;
+  background: #ecf0f6;
   padding: 0.8rem 1.5rem;
   display: block;
   margin-left: auto;
@@ -422,7 +423,7 @@ html {
 }
 
 .cv-container {
-  background: #ebe9e9;
+  background: #ecf0f6;
   padding: 1rem 1rem;
   border-radius: 4rem;
   display: block;
@@ -444,7 +445,7 @@ a.social:hover {
 }
 
 a.github {
-  color: #0d0d11;
+  color: #05080c;
   padding: 0 1rem;
 }
 
@@ -510,20 +511,20 @@ a.instagram {
   }
 }
 .minifunction {
-  background-color: #161616;
+  background-color: #1d1d1d;
 }
 
 .m-h2 {
   margin: 0;
   margin-bottom: 1rem;
   padding-top: 1rem;
-  color: #f2af29;
+  color: #EFBA1A;
   text-align: center;
   font-size: 2.8rem;
 }
 
 .bl-ul {
-  color: #ebe9e9;
+  color: #ecf0f6;
 }
 
 .ex-tx {
@@ -536,21 +537,21 @@ a.instagram {
 .blog-item {
   display: flex;
   justify-content: center;
-  color: #f2af29;
+  color: #EFBA1A;
   text-align: center;
   font-size: 2rem;
   transition: 0.3s ease;
 }
 
 .blog-item > li {
-  color: #f2af29;
+  color: #EFBA1A;
   text-align: center;
   font-size: 3rem;
   transition: 0.3s ease;
 }
 
 .bl-a {
-  color: #0d0d11;
+  color: #05080c;
   text-transform: capitalize;
   text-decoration: underline;
   font-size: 1.5rem;
@@ -577,7 +578,7 @@ a.instagram {
 .line-styling .style-circle {
   width: 0.6rem;
   height: 0.6rem;
-  background-color: #ebe9e9;
+  background-color: #ecf0f6;
   border-radius: 50%;
 }
 
@@ -585,12 +586,12 @@ a.instagram {
   width: 93%;
   height: 0.2rem;
   border-radius: 0.7rem;
-  background-color: #ebe9e9;
+  background-color: #ecf0f6;
 }
 
 .First {
   background-color: rgb(46, 157, 217);
-  color: white;
+  color: #ecf0f6;
   width: 100px;
   height: 100px;
   font-size: 80px;
@@ -606,7 +607,7 @@ a.instagram {
 
 .Second {
   background-color: rgb(46, 157, 217);
-  color: white;
+  color: #ecf0f6;
   width: 100px;
   height: 100px;
   font-size: 80px;
@@ -626,11 +627,11 @@ a.instagram {
 }
 
 .post-container {
-  background-color: #161616;
+  background-color: #1d1d1d;
 }
 
 .post-title {
-  color: #ebe9e9;
+  color: #ecf0f6;
   font-size: 4rem;
   text-align: center;
   padding: 1.5rem;
@@ -638,7 +639,7 @@ a.instagram {
 }
 
 .post-content {
-  color: #ebe9e9;
+  color: #ecf0f6;
   padding: 3rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -662,16 +663,16 @@ a.instagram {
 }
 
 .like-button {
-  color: #f2af29;
+  color: #EFBA1A;
   padding-bottom: 1rem;
 }
 
 .def-col {
-  color: #f2af29;
+  color: #EFBA1A;
 }
 
 .def-name {
-  color: #ebe9e9;
+  color: #ecf0f6;
   width: -moz-max-content;
   width: max-content;
   position: relative;
@@ -679,7 +680,7 @@ a.instagram {
 }
 
 .def-name:hover {
-  color: #f2af29;
+  color: #EFBA1A;
 }
 
 .def-name::after {
@@ -689,7 +690,7 @@ a.instagram {
   bottom: 0;
   width: 100%;
   height: 3px;
-  background-color: #f2af29;
+  background-color: #EFBA1A;
   transform: scaleX(0);
   transition: all 1s ease;
 }
@@ -715,19 +716,19 @@ a.instagram {
   margin-right: auto;
   font-size: 2rem;
   border-radius: 0.5rem;
-  background: #f2af29;
+  background: #EFBA1A;
   border-radius: 5px;
   border: 0;
   cursor: pointer;
-  color: white;
+  color: #ecf0f6;
   transition: all 0.3s;
   font-weight: 700;
   padding: 1rem;
 }
 
 .btn-para:hover {
-  background: #ebe9e9;
-  color: #000000;
+  background: #ecf0f6;
+  color: #05080c;
 }
 
 .like {
@@ -735,12 +736,12 @@ a.instagram {
 }
 
 .gb {
-  background-color: #ebe9e9;
+  background-color: #ecf0f6;
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #0d0d11;
+  color: #05080c;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.5rem;
@@ -911,8 +912,8 @@ body {
   }
 }
 .projects {
-  background-color: #161616;
-  color: #ebe9e9;
+  background-color: #1d1d1d;
+  color: #ecf0f6;
 }
 .projects .p-div {
   border: 2px solid rgb(244, 244, 244);
@@ -923,11 +924,11 @@ body {
   box-sizing: content-box;
   margin: 2rem 0;
   transition: 0.2s ease;
-  background-color: #232323;
+  background-color: #1d1d1d;
 }
 .projects .p-div:hover {
-  border: 2px solid #f2af29;
-  box-shadow: 0 0 5px #f2af29;
+  border: 2px solid #EFBA1A;
+  box-shadow: 0 0 5px #EFBA1A;
 }
 .projects section,
 .projects .p-div {
@@ -974,21 +975,21 @@ body {
 .projects .p-div .b-div > button:hover,
 .projects .p-div .s-btn:hover {
   background-color: #555;
-  color: #f2af29;
-  border: #f2af29;
-  box-shadow: 0 0 5px #f2af29;
+  color: #EFBA1A;
+  border: #EFBA1A;
+  box-shadow: 0 0 5px #EFBA1A;
 }
 .projects section .b-div > button:hover .git-link,
 .projects section .s-btn:hover .git-link,
 .projects .p-div .b-div > button:hover .git-link,
 .projects .p-div .s-btn:hover .git-link {
-  color: #f2af29;
-  border: #f2af29;
+  color: #EFBA1A;
+  border: #EFBA1A;
 }
 .projects section h1,
 .projects .p-div h1 {
   padding: 0;
-  color: #f2af29;
+  color: #EFBA1A;
   text-align: center;
   margin: 2rem 0;
   font-size: 2.2rem;
@@ -1005,7 +1006,7 @@ body {
 .projects .p-div p {
   font-size: 1rem;
   width: 90%;
-  color: #ebe9e9;
+  color: #ecf0f6;
   text-align: center;
 }
 .projects section .p-img,
@@ -1020,7 +1021,7 @@ body {
 }
 .projects section .git-link,
 .projects .p-div .git-link {
-  color: #ebe9e9;
+  color: #ecf0f6;
   text-decoration: none;
 }
 .projects section .v-txt,
@@ -1053,12 +1054,12 @@ body {
 .projects section .v-btn:hover,
 .projects .p-div .v-btn:hover {
   background-color: #555;
-  box-shadow: 0 0 5px #f2af29;
+  box-shadow: 0 0 5px #EFBA1A;
 }
 .projects section .v-btn:hover .git-link,
 .projects .p-div .v-btn:hover .git-link {
-  color: #f2af29;
-  border: #f2af29;
+  color: #EFBA1A;
+  border: #EFBA1A;
 }
 
 @media (max-width: 769px) {
@@ -1137,7 +1138,7 @@ body {
 }
 .project-details {
   min-height: 100vh;
-  background-color: #161616;
+  background-color: #1d1d1d;
 }
 
 .project-details-div {
@@ -1145,12 +1146,12 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: #ebe9e9;
+  color: #ecf0f6;
 }
 .project-details-div h1 {
   font-size: 4rem;
   margin: 2rem 0;
-  color: #f2af29;
+  color: #EFBA1A;
   text-align: center;
 }
 .project-details-div h2 {
@@ -1186,7 +1187,7 @@ body {
 }
 .project-details-div .tech .time {
   margin: 2rem 0 0rem 0;
-  color: #f2af29;
+  color: #EFBA1A;
   font-weight: 500;
 }
 .project-details-div .technology {
@@ -1205,7 +1206,7 @@ body {
 }
 .project-details-div .technology .names li {
   background-color: #666;
-  color: #f2af29;
+  color: #EFBA1A;
   font-weight: 500;
   border-radius: 2rem;
   cursor: pointer;
@@ -1214,7 +1215,7 @@ body {
   margin: 0.3rem;
 }
 .project-details-div .technology .names li:hover {
-  box-shadow: 0 0 6px #f2af29;
+  box-shadow: 0 0 6px #EFBA1A;
 }
 
 .pd-img {
@@ -1237,8 +1238,8 @@ body {
   border-radius: 50%;
   left: 3%;
   bottom: 6%;
-  background-color: #ebe9e9;
-  color: #161616;
+  background-color: #ecf0f6;
+  color: #05080c;
   border: none;
   font-size: 1.8rem;
   vertical-align: middle;
