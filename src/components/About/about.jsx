@@ -70,7 +70,7 @@ const About = () => {
             <a
               href="Resume_DEVASHISH_ SONI.pdf"
               download="Resume_DevashishSoni"
-              className="ccv szocial"
+              className="ccv social"
               target="_blank"
               id="resume-a"
             >
