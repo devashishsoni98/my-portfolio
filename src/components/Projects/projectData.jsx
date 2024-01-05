@@ -67,19 +67,19 @@
       githubLink: "https://github.com/devashishsoni98/flexstart-clone",
       liveLink: "https://ds-flexstart-clone.netlify.app/",
     },
-    {
-      id: 6,
-      title: "Simple HTML Portfolio",
-      description: "This is a simple HTML Portfolio page!",
-      image: "/portfolio.png",
-      context: "This project was built during my First Year internship as one of the first basic project to get started with basic HTML and CSS.",
-      details:
-        "This website is built using HTML5, CSS3 and JavaScript. It consists of multiple pages with different hover effects, transitions and animations. ",
-      timeframe: "August 2023",
-      technologies: ["HTML", "CSS"],
-      githubLink: "",
-      liveLink: "/portfolio"
-    },
+    // {
+    //   id: 6,
+    //   title: "Simple HTML Portfolio",
+    //   description: "This is a simple HTML Portfolio page!",
+    //   image: "/portfolio.png",
+    //   context: "This project was built during my First Year internship as one of the first basic project to get started with basic HTML and CSS.",
+    //   details:
+    //     "This website is built using HTML5, CSS3 and JavaScript. It consists of multiple pages with different hover effects, transitions and animations. ",
+    //   timeframe: "August 2023",
+    //   technologies: ["HTML", "CSS"],
+    //   githubLink: "",
+    //   liveLink: "/portfolio"
+    // },
   ];
 
   export default projectData;
