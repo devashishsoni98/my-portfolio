@@ -34,14 +34,27 @@
       image: "/weather.png",
       context: "This project was built during my First Year internship where I was learning about front end development using react js. The purpose was to build a simple and responsive weather app which could be used to check weather for any city. I also wanted to try out the theme switching (light and dark theme) feature in this project. Overall, this purpose of this project was to learn how to deal with api and learn theme switching using css and js.",
       details:
-        "This website is built using React Js and it collects data from the OpenWeatherMap API. It displays various information about the weather like temprature, humidity, what the area feels like and weather. It also have a toggle button which can be used to switch to a dark theme. I have also added the feature to activate search by clicking on the enter button only.",
-        timeframe: "August 2023 - September 2023",
-        technologies: ["React JS", "API", "HTML", "CSS"],
+      "This website is built using React Js and it collects data from the OpenWeatherMap API. It displays various information about the weather like temprature, humidity, what the area feels like and weather. It also have a toggle button which can be used to switch to a dark theme. I have also added the feature to activate search by clicking on the enter button only.",
+      timeframe: "August 2023 - September 2023",
+      technologies: ["React JS", "API", "HTML", "CSS"],
       githubLink: "https://github.com/devashishsoni98/weatherApp",
       liveLink: "https://ds-weather-app.netlify.app/",
     },
     {
       id: 4,
+      title: "Quiz App",
+      description: "A quiz app based on NextJs",
+      image: "/quizquest.png",
+      context: "This is one of the first project that I created as a part of my NextJs learning.",
+      details:
+        "This website is built using HTML5, CSS3 and JavaScript on NextJs. It consists of 5 different questions and it holds the score after each question and display results at last.",
+      timeframe: "November 2023",
+      technologies: ["Next JS","HTML", "CSS"],
+      githubLink: "https://github.com/devashishsoni98/QuizQuest",
+      liveLink: "https://quiz-quest-app.netlify.app/"
+    },
+    {
+      id: 5,
       title: "Flight Booking Website",
       description:
         "This is a simple and responsive frontend flight booking website with lots of effects and animations!",
@@ -55,7 +68,7 @@
       liveLink: "https://ds-flight-app.netlify.app/",
     },
     {
-      id: 5,
+      id: 6,
       title: "FlexStart Clone Website",
       description: "This is a clone for a bootstrap template FlexStart!",
       image: "/flexstart.png",
@@ -67,19 +80,6 @@
       githubLink: "https://github.com/devashishsoni98/flexstart-clone",
       liveLink: "https://ds-flexstart-clone.netlify.app/",
     },
-    // {
-    //   id: 6,
-    //   title: "Simple HTML Portfolio",
-    //   description: "This is a simple HTML Portfolio page!",
-    //   image: "/portfolio.png",
-    //   context: "This project was built during my First Year internship as one of the first basic project to get started with basic HTML and CSS.",
-    //   details:
-    //     "This website is built using HTML5, CSS3 and JavaScript. It consists of multiple pages with different hover effects, transitions and animations. ",
-    //   timeframe: "August 2023",
-    //   technologies: ["HTML", "CSS"],
-    //   githubLink: "",
-    //   liveLink: "/portfolio"
-    // },
   ];
 
   export default projectData;
