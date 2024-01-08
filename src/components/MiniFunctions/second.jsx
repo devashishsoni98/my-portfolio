@@ -2,10 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 function SecondComp() {
-  const [name, setName] = useState("SpiderMan");
+  const [name, setName] = useState("Superman");
 
   function changeHeroFun() {
-    setName(name === "SpiderMan" ? "ShaktiMaan" : "SpiderMan");
+    setName(name === "Superman" ? "ShaktiMaan" : "Superman");
   }
 
   return (
