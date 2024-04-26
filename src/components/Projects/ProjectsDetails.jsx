@@ -13,7 +13,7 @@ const ProjectDetails = () => {
   return (
     <>
       <div className="project-details">
-        <div className="project-details-div">
+        <div className="project-details-div pos-rel">
           <GoBack />
           <h1>{project.title}</h1>
           <h2>{project.description}</h2>

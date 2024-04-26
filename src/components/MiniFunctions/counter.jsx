@@ -36,6 +36,7 @@ function Counter() {
         whileInView={{ y: 0, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.45 }}
+        className="counter-main"
       >
         <h1
           style={{

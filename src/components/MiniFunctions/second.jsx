@@ -15,6 +15,7 @@ function SecondComp() {
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.75 }}
+        className="change_name"
       >
         <h1
           style={{

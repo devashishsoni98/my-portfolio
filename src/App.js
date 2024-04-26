@@ -12,6 +12,7 @@ import GoTop from "./components/Props/GoTop";
 import ScrollToTop from "./components/ScrollToTop";
 import ProjectDetails from "./components/Projects/ProjectsDetails";
 import { useState, useEffect } from "react";
+import Blob from "./components/Blob/blob";
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
       <ScrollToTop />
         <NavBar />
         <GoTop/>
+        <Blob/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/minifunctions" element={<MiniFunctions />} />

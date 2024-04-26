@@ -510,6 +510,9 @@ a.instagram {
     font-size: 0.75rem;
   }
 }
+.blog-list {
+  position: relative;
+}
 .minifunction {
   background-color: #1d1d1d;
 }
@@ -589,6 +592,10 @@ a.instagram {
   background-color: #ecf0f6;
 }
 
+.counter-main {
+  position: relative;
+}
+
 .First {
   background-color: rgb(46, 157, 217);
   color: #ecf0f6;
@@ -624,6 +631,14 @@ a.instagram {
   font-size: 4rem;
   display: flex;
   margin-inline: auto;
+}
+
+.change_name {
+  position: relative;
+}
+
+.pos-rel {
+  position: relative;
 }
 
 .post-container {
@@ -1305,5 +1320,32 @@ body {
 @media (max-width: 990px) {
   .project-details-div .technology .names {
     width: 65%;
+  }
+}
+#blob {
+  background-color: white;
+  /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  height: 260px;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  opacity: 0.4;
+  translate: -50% -50%;
+  border-radius: 50%;
+  animation: rotate 20s infinite;
+  filter: blur(100px);
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  /* 50%{
+      scale: 1 1.1;
+  } */
+  to {
+    rotate: 360deg;
   }
 }/*# sourceMappingURL=index.css.map */

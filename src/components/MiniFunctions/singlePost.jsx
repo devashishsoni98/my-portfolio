@@ -21,6 +21,7 @@ const SinglePost = () => {
       whileInView={{ y: 0, scale:1}}
       viewport={{ once: true }}
       transition={{duration:.75,}}
+      className="pos-rel"
       >
       <h2 className="post-title">React JS</h2>
       <img
