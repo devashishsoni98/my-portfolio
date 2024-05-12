@@ -22,7 +22,7 @@
       details:
         "This website is built using HTML5, CSS3 and JavaScript. It consists of multiple pages with different effects, transitions and features. ",
       timeframe: "October 2023 - Present",
-      technologies: ["HTML", "CSS", "JS", "Bootstrap"],
+      technologies: ["HTML", "CSS", "JS", "Bootstrap","PHP","MySql"],
       githubLink: "https://github.com/devashishsoni98/Web-Based-Skyline-Management-System",
       // liveLink: "https://skyline1.netlify.app/",
     },
