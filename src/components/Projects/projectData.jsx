@@ -24,7 +24,7 @@
       timeframe: "October 2023 - Present",
       technologies: ["HTML", "CSS", "JS", "Bootstrap"],
       githubLink: "https://github.com/devashishsoni98/Web-Based-Skyline-Management-System",
-      liveLink: "https://skyline1.netlify.app/",
+      // liveLink: "https://skyline1.netlify.app/",
     },
     {
       id: 3,

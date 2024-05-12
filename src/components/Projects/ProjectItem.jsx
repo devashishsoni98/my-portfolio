@@ -61,6 +61,7 @@ const ProjectItem = ({ project, index, projectData }) => {
                 </button>
               </Link>
             )}
+            {project.liveLink && (
             <Link
               to={project.liveLink}
               target={index <= lastIndexOfArray - 1 ? "_blank" : undefined}
@@ -70,6 +71,7 @@ const ProjectItem = ({ project, index, projectData }) => {
                 Live Demo
               </button>
             </Link>
+            )}
             <br />
           </div>
           <Link className="v-btn" to={`/projectdetails/${project.id}`} key={project.id}>
