@@ -105,7 +105,7 @@ const Contact = () => {
                   name="user_email"
                   className={`input ${!isValidEmail ? "invalid" : ""}`}
                   required
-                  onChange={handleEmailChange}
+                    
                 />
                 <span>E-Mail</span>
               </div>

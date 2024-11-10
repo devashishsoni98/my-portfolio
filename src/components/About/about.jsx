@@ -47,17 +47,14 @@ const About = () => {
                   <p>
                     I am currently pursuing my B.Tech from{" "}
                     <span className="colour">PIET</span>, Jaipur. <br /> <br /> I am a
-                    second-year CS student, interested in learning new
-                    technologies in web development like{" "}
-                    <span className="colour">JS, React Js, Next Js</span> and
-                    many more. <br />
-                    <br /> I like to learn by applying theoretical knowledge
-                    into projects to get a solid grip on fundamentals and learn
-                    how to deal with errors.
+                    third-year CS student, working on
+                    technologies in software development including{" "}
+                    <span className="colour">Java, SpringBoot, Hibernate, React.js, Next Js, C++</span><br />
+                    <br /> I enjoy bridging theory with practice through projects, allowing me to strengthen my core understanding and improve my ability to handle errors effectively.
                   </p>
                 </div>
                 <div className="abt-r">
-                  <img className="abt-pic" src="17.jpg" alt="self-pic" />
+                  <img className="abt-pic" src="19.png" alt="self-pic" />
                 </div>
               </div>
             </motion.div>
