@@ -1,7 +1,10 @@
+
+
 {
   "name": "try-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module", 
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -11,7 +14,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
     "framer-motion": "^10.16.1",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-card-slider-component": "^1.0.9",
@@ -33,7 +40,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node src/components/MiniFunctions/Linkedin/server.mjs" 
   },
   "eslintConfig": {
     "extends": [

@@ -51,9 +51,11 @@ function Navbar() {
             <li onClick={removeActive}>
               <Link to="/projects" className={`${styles.navLink}`}>Projects</Link>
             </li>
+            {/* 
             <li onClick={removeActive}>
               <Link to="/minifunctions" className={`${styles.navLink}`}>Mini Functions</Link>
             </li>
+             */}
             <li onClick={removeActive}>
               <Link to="/contact" className={`${styles.navLink}`}>Contact</Link>
             </li>

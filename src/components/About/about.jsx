@@ -38,19 +38,34 @@ const About = () => {
                 I'm <br />
                 <div className="containerr">
                   <span className="textt">
-                    {text}<Cursor cursorStyle="|" />
+                    {text}
+                    <Cursor cursorStyle="|" />
                   </span>
                 </div>
               </h2>
               <div className="abt-r-l">
                 <div className="abt-l">
                   <p>
-                    I am currently pursuing my B.Tech from{" "}
-                    <span className="colour">PIET</span>, Jaipur. <br /> <br /> I am a
-                    third-year CS student, working on
-                    technologies in software development including{" "}
-                    <span className="colour">Java, SpringBoot, Hibernate, React.js, Next Js, C++</span><br />
-                    <br /> I enjoy bridging theory with practice through projects, allowing me to strengthen my core understanding and improve my ability to handle errors effectively.
+                    I am a third-year CSE undergraduate at{" "}
+                    <span className="colour">PIET</span>, Jaipur, specializing
+                    in software development and{" "}
+                    data structures & algorithms
+                    . <br /> <br />
+                    Proficient in{" "}
+                    <span className="colour">
+                      Java, C++, MySQL, Spring Boot and React.js
+                    </span>
+                    , with experience in building{" "}
+                    scalable web applications.{" "}
+                    <br /> <br />
+                    Passionate about{" "}problem-solving, 
+                    <span className="colour">
+                      {" "}API development, 
+                    </span>and <span className="colour">version control</span>
+                    , I stay updated with industry trends and thrive in{" "}
+                    collaborative environments{" "}
+                    while working on{" "}
+                    <span className="colour">AI and MERN stack projects</span>.
                   </p>
                 </div>
                 <div className="abt-r">
@@ -62,10 +77,10 @@ const About = () => {
           <div
             className="cv-container"
             style={{ marginTop: "2rem" }}
-            onClick={ResumeClick}
+            // onClick={ResumeClick}
           >
             <a
-              href="Resume_DEVASHISH_ SONI.pdf"
+              href="/Resume_DEVASHISH_SONI.pdf"
               download="Resume_DevashishSoni"
               className="ccv social"
               target="_blank"

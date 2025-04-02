@@ -105,10 +105,10 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.75 }}
             className="cv-container"
-            onClick={ResumeClick}
+            // onClick={ResumeClick}
           >
             <a
-              href="Resume_DEVASHISH_ SONI.pdf"
+              href="/Resume_DEVASHISH_SONI.pdf"
               download="Resume_DevashishSoni"
               className="ccv social"
               target="_blank"
