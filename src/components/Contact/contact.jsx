@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
-import { FiMail, FiMapPin, FiPhone, FiSend, FiCheck, FiX } from "react-icons/fi";
+import { FiMail, FiMapPin, FiPhone, FiSend, FiCheck, FiX, FiMessageCircle, FiUser, FiZap } from "react-icons/fi";
 
 const Contact = () => {
   const userid = process.env.REACT_APP_USER_ID;
@@ -11,6 +11,9 @@ const Contact = () => {
   const myapi = process.env.REACT_APP_EMAIL_API;
 
   const form = useRef();
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true, amount: 0.2 });
+
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -54,13 +57,13 @@ const Contact = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        ease: "easeOut",
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   };
@@ -70,54 +73,80 @@ const Contact = () => {
       icon: FiMail,
       label: "Email",
       value: "devashishsoni0@gmail.com",
-      href: "mailto:devashishsoni0@gmail.com"
+      href: "mailto:devashishsoni0@gmail.com",
+      color: "var(--gradient-primary)"
     },
     {
       icon: FiMapPin,
       label: "Location",
       value: "Jaipur, Rajasthan, India",
-      href: null
+      href: null,
+      color: "var(--gradient-secondary)"
     },
     {
       icon: FiPhone,
       label: "Phone",
       value: "+91 (123) 456-7890",
-      href: "tel:+911234567890"
+      href: "tel:+911234567890",
+      color: "var(--gradient-accent)"
     }
   ];
 
   return (
-    <section className="contact-section section">
+    <section ref={containerRef} className="contact-section">
+      {/* Background Elements */}
+      <div className="contact-bg">
+        <div className="bg-blob bg-blob-1"></div>
+        <div className="bg-blob bg-blob-2"></div>
+        <div className="bg-grid"></div>
+      </div>
+
       <div className="container">
         <motion.div
           className="contact-content"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          animate={isInView ? "visible" : "hidden"}
         >
           {/* Header */}
           <motion.div className="section-header" variants={itemVariants}>
-            <h2 className="section-title">Get In Touch</h2>
+            <div className="section-badge">
+              <span className="neon-glow">Contact</span>
+            </div>
+            <h2 className="section-title display-text">
+              Let's Create
+              <span className="highlight-line">Together</span>
+            </h2>
             <p className="section-subtitle">
-              Have a project in mind or want to collaborate? I'd love to hear from you!
+              Have a project in mind or want to collaborate? I'd love to hear from you! 
+              Let's discuss how we can bring your ideas to life.
             </p>
           </motion.div>
 
-          <div className="contact-main grid grid-cols-2">
+          <div className="contact-main">
             {/* Contact Info */}
-            <motion.div className="contact-info" variants={itemVariants}>
-              <div className="contact-card card">
-                <h3>Let's Connect</h3>
-                <p className="contact-intro">
-                  I'm always open to discussing new opportunities, creative projects, 
-                  or just having a friendly chat about technology and development.
-                </p>
+            <motion.div className="contact-info-section" variants={itemVariants}>
+              <div className="contact-card glass-card">
+                <div className="contact-header">
+                  <div className="contact-icon-main">
+                    <FiMessageCircle />
+                  </div>
+                  <h3>Let's Connect</h3>
+                  <p className="contact-intro">
+                    I'm always open to discussing new opportunities, creative projects, 
+                    or just having a friendly chat about technology and development.
+                  </p>
+                </div>
 
                 <div className="contact-details">
                   {contactInfo.map((info, index) => (
-                    <div key={index} className="contact-item">
-                      <div className="contact-icon">
+                    <motion.div 
+                      key={index} 
+                      className="contact-item"
+                      whileHover={{ scale: 1.02, x: 10 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <div className="contact-icon" style={{ background: info.color }}>
                         <info.icon />
                       </div>
                       <div className="contact-text">
@@ -130,70 +159,96 @@ const Contact = () => {
                           <span className="contact-value">{info.value}</span>
                         )}
                       </div>
-                    </div>
+                      <div className="contact-glow"></div>
+                    </motion.div>
                   ))}
                 </div>
 
-                <div className="social-links">
-                  <h4>Follow Me</h4>
-                  <div className="social-icons">
-                    <a
+                <div className="social-section">
+                  <h4>Follow My Journey</h4>
+                  <div className="social-links-grid">
+                    <motion.a
                       href="https://linkedin.com/in/devashish-soni"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="social-link"
+                      className="social-link-card glass"
+                      whileHover={{ scale: 1.05, y: -5 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       <BiLogoLinkedin />
-                    </a>
-                    <a
+                      <span>LinkedIn</span>
+                      <div className="social-glow linkedin-glow"></div>
+                    </motion.a>
+                    <motion.a
                       href="https://github.com/devashishsoni98"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="social-link"
+                      className="social-link-card glass"
+                      whileHover={{ scale: 1.05, y: -5 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       <BsGithub />
-                    </a>
+                      <span>GitHub</span>
+                      <div className="social-glow github-glow"></div>
+                    </motion.a>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div className="contact-form-wrapper" variants={itemVariants}>
-              <div className="contact-form-card card">
-                <h3>Send Message</h3>
+            <motion.div className="contact-form-section" variants={itemVariants}>
+              <div className="contact-form-card glass-card">
+                <div className="form-header">
+                  <div className="form-icon">
+                    <FiZap />
+                  </div>
+                  <h3>Send Message</h3>
+                  <p>Ready to start a conversation? Drop me a line!</p>
+                </div>
                 
                 <form ref={form} onSubmit={sendEmail} className="contact-form">
-                  <div className="form-group">
-                    <label htmlFor="user_name">Full Name</label>
-                    <input
-                      type="text"
-                      id="user_name"
-                      name="user_name"
-                      required
-                      className="form-input"
-                      placeholder="Enter your full name"
-                    />
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="user_name">
+                        <FiUser />
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="user_name"
+                        name="user_name"
+                        required
+                        className="form-input"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label htmlFor="user_email">
+                        <FiMail />
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="user_email"
+                        name="user_email"
+                        required
+                        className={`form-input ${!isValidEmail ? 'error' : ''}`}
+                        placeholder="Enter your email address"
+                        onChange={handleEmailChange}
+                      />
+                      {!isValidEmail && (
+                        <span className="error-message">Please enter a valid email address</span>
+                      )}
+                    </div>
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="user_email">Email Address</label>
-                    <input
-                      type="email"
-                      id="user_email"
-                      name="user_email"
-                      required
-                      className={`form-input ${!isValidEmail ? 'error' : ''}`}
-                      placeholder="Enter your email address"
-                      onChange={handleEmailChange}
-                    />
-                    {!isValidEmail && (
-                      <span className="error-message">Please enter a valid email address</span>
-                    )}
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message">
+                      <FiMessageCircle />
+                      Message
+                    </label>
                     <textarea
                       id="message"
                       name="message"
@@ -204,29 +259,36 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  <button 
+                  <motion.button 
                     type="submit" 
                     className="btn btn-primary submit-btn"
                     disabled={isSubmitting || !isValidEmail}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="spinner"></div>
-                        Sending...
+                        <div className="loading-spinner"></div>
+                        <span>Sending...</span>
                       </>
                     ) : (
                       <>
                         <FiSend />
-                        Send Message
+                        <span>Send Message</span>
                       </>
                     )}
-                  </button>
+                  </motion.button>
 
                   {submitStatus && (
-                    <div className={`status-message ${submitStatus.type}`}>
+                    <motion.div 
+                      className={`status-message ${submitStatus.type}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
                       {submitStatus.type === 'success' ? <FiCheck /> : <FiX />}
-                      {submitStatus.message}
-                    </div>
+                      <span>{submitStatus.message}</span>
+                    </motion.div>
                   )}
                 </form>
               </div>
@@ -238,131 +300,315 @@ const Contact = () => {
       <style jsx>{`
         .contact-section {
           background: var(--background-primary);
-          padding-top: 100px;
+          padding: var(--space-5xl) 0;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .contact-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 0;
+        }
+
+        .bg-grid {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: 
+            linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+          background-size: 30px 30px;
+          opacity: 0.5;
+        }
+
+        .bg-blob {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(80px);
+          opacity: 0.2;
+          animation: blob 12s infinite;
+        }
+
+        .bg-blob-1 {
+          top: 20%;
+          left: 10%;
+          width: 350px;
+          height: 350px;
+          background: var(--gradient-primary);
+          animation-delay: 0s;
+        }
+
+        .bg-blob-2 {
+          bottom: 20%;
+          right: 10%;
+          width: 300px;
+          height: 300px;
+          background: var(--gradient-accent);
+          animation-delay: 6s;
+        }
+
+        .contact-content {
+          position: relative;
+          z-index: 2;
         }
 
         .section-header {
           text-align: center;
-          margin-bottom: var(--space-3xl);
+          margin-bottom: var(--space-5xl);
+        }
+
+        .section-badge {
+          display: inline-flex;
+          align-items: center;
+          padding: var(--space-sm) var(--space-lg);
+          background: var(--glass-bg);
+          border: 1px solid var(--accent-electric);
+          border-radius: var(--radius-full);
+          font-size: var(--text-sm);
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-bottom: var(--space-xl);
+          color: var(--accent-electric);
         }
 
         .section-title {
-          font-size: var(--text-4xl);
-          margin-bottom: var(--space-md);
-          background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+          margin-bottom: var(--space-lg);
+        }
+
+        .highlight-line {
+          display: block;
+          background: var(--gradient-accent);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
 
         .section-subtitle {
-          font-size: var(--text-lg);
+          font-size: var(--text-xl);
           color: var(--text-secondary);
-          max-width: 600px;
+          max-width: 700px;
           margin: 0 auto;
+          line-height: 1.6;
+        }
+
+        .contact-main {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: var(--space-4xl);
         }
 
         .contact-card,
         .contact-form-card {
-          height: 100%;
+          padding: var(--space-4xl);
+          height: fit-content;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .contact-header,
+        .form-header {
+          text-align: center;
+          margin-bottom: var(--space-3xl);
+        }
+
+        .contact-icon-main,
+        .form-icon {
+          width: 80px;
+          height: 80px;
+          background: var(--gradient-primary);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: var(--text-2xl);
+          color: white;
+          margin: 0 auto var(--space-lg);
+          position: relative;
+        }
+
+        .contact-icon-main::after,
+        .form-icon::after {
+          content: '';
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          right: -10px;
+          bottom: -10px;
+          border: 2px solid var(--accent-electric);
+          border-radius: 50%;
+          border-top-color: transparent;
+          border-right-color: transparent;
+          animation: spin 3s linear infinite;
         }
 
         .contact-card h3,
         .contact-form-card h3 {
           font-size: var(--text-2xl);
-          margin-bottom: var(--space-lg);
+          font-weight: 700;
+          margin-bottom: var(--space-md);
           color: var(--text-primary);
         }
 
-        .contact-intro {
+        .contact-intro,
+        .form-header p {
           color: var(--text-secondary);
-          line-height: var(--leading-relaxed);
+          line-height: 1.6;
           margin-bottom: var(--space-2xl);
         }
 
         .contact-details {
-          margin-bottom: var(--space-2xl);
+          margin-bottom: var(--space-3xl);
         }
 
         .contact-item {
           display: flex;
-          align-items: flex-start;
-          gap: var(--space-md);
-          margin-bottom: var(--space-lg);
+          align-items: center;
+          gap: var(--space-lg);
+          margin-bottom: var(--space-xl);
+          padding: var(--space-lg);
+          border-radius: var(--radius-xl);
+          transition: all var(--transition-normal);
+          position: relative;
+          overflow: hidden;
         }
 
         .contact-icon {
-          width: 48px;
-          height: 48px;
-          background: linear-gradient(135deg, var(--accent-primary), var(--accent-gold));
-          border-radius: var(--radius-lg);
+          width: 60px;
+          height: 60px;
+          border-radius: var(--radius-xl);
           display: flex;
           align-items: center;
           justify-content: center;
           color: white;
-          font-size: var(--text-lg);
+          font-size: var(--text-xl);
           flex-shrink: 0;
+          position: relative;
+          z-index: 2;
         }
 
         .contact-text {
           display: flex;
           flex-direction: column;
           gap: var(--space-xs);
+          flex: 1;
         }
 
         .contact-label {
           font-size: var(--text-sm);
           color: var(--text-muted);
-          font-weight: 500;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
         }
 
         .contact-value {
           color: var(--text-primary);
           font-weight: 600;
+          font-size: var(--text-base);
           text-decoration: none;
-          transition: color 0.2s ease;
+          transition: color var(--transition-normal);
         }
 
         .contact-value:hover {
-          color: var(--accent-primary);
+          color: var(--accent-electric);
         }
 
-        .social-links h4 {
+        .contact-glow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: var(--gradient-primary);
+          opacity: 0;
+          filter: blur(20px);
+          transition: opacity var(--transition-normal);
+          border-radius: var(--radius-xl);
+        }
+
+        .contact-item:hover .contact-glow {
+          opacity: 0.1;
+        }
+
+        .social-section h4 {
           font-size: var(--text-lg);
-          margin-bottom: var(--space-md);
+          margin-bottom: var(--space-lg);
           color: var(--text-primary);
+          text-align: center;
         }
 
-        .social-icons {
-          display: flex;
-          gap: var(--space-md);
+        .social-links-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: var(--space-lg);
         }
 
-        .social-link {
-          width: 48px;
-          height: 48px;
-          background: var(--background-tertiary);
-          border: 1px solid var(--border-primary);
-          border-radius: 50%;
+        .social-link-card {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          justify-content: center;
+          gap: var(--space-sm);
+          padding: var(--space-xl);
+          border-radius: var(--radius-xl);
           color: var(--text-secondary);
-          font-size: var(--text-xl);
-          transition: all 0.3s ease;
+          font-size: var(--text-2xl);
+          transition: all var(--transition-normal);
+          position: relative;
+          overflow: hidden;
+          text-decoration: none;
         }
 
-        .social-link:hover {
-          background: var(--accent-primary);
-          border-color: var(--accent-primary);
-          color: white;
-          transform: translateY(-2px);
-          box-shadow: var(--shadow-lg);
+        .social-link-card span {
+          font-size: var(--text-sm);
+          font-weight: 600;
+        }
+
+        .social-glow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          filter: blur(20px);
+          transition: opacity var(--transition-normal);
+          border-radius: var(--radius-xl);
+        }
+
+        .linkedin-glow {
+          background: #0077b5;
+        }
+
+        .github-glow {
+          background: #333;
+        }
+
+        .social-link-card:hover .social-glow {
+          opacity: 0.2;
+        }
+
+        .social-link-card:hover {
+          color: var(--text-primary);
+          transform: translateY(-5px);
         }
 
         .contact-form {
           display: flex;
           flex-direction: column;
+          gap: var(--space-xl);
+        }
+
+        .form-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           gap: var(--space-lg);
         }
 
@@ -373,30 +619,37 @@ const Contact = () => {
         }
 
         .form-group label {
+          display: flex;
+          align-items: center;
+          gap: var(--space-sm);
           font-size: var(--text-sm);
           font-weight: 600;
           color: var(--text-primary);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
         }
 
         .form-input {
-          padding: var(--space-md);
+          padding: var(--space-lg);
           background: var(--background-tertiary);
           border: 1px solid var(--border-primary);
-          border-radius: var(--radius-lg);
+          border-radius: var(--radius-xl);
           color: var(--text-primary);
           font-size: var(--text-base);
           font-family: inherit;
-          transition: all 0.2s ease;
+          transition: all var(--transition-normal);
         }
 
         .form-input:focus {
           outline: none;
-          border-color: var(--accent-primary);
-          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+          border-color: var(--accent-electric);
+          box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.1);
+          background: var(--background-secondary);
         }
 
         .form-input.error {
           border-color: var(--error);
+          box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
         }
 
         .form-input::placeholder {
@@ -405,17 +658,22 @@ const Contact = () => {
 
         .form-textarea {
           resize: vertical;
-          min-height: 120px;
+          min-height: 140px;
+          font-family: inherit;
         }
 
         .error-message {
           color: var(--error);
           font-size: var(--text-sm);
           margin-top: var(--space-xs);
+          display: flex;
+          align-items: center;
+          gap: var(--space-xs);
         }
 
         .submit-btn {
-          margin-top: var(--space-md);
+          margin-top: var(--space-lg);
+          width: 100%;
         }
 
         .submit-btn:disabled {
@@ -423,24 +681,15 @@ const Contact = () => {
           cursor: not-allowed;
         }
 
-        .spinner {
-          width: 16px;
-          height: 16px;
-          border: 2px solid transparent;
-          border-top: 2px solid currentColor;
-          border-radius: 50%;
-          animation: spin 1s linear infinite;
-        }
-
         .status-message {
           display: flex;
           align-items: center;
           gap: var(--space-sm);
-          padding: var(--space-md);
-          border-radius: var(--radius-lg);
+          padding: var(--space-lg);
+          border-radius: var(--radius-xl);
           font-size: var(--text-sm);
-          font-weight: 500;
-          margin-top: var(--space-md);
+          font-weight: 600;
+          margin-top: var(--space-lg);
         }
 
         .status-message.success {
@@ -458,20 +707,40 @@ const Contact = () => {
         @media (max-width: 1024px) {
           .contact-main {
             grid-template-columns: 1fr;
-            gap: var(--space-2xl);
+            gap: var(--space-3xl);
           }
         }
 
         @media (max-width: 768px) {
+          .contact-section {
+            padding: var(--space-3xl) 0;
+          }
+
+          .contact-card,
+          .contact-form-card {
+            padding: var(--space-2xl);
+          }
+
+          .form-row {
+            grid-template-columns: 1fr;
+          }
+
+          .social-links-grid {
+            grid-template-columns: 1fr;
+          }
+
           .contact-item {
             flex-direction: column;
             text-align: center;
-            gap: var(--space-sm);
+            gap: var(--space-md);
           }
 
-          .social-icons {
-            justify-content: center;
+          .bg-blob {
+            filter: blur(40px);
           }
+
+          .bg-blob-1 { width: 250px; height: 250px; }
+          .bg-blob-2 { width: 200px; height: 200px; }
         }
       `}</style>
     </section>

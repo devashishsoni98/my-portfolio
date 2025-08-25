@@ -1,245 +1,367 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
-import { FiExternalLink, FiArrowRight, FiCalendar, FiCode } from "react-icons/fi";
+import { FiExternalLink, FiArrowRight, FiCalendar, FiCode, FiEye, FiStar } from "react-icons/fi";
 
 const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <motion.div 
-      className={`project-card ${viewMode}`}
+      className={`project-card-modern ${viewMode}`}
       variants={variants}
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.3 }}
+      whileHover={{ y: -12 }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="project-image">
-        <img src={project.image} alt={`${project.title} preview`} />
-        <div className="project-overlay">
-          <div className="project-links">
-            {project.githubLink && (
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-                title="View Source Code"
-              >
-                <FaGithub />
-              </a>
-            )}
-            {project.liveLink && (
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-                title="View Live Demo"
-              >
-                <FiExternalLink />
-              </a>
-            )}
+      {/* Project Image */}
+      <div className="project-image-container">
+        <div className="project-image">
+          <img src={project.image} alt={`${project.title} preview`} />
+          <div className="image-overlay">
+            <div className="overlay-content">
+              <div className="project-links">
+                {project.githubLink && (
+                  <motion.a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <FaGithub />
+                  </motion.a>
+                )}
+                {project.liveLink && (
+                  <motion.a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <FiExternalLink />
+                  </motion.a>
+                )}
+              </div>
+              <div className="project-stats">
+                <div className="stat-item">
+                  <FiEye />
+                  <span>View</span>
+                </div>
+                <div className="stat-item">
+                  <FiStar />
+                  <span>Featured</span>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        
+        {/* Floating Badge */}
+        <div className="project-badge">
+          <span>{project.technologies[0]}</span>
         </div>
       </div>
 
+      {/* Project Content */}
       <div className="project-content">
+        {/* Meta Information */}
         <div className="project-meta">
           <div className="project-category">
-            {project.technologies[0]}
+            <FiCode />
+            <span>{project.technologies[0]}</span>
           </div>
           <div className="project-date">
             <FiCalendar />
-            {project.timeframe.split(' - ')[1] || project.timeframe}
+            <span>{project.timeframe.split(' - ')[1] || project.timeframe}</span>
           </div>
         </div>
 
-        <h3 className="project-title">{project.title}</h3>
-        
-        <p className="project-description">
-          {project.description}
-        </p>
+        {/* Title and Description */}
+        <div className="project-info">
+          <h3 className="project-title">{project.title}</h3>
+          <p className="project-description">
+            {project.description}
+          </p>
+        </div>
 
+        {/* Technologies */}
         <div className="project-tech">
           {project.technologies.slice(0, 4).map((tech, techIndex) => (
-            <span key={techIndex} className="tech-tag">
+            <motion.span 
+              key={techIndex} 
+              className="tech-tag"
+              whileHover={{ scale: 1.05 }}
+            >
               {tech}
-            </span>
+            </motion.span>
           ))}
           {project.technologies.length > 4 && (
             <span className="tech-more">+{project.technologies.length - 4}</span>
           )}
         </div>
 
+        {/* Actions */}
         <div className="project-actions">
           <Link 
             to={`/projectdetails/${project.id}`} 
-            className="btn btn-primary"
+            className="btn btn-primary project-btn"
           >
-            View Details
-            <FiArrowRight />
+            <span>View Details</span>
+            <motion.div
+              animate={{ x: isHovered ? 5 : 0 }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              <FiArrowRight />
+            </motion.div>
           </Link>
           
-          <div className="project-external-links">
+          <div className="external-links">
             {project.githubLink && (
-              <a
+              <motion.a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline"
-                title="View Source"
+                className="btn btn-outline external-btn"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <FaGithub />
-              </a>
+              </motion.a>
             )}
             {project.liveLink && (
-              <a
+              <motion.a
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline"
-                title="Live Demo"
+                className="btn btn-outline external-btn"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <FiExternalLink />
-              </a>
+              </motion.a>
             )}
           </div>
         </div>
       </div>
 
+      {/* Glow Effect */}
+      <div className="project-glow"></div>
+
       <style jsx>{`
-        .project-card {
-          background: var(--background-secondary);
-          border: 1px solid var(--border-primary);
-          border-radius: var(--radius-2xl);
+        .project-card-modern {
+          background: var(--glass-bg);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid var(--glass-border);
+          border-radius: var(--radius-3xl);
           overflow: hidden;
-          transition: all 0.3s ease;
+          transition: all var(--transition-normal);
+          position: relative;
           height: fit-content;
         }
 
-        .project-card:hover {
-          border-color: var(--accent-primary);
-          box-shadow: var(--shadow-xl);
+        .project-card-modern:hover {
+          border-color: var(--accent-electric);
+          box-shadow: 
+            0 25px 50px rgba(0, 0, 0, 0.4),
+            0 0 40px rgba(0, 255, 255, 0.1);
         }
 
-        .project-card.list {
+        .project-card-modern.list {
           display: grid;
-          grid-template-columns: 300px 1fr;
-          gap: var(--space-xl);
-          align-items: center;
+          grid-template-columns: 350px 1fr;
+          gap: 0;
+          align-items: stretch;
+        }
+
+        .project-glow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: var(--gradient-primary);
+          opacity: 0;
+          filter: blur(30px);
+          transition: opacity var(--transition-normal);
+          z-index: -1;
+        }
+
+        .project-card-modern:hover .project-glow {
+          opacity: 0.1;
+        }
+
+        .project-image-container {
+          position: relative;
+          overflow: hidden;
         }
 
         .project-image {
           position: relative;
           width: 100%;
-          height: 240px;
+          height: 280px;
           overflow: hidden;
           background: var(--background-tertiary);
         }
 
-        .project-card.list .project-image {
-          height: 200px;
+        .project-card-modern.list .project-image {
+          height: 100%;
+          min-height: 300px;
         }
 
         .project-image img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.3s ease;
+          transition: transform var(--transition-slow);
         }
 
-        .project-card:hover .project-image img {
-          transform: scale(1.05);
+        .project-card-modern:hover .project-image img {
+          transform: scale(1.1);
         }
 
-        .project-overlay {
+        .image-overlay {
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(0, 0, 0, 0.8);
+          background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 255, 255, 0.1) 100%
+          );
           display: flex;
-          align-items: center;
-          justify-content: center;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: var(--space-xl);
           opacity: 0;
-          transition: opacity 0.3s ease;
+          transition: opacity var(--transition-normal);
         }
 
-        .project-card:hover .project-overlay {
+        .project-card-modern:hover .image-overlay {
           opacity: 1;
+        }
+
+        .overlay-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
         }
 
         .project-links {
           display: flex;
           gap: var(--space-md);
+          justify-content: flex-end;
         }
 
         .project-link {
-          width: 48px;
-          height: 48px;
-          background: var(--accent-primary);
+          width: 50px;
+          height: 50px;
+          background: var(--glass-bg);
+          backdrop-filter: blur(20px);
           color: white;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           font-size: var(--text-lg);
-          transition: all 0.2s ease;
+          transition: all var(--transition-normal);
+          border: 1px solid var(--glass-border);
         }
 
         .project-link:hover {
-          background: var(--accent-secondary);
-          transform: scale(1.1);
+          background: var(--accent-electric);
+          color: var(--background-primary);
+          box-shadow: var(--shadow-neon);
+        }
+
+        .project-stats {
+          display: flex;
+          gap: var(--space-lg);
+        }
+
+        .stat-item {
+          display: flex;
+          align-items: center;
+          gap: var(--space-xs);
+          color: white;
+          font-size: var(--text-sm);
+          font-weight: 500;
+        }
+
+        .project-badge {
+          position: absolute;
+          top: var(--space-lg);
+          left: var(--space-lg);
+          background: var(--gradient-primary);
+          color: white;
+          padding: var(--space-xs) var(--space-md);
+          border-radius: var(--radius-full);
+          font-size: var(--text-xs);
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          z-index: 2;
         }
 
         .project-content {
-          padding: var(--space-xl);
+          padding: var(--space-2xl);
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-lg);
         }
 
         .project-meta {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: var(--space-md);
+          flex-wrap: wrap;
+          gap: var(--space-md);
         }
 
-        .project-category {
-          background: var(--accent-primary);
-          color: white;
-          padding: var(--space-xs) var(--space-sm);
-          border-radius: var(--radius-md);
-          font-size: var(--text-xs);
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-        }
-
+        .project-category,
         .project-date {
           display: flex;
           align-items: center;
           gap: var(--space-xs);
           color: var(--text-muted);
           font-size: var(--text-sm);
+          font-weight: 500;
+        }
+
+        .project-info {
+          flex: 1;
         }
 
         .project-title {
-          font-size: var(--text-xl);
-          font-weight: 700;
+          font-size: var(--text-2xl);
+          font-weight: 800;
           margin-bottom: var(--space-md);
           color: var(--text-primary);
+          font-family: var(--font-display);
+          line-height: 1.2;
         }
 
         .project-description {
           color: var(--text-secondary);
-          line-height: var(--leading-relaxed);
-          margin-bottom: var(--space-lg);
+          line-height: 1.6;
+          margin: 0;
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
 
-        .project-card.list .project-description {
+        .project-card-modern.list .project-description {
           -webkit-line-clamp: 4;
         }
 
@@ -247,7 +369,6 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           display: flex;
           flex-wrap: wrap;
           gap: var(--space-sm);
-          margin-bottom: var(--space-xl);
         }
 
         .tech-tag {
@@ -256,17 +377,26 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           padding: var(--space-xs) var(--space-sm);
           border-radius: var(--radius-md);
           font-size: var(--text-xs);
-          font-weight: 500;
+          font-weight: 600;
           border: 1px solid var(--border-primary);
+          transition: all var(--transition-normal);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        .tech-tag:hover {
+          background: var(--accent-electric);
+          color: var(--background-primary);
+          border-color: var(--accent-electric);
         }
 
         .tech-more {
-          background: var(--accent-primary);
+          background: var(--gradient-primary);
           color: white;
           padding: var(--space-xs) var(--space-sm);
           border-radius: var(--radius-md);
           font-size: var(--text-xs);
-          font-weight: 600;
+          font-weight: 700;
         }
 
         .project-actions {
@@ -274,27 +404,39 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           justify-content: space-between;
           align-items: center;
           gap: var(--space-md);
+          margin-top: var(--space-lg);
         }
 
-        .project-external-links {
+        .project-btn {
+          flex: 1;
+          max-width: 200px;
+        }
+
+        .external-links {
           display: flex;
           gap: var(--space-sm);
         }
 
-        .project-external-links .btn {
-          width: 40px;
-          height: 40px;
+        .external-btn {
+          width: 45px;
+          height: 45px;
           padding: 0;
+          border-radius: 50%;
         }
 
         @media (max-width: 768px) {
-          .project-card.list {
+          .project-card-modern.list {
             grid-template-columns: 1fr;
             gap: 0;
           }
 
-          .project-card.list .project-image {
-            height: 200px;
+          .project-card-modern.list .project-image {
+            height: 250px;
+            min-height: auto;
+          }
+
+          .project-content {
+            padding: var(--space-xl);
           }
 
           .project-actions {
@@ -302,20 +444,33 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
             gap: var(--space-md);
           }
 
-          .project-actions .btn:first-child {
+          .project-btn {
+            max-width: none;
             width: 100%;
+          }
+
+          .external-links {
+            justify-content: center;
           }
         }
 
         @media (max-width: 480px) {
-          .project-content {
-            padding: var(--space-lg);
-          }
-
           .project-meta {
             flex-direction: column;
             align-items: flex-start;
             gap: var(--space-sm);
+          }
+
+          .project-image {
+            height: 220px;
+          }
+
+          .project-links {
+            justify-content: center;
+          }
+
+          .project-stats {
+            justify-content: center;
           }
         }
       `}</style>
