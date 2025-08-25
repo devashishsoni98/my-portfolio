@@ -1,50 +1,5 @@
-// import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-// import About from "./components/About/about";
-// import Contact from "./components/Contact/contact";
-// import NavBar from "./components/Navbar/navbar";
-// import SinglePost from "./components/MiniFunctions/singlePost";
-// import Portfolio from "./components/Portfolio/portfolio";
-// import BlogList from "./components/MiniFunctions/blogList";
-// import Home from "./components/Home/Home";
-// import MiniFunctions from "./components/MiniFunctions/minifunctions";
-// import Projects from "./components/Projects/projects";
-// import GoTop from "./components/Props/GoTop";
-// import ScrollToTop from "./components/ScrollToTop";
-// import ProjectDetails from "./components/Projects/ProjectsDetails";
-// import { useState, useEffect } from "react";
-// import Blob from "./components/Blob/blob";
-
-// function App() {
-  
-//   return (
-//     <div className="App">
-//       <BrowserRouter>
-//       <ScrollToTop />
-//         <NavBar />
-//         <GoTop/>
-//         <Blob/>
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/minifunctions" element={<MiniFunctions />} />
-//           <Route path="/about" element={<About />} />
-//           <Route path="/contact" element={<Contact />} />
-//           <Route path="/posts/:id" element={<SinglePost />} />
-//           <Route path="/blog" element={<BlogList />} />
-//           <Route path="/portfolio" element={<Portfolio />} />
-//           <Route path="/projects" element={<Projects />} />
-//           <Route path="/projectdetails/:id" element={<ProjectDetails />} />
-//         </Routes>
-//       </BrowserRouter>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// In App.js
 import React, { useState, useEffect } from 'react';
-
 
 import About from './components/About/about.jsx';
 import Contact from './components/Contact/contact.jsx';
@@ -59,7 +14,6 @@ import GoTop from './components/Props/GoTop.jsx';
 import ScrollToTop from './components/ScrollToTop.js';
 import ProjectsDetails from './components/Projects/ProjectsDetails.jsx';
 import Blob from './components/Blob/blob.jsx';
-
 
 function App() {
   const [accessToken, setAccessToken] = useState(null);
@@ -97,42 +51,44 @@ function App() {
         <Navbar />
         <GoTop />
         <Blob />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/minifunctions" element={<MiniFunctions />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/posts/:id" element={<SinglePost />} />
-          <Route path="/blog" element={<BlogList />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projectdetails/:id" element={<ProjectsDetails />} />
-          <Route 
-            path="/linkedin-posts" 
-            element={
-              <div>
-                <h2>LinkedIn Recent Posts</h2>
-                {!accessToken ? (
-                  <button onClick={handleLinkedInLogin}>Login with LinkedIn</button>
-                ) : (
-                  <div>
-                    {posts.length > 0 ? (
-                      <ul>
-                        {posts.map((post, index) => (
-                          <li key={index}>
-                            <p>{post.text}</p>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p>No recent posts available.</p>
-                    )}
-                  </div>
-                )}
-              </div>
-            } 
-          />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/minifunctions" element={<MiniFunctions />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/posts/:id" element={<SinglePost />} />
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projectdetails/:id" element={<ProjectsDetails />} />
+            <Route 
+              path="/linkedin-posts" 
+              element={
+                <div>
+                  <h2>LinkedIn Recent Posts</h2>
+                  {!accessToken ? (
+                    <button onClick={handleLinkedInLogin}>Login with LinkedIn</button>
+                  ) : (
+                    <div>
+                      {posts.length > 0 ? (
+                        <ul>
+                          {posts.map((post, index) => (
+                            <li key={index}>
+                              <p>{post.text}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>No recent posts available.</p>
+                      )}
+                    </div>
+                  )}
+                </div>
+              } 
+            />
+          </Routes>
+        </main>
       </BrowserRouter>
     </div>
   );
