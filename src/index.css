@@ -482,8 +482,8 @@ h6 {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: var(--space-5xl) 0 var(--space-4xl);
-  margin-top: 90px; /* Account for sticky navbar */
+  padding: 2rem 0 1.5rem;
+  margin-top: 70px; /* Account for sticky navbar */
 }
 
 .parallax-content {
@@ -496,21 +496,21 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-4xl);
+  gap: 2rem;
   text-align: center;
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  padding: var(--space-2xl);
+  padding: 1rem;
 }
 
 /* Hero Stats */
 .hero-stats {
   display: flex;
   justify-content: center;
-  gap: var(--space-4xl);
-  margin: var(--space-3xl) 0;
-  padding: var(--space-3xl) 0;
+  gap: 2.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
@@ -542,8 +542,8 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
-  padding: var(--space-lg);
+  gap: 0.5rem;
+  padding: 1rem;
   border-radius: var(--radius-lg);
   transition: all var(--transition-normal);
 }
@@ -561,11 +561,11 @@ h6 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-family: var(--font-display);
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.25rem;
 }
 
 .stat-label {
-  font-size: var(--text-base);
+  font-size: 1rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -575,19 +575,19 @@ h6 {
 /* Hero Actions */
 .hero-actions {
   display: flex;
-  gap: var(--space-2xl);
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin: var(--space-4xl) 0;
+  margin: 2rem 0;
 }
 
 /* Social Links */
 .social-links-modern {
   display: flex;
-  gap: var(--space-2xl);
+  gap: 1.5rem;
   justify-content: center;
-  margin: var(--space-4xl) 0;
-  padding: var(--space-2xl) 0;
+  margin: 2rem 0;
+  padding: 1rem 0;
 }
 
 .social-link-modern {
@@ -641,10 +641,10 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-lg);
-  margin-top: var(--space-5xl);
+  gap: 1rem;
+  margin-top: 2rem;
   color: var(--text-muted);
-  padding: var(--space-2xl) 0;
+  padding: 1rem 0;
 }
 
 .scroll-line {
@@ -774,26 +774,26 @@ button:focus-visible {
   }
 
   .home-content {
-    gap: var(--space-3xl);
-    padding: var(--space-lg);
+    gap: 1.5rem;
+    padding: 1rem;
   }
 
   .hero-content.glass-card {
-    padding: var(--space-3xl) var(--space-2xl);
-    margin: var(--space-xl) 0;
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
   }
 
   .hero-stats {
-    gap: var(--space-2xl);
+    gap: 1.5rem;
     flex-wrap: wrap;
-    padding: var(--space-2xl) 0;
+    padding: 1rem 0;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: center;
-    gap: var(--space-lg);
-    margin: var(--space-3xl) 0;
+    gap: 1rem;
+    margin: 1.5rem 0;
   }
 
   .btn {
@@ -802,8 +802,8 @@ button:focus-visible {
   }
 
   .social-links-modern {
-    gap: var(--space-xl);
-    margin: var(--space-3xl) 0;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
   }
 
   .social-link-modern {
@@ -820,13 +820,13 @@ button:focus-visible {
   }
 
   .scroll-indicator-modern {
-    margin-top: var(--space-4xl);
+    margin-top: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-content.glass-card {
-    padding: var(--space-2xl) var(--space-lg);
+    padding: 1.5rem 1rem;
   }
 
   .subtitle-text {
@@ -835,8 +835,8 @@ button:focus-visible {
   }
 
   .hero-stats {
-    gap: var(--space-xl);
-    padding: var(--space-xl) 0;
+    gap: 1rem;
+    padding: 1rem 0;
   }
 
   .stat-number {
@@ -844,7 +844,7 @@ button:focus-visible {
   }
 
   .stat-label {
-    font-size: var(--text-sm);
+    font-size: 0.875rem;
   }
 
   .floating-icon {
@@ -1136,18 +1136,18 @@ button:focus-visible {
 
 /* Enhanced hero badge styling with better spacing and visual hierarchy */
 .hero-badge {
-  margin-bottom: var(--space-3xl);
+  margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
 }
 
 .hero-badge .neon-glow {
   display: inline-block;
-  padding: var(--space-md) var(--space-2xl);
+  padding: 0.75rem 1.5rem;
   background: rgba(0, 255, 255, 0.1);
   border: 1px solid rgba(0, 255, 255, 0.3);
   border-radius: var(--radius-full);
-  font-size: var(--text-sm);
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;

@@ -173,7 +173,7 @@ const Projects = () => {
         .projects-section {
           background: var(--background-primary);
           min-height: 100vh;
-          padding: calc(var(--space-3xl) + 80px) 0 var(--space-3xl) 0;
+          padding: calc(2rem + 70px) 0 2rem 0;
           position: relative;
           overflow: hidden;
         }
@@ -234,7 +234,7 @@ const Projects = () => {
 
         .section-header {
           text-align: center;
-          margin-bottom: var(--space-3xl);
+          margin-bottom: 2rem;
         }
 
         .section-badge {
@@ -265,7 +265,7 @@ const Projects = () => {
         }
 
         .section-subtitle {
-          font-size: var(--text-xl);
+          font-size: 1.125rem;
           color: var(--text-secondary);
           max-width: 800px;
           margin: 0 auto;
@@ -276,9 +276,9 @@ const Projects = () => {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: var(--space-2xl);
+          margin-bottom: 1.5rem;
           flex-wrap: wrap;
-          gap: var(--space-xl);
+          gap: 1.5rem;
         }
 
         .filter-section {
@@ -389,29 +389,29 @@ const Projects = () => {
 
         .projects-counter {
           text-align: center;
-          margin-bottom: var(--space-xl);
+          margin-bottom: 1rem;
         }
 
         .counter-text {
-          font-size: var(--text-lg);
+          font-size: 1.125rem;
           color: var(--text-secondary);
         }
 
         .counter-number {
           font-weight: 700;
           color: var(--accent-electric);
-          font-size: var(--text-xl);
+          font-size: 1.25rem;
         }
 
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-          gap: var(--space-2xl);
+          gap: 1.5rem;
         }
 
         .projects-grid.list-view {
           grid-template-columns: 1fr;
-          gap: var(--space-xl);
+          gap: 1rem;
         }
 
         .project-wrapper {
@@ -420,7 +420,7 @@ const Projects = () => {
 
         .no-projects {
           text-align: center;
-          padding: var(--space-3xl);
+          padding: 2rem;
           max-width: 500px;
           margin: 0 auto;
         }
@@ -439,32 +439,33 @@ const Projects = () => {
         }
 
         .no-projects h3 {
-          font-size: var(--text-2xl);
-          margin-bottom: var(--space-md);
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
           color: var(--text-primary);
         }
 
         .no-projects p {
           color: var(--text-secondary);
-          margin-bottom: var(--space-xl);
+          margin-bottom: 1.5rem;
+          font-size: 1rem;
         }
 
         @media (max-width: 1024px) {
           .projects-grid {
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--space-xl);
+            gap: 1rem;
           }
         }
 
         @media (max-width: 768px) {
           .projects-section {
-            padding: calc(var(--space-2xl) + 70px) 0 var(--space-2xl) 0;
+            padding: calc(1.5rem + 70px) 0 1.5rem 0;
           }
 
           .projects-controls {
             flex-direction: column;
             align-items: stretch;
-            gap: var(--space-lg);
+            gap: 1rem;
           }
 
           .filter-tabs {
@@ -478,7 +479,7 @@ const Projects = () => {
 
           .projects-grid {
             grid-template-columns: 1fr;
-            gap: var(--space-lg);
+            gap: 1rem;
           }
 
           .bg-blob {

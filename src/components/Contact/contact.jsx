@@ -300,7 +300,7 @@ const Contact = () => {
       <style jsx>{`
         .contact-section {
           background: var(--background-primary);
-          padding: var(--space-5xl) 0;
+          padding: 3rem 0;
           position: relative;
           overflow: hidden;
         }
@@ -361,7 +361,7 @@ const Contact = () => {
 
         .section-header {
           text-align: center;
-          margin-bottom: var(--space-5xl);
+          margin-bottom: 2.5rem;
         }
 
         .section-badge {
@@ -392,7 +392,7 @@ const Contact = () => {
         }
 
         .section-subtitle {
-          font-size: var(--text-xl);
+          font-size: 1.125rem;
           color: var(--text-secondary);
           max-width: 700px;
           margin: 0 auto;
@@ -402,12 +402,12 @@ const Contact = () => {
         .contact-main {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: var(--space-4xl);
+          gap: 2rem;
         }
 
         .contact-card,
         .contact-form-card {
-          padding: var(--space-4xl);
+          padding: 2rem;
           height: fit-content;
           position: relative;
           overflow: hidden;
@@ -416,7 +416,7 @@ const Contact = () => {
         .contact-header,
         .form-header {
           text-align: center;
-          margin-bottom: var(--space-3xl);
+          margin-bottom: 2rem;
         }
 
         .contact-icon-main,
@@ -451,9 +451,9 @@ const Contact = () => {
 
         .contact-card h3,
         .contact-form-card h3 {
-          font-size: var(--text-2xl);
+          font-size: 1.5rem;
           font-weight: 700;
-          margin-bottom: var(--space-md);
+          margin-bottom: 1rem;
           color: var(--text-primary);
         }
 
@@ -461,11 +461,12 @@ const Contact = () => {
         .form-header p {
           color: var(--text-secondary);
           line-height: 1.6;
-          margin-bottom: var(--space-2xl);
+          margin-bottom: 1.5rem;
+          font-size: 1rem;
         }
 
         .contact-details {
-          margin-bottom: var(--space-3xl);
+          margin-bottom: 2rem;
         }
 
         .contact-item {
@@ -603,26 +604,26 @@ const Contact = () => {
         .contact-form {
           display: flex;
           flex-direction: column;
-          gap: var(--space-xl);
+          gap: 1.5rem;
         }
 
         .form-row {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: var(--space-lg);
+          gap: 1rem;
         }
 
         .form-group {
           display: flex;
           flex-direction: column;
-          gap: var(--space-sm);
+          gap: 0.5rem;
         }
 
         .form-group label {
           display: flex;
           align-items: center;
-          gap: var(--space-sm);
-          font-size: var(--text-sm);
+          gap: 0.5rem;
+          font-size: 0.9rem;
           font-weight: 600;
           color: var(--text-primary);
           text-transform: uppercase;
@@ -630,12 +631,12 @@ const Contact = () => {
         }
 
         .form-input {
-          padding: var(--space-lg);
+          padding: 1rem;
           background: var(--background-tertiary);
           border: 1px solid var(--border-primary);
           border-radius: var(--radius-xl);
           color: var(--text-primary);
-          font-size: var(--text-base);
+          font-size: 1rem;
           font-family: inherit;
           transition: all var(--transition-normal);
         }
@@ -672,7 +673,7 @@ const Contact = () => {
         }
 
         .submit-btn {
-          margin-top: var(--space-lg);
+          margin-top: 1rem;
           width: 100%;
         }
 
@@ -684,12 +685,12 @@ const Contact = () => {
         .status-message {
           display: flex;
           align-items: center;
-          gap: var(--space-sm);
-          padding: var(--space-lg);
+          gap: 0.5rem;
+          padding: 1rem;
           border-radius: var(--radius-xl);
-          font-size: var(--text-sm);
+          font-size: 0.9rem;
           font-weight: 600;
-          margin-top: var(--space-lg);
+          margin-top: 1rem;
         }
 
         .status-message.success {
@@ -707,18 +708,18 @@ const Contact = () => {
         @media (max-width: 1024px) {
           .contact-main {
             grid-template-columns: 1fr;
-            gap: var(--space-3xl);
+            gap: 2rem;
           }
         }
 
         @media (max-width: 768px) {
           .contact-section {
-            padding: var(--space-3xl) 0;
+            padding: 2rem 0;
           }
 
           .contact-card,
           .contact-form-card {
-            padding: var(--space-2xl);
+            padding: 1.5rem;
           }
 
           .form-row {
@@ -732,7 +733,7 @@ const Contact = () => {
           .contact-item {
             flex-direction: column;
             text-align: center;
-            gap: var(--space-md);
+            gap: 1rem;
           }
 
           .bg-blob {

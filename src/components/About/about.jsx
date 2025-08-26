@@ -260,7 +260,7 @@ const About = () => {
         .about-section {
           background: var(--background-primary);
           position: relative;
-          padding: var(--space-5xl) 0;
+          padding: 4rem 0 3rem 0;
           overflow: hidden;
         }
 
@@ -316,7 +316,7 @@ const About = () => {
 
         .section-header {
           text-align: center;
-          margin-bottom: var(--space-5xl);
+          margin-bottom: 3rem;
         }
 
         .section-badge {
@@ -359,26 +359,26 @@ const About = () => {
         .about-main {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: var(--space-4xl);
-          margin-bottom: var(--space-5xl);
+          gap: 2.5rem;
+          margin-bottom: 3rem;
         }
 
         .profile-section {
-          padding: var(--space-4xl);
+          padding: 2rem;
           text-align: center;
           position: relative;
           overflow: hidden;
         }
 
         .profile-visual {
-          margin-bottom: var(--space-3xl);
+          margin-bottom: 2rem;
           position: relative;
         }
 
         .profile-image-container {
           position: relative;
           display: inline-block;
-          margin-bottom: var(--space-xl);
+          margin-bottom: 1.5rem;
         }
 
         .profile-glow {
@@ -436,9 +436,9 @@ const About = () => {
         }
 
         .profile-name {
-          font-size: var(--text-3xl);
+          font-size: 2rem;
           font-weight: 700;
-          margin-bottom: var(--space-lg);
+          margin-bottom: 1rem;
           background: var(--gradient-primary);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -446,7 +446,7 @@ const About = () => {
         }
 
         .typing-container {
-          margin-bottom: var(--space-2xl);
+          margin-bottom: 1.5rem;
           min-height: 60px;
           display: flex;
           align-items: center;
@@ -454,20 +454,21 @@ const About = () => {
         }
 
         .typing-text {
-          font-size: var(--text-xl);
+          font-size: 1.25rem;
           font-weight: 600;
           color: var(--accent-electric);
         }
 
         .bio-content {
           text-align: left;
-          margin-bottom: var(--space-3xl);
+          margin-bottom: 2rem;
         }
 
         .bio-paragraph {
-          margin-bottom: var(--space-lg);
+          margin-bottom: 1rem;
           line-height: 1.7;
           color: var(--text-secondary);
+          font-size: 1rem;
         }
 
         .highlight {
@@ -477,26 +478,26 @@ const About = () => {
         }
 
         .download-btn {
-          margin-top: var(--space-xl);
+          margin-top: 1.5rem;
         }
 
         .stats-experience {
           display: flex;
           flex-direction: column;
-          gap: var(--space-3xl);
+          gap: 2rem;
         }
 
         .stats-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: var(--space-xl);
+          gap: 1.5rem;
         }
 
         .stat-card {
           display: flex;
           align-items: center;
-          gap: var(--space-lg);
-          padding: var(--space-xl);
+          gap: 1rem;
+          padding: 1.5rem;
           position: relative;
           overflow: hidden;
         }
@@ -519,9 +520,9 @@ const About = () => {
         }
 
         .stat-value {
-          font-size: var(--text-3xl);
+          font-size: 2rem;
           font-weight: 800;
-          margin-bottom: var(--space-xs);
+          margin-bottom: 0.5rem;
           background: var(--gradient-primary);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -530,7 +531,7 @@ const About = () => {
 
         .stat-label {
           color: var(--text-secondary);
-          font-size: var(--text-sm);
+          font-size: 0.9rem;
           margin: 0;
         }
 
@@ -553,21 +554,21 @@ const About = () => {
         .experience-grid {
           display: flex;
           flex-direction: column;
-          gap: var(--space-lg);
+          gap: 1rem;
         }
 
         .experience-title {
-          font-size: var(--text-2xl);
+          font-size: 1.5rem;
           font-weight: 700;
-          margin-bottom: var(--space-lg);
+          margin-bottom: 1rem;
           color: var(--text-primary);
           text-align: center;
         }
 
         .experience-card {
           display: flex;
-          gap: var(--space-lg);
-          padding: var(--space-xl);
+          gap: 1rem;
+          padding: 1.5rem;
           position: relative;
           overflow: hidden;
         }
@@ -589,15 +590,15 @@ const About = () => {
         }
 
         .experience-name {
-          font-size: var(--text-lg);
+          font-size: 1.125rem;
           font-weight: 600;
-          margin-bottom: var(--space-sm);
+          margin-bottom: 0.5rem;
           color: var(--text-primary);
         }
 
         .experience-desc {
           color: var(--text-secondary);
-          font-size: var(--text-sm);
+          font-size: 0.95rem;
           line-height: 1.6;
           margin: 0;
         }
@@ -623,26 +624,26 @@ const About = () => {
         }
 
         .skills-header {
-          margin-bottom: var(--space-4xl);
+          margin-bottom: 2.5rem;
         }
 
         .skills-title {
-          margin-bottom: var(--space-lg);
+          margin-bottom: 1rem;
         }
 
         .skills-subtitle {
-          font-size: var(--text-lg);
+          font-size: 1.125rem;
           color: var(--text-secondary);
         }
 
         .skills-marquee {
-          margin-top: var(--space-2xl);
+          margin-top: 1.5rem;
         }
 
         @media (max-width: 1024px) {
           .about-main {
             grid-template-columns: 1fr;
-            gap: var(--space-3xl);
+            gap: 2rem;
           }
 
           .stats-grid {
@@ -652,7 +653,7 @@ const About = () => {
 
         @media (max-width: 768px) {
           .about-section {
-            padding: var(--space-3xl) 0;
+            padding: 2.5rem 0;
           }
 
           .profile-image {
@@ -668,7 +669,7 @@ const About = () => {
           .experience-card {
             flex-direction: column;
             text-align: center;
-            gap: var(--space-md);
+            gap: 1rem;
           }
 
           .bio-content {
