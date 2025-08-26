@@ -1,35 +1,36 @@
-import React, { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import ProjectItem from "./ProjectItem";
-import projectData from "./projectData";
-import { FiFilter, FiGrid, FiList, FiZap, FiCode, FiCpu, FiLayers } from "react-icons/fi";
+"use client"
+
+import { useState, useRef } from "react"
+import { motion, useInView } from "framer-motion"
+import ProjectItem from "./ProjectItem"
+import projectData from "./projectData"
+import { FiFilter, FiGrid, FiList, FiZap, FiCode, FiCpu, FiLayers } from "react-icons/fi"
 
 const Projects = () => {
-  const [filter, setFilter] = useState("all");
-  const [viewMode, setViewMode] = useState("grid");
-  const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { once: true, amount: 0.1 });
+  const [filter, setFilter] = useState("all")
+  const [viewMode, setViewMode] = useState("grid")
+  const containerRef = useRef(null)
+  const isInView = useInView(containerRef, { once: true, amount: 0.1 })
 
   const categories = [
     { id: "all", label: "All Projects", icon: FiLayers, color: "var(--gradient-primary)" },
     { id: "fullstack", label: "Full Stack", icon: FiCode, color: "var(--gradient-secondary)" },
     { id: "frontend", label: "Frontend", icon: FiZap, color: "var(--gradient-accent)" },
     { id: "ai", label: "AI/ML", icon: FiCpu, color: "var(--gradient-warm)" },
-  ];
+  ]
 
   const getProjectCategory = (project) => {
     if (project.technologies.includes("Spring Boot") || project.technologies.includes("Flask Python")) {
-      return "fullstack";
+      return "fullstack"
     }
     if (project.technologies.includes("AI/ML") || project.technologies.includes("Python")) {
-      return "ai";
+      return "ai"
     }
-    return "frontend";
-  };
+    return "frontend"
+  }
 
-  const filteredProjects = filter === "all" 
-    ? projectData 
-    : projectData.filter(project => getProjectCategory(project) === filter);
+  const filteredProjects =
+    filter === "all" ? projectData : projectData.filter((project) => getProjectCategory(project) === filter)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,7 +41,7 @@ const Projects = () => {
         delayChildren: 0.2,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -52,7 +53,7 @@ const Projects = () => {
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
-  };
+  }
 
   return (
     <section ref={containerRef} className="projects-section">
@@ -80,8 +81,8 @@ const Projects = () => {
               <span className="highlight-line">Projects</span>
             </h2>
             <p className="section-subtitle">
-              A curated collection of projects that showcase my expertise in modern web development, 
-              creative problem-solving, and cutting-edge technologies
+              A curated collection of projects that showcase my expertise in modern web development, creative
+              problem-solving, and cutting-edge technologies
             </p>
           </motion.div>
 
@@ -92,7 +93,7 @@ const Projects = () => {
                 {categories.map((category) => (
                   <motion.button
                     key={category.id}
-                    className={`filter-tab ${filter === category.id ? 'active' : ''}`}
+                    className={`filter-tab ${filter === category.id ? "active" : ""}`}
                     onClick={() => setFilter(category.id)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -102,7 +103,7 @@ const Projects = () => {
                     </div>
                     <span>{category.label}</span>
                     {filter === category.id && (
-                      <motion.div 
+                      <motion.div
                         className="filter-glow"
                         layoutId="filterGlow"
                         style={{ background: category.color }}
@@ -116,15 +117,15 @@ const Projects = () => {
             <div className="view-controls">
               <div className="view-toggle glass">
                 <button
-                  className={`view-btn ${viewMode === 'grid' ? 'active' : ''}`}
-                  onClick={() => setViewMode('grid')}
+                  className={`view-btn ${viewMode === "grid" ? "active" : ""}`}
+                  onClick={() => setViewMode("grid")}
                 >
                   <FiGrid />
                   <span>Grid</span>
                 </button>
                 <button
-                  className={`view-btn ${viewMode === 'list' ? 'active' : ''}`}
-                  onClick={() => setViewMode('list')}
+                  className={`view-btn ${viewMode === "list" ? "active" : ""}`}
+                  onClick={() => setViewMode("list")}
                 >
                   <FiList />
                   <span>List</span>
@@ -141,23 +142,13 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid */}
-          <motion.div 
-            className={`projects-grid magazine-grid ${viewMode === 'list' ? 'list-view' : ''}`}
+          <motion.div
+            className={`projects-grid magazine-grid ${viewMode === "list" ? "list-view" : ""}`}
             variants={containerVariants}
           >
             {filteredProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                className="project-wrapper"
-                variants={itemVariants}
-                layout
-              >
-                <ProjectItem
-                  project={project}
-                  index={index}
-                  viewMode={viewMode}
-                  variants={itemVariants}
-                />
+              <motion.div key={project.id} className="project-wrapper" variants={itemVariants} layout>
+                <ProjectItem project={project} index={index} viewMode={viewMode} variants={itemVariants} />
               </motion.div>
             ))}
           </motion.div>
@@ -170,10 +161,7 @@ const Projects = () => {
               </div>
               <h3>No projects found</h3>
               <p>Try adjusting your filters to see more projects.</p>
-              <button 
-                className="btn btn-primary"
-                onClick={() => setFilter('all')}
-              >
+              <button className="btn btn-primary" onClick={() => setFilter("all")}>
                 Show All Projects
               </button>
             </motion.div>
@@ -185,7 +173,7 @@ const Projects = () => {
         .projects-section {
           background: var(--background-primary);
           min-height: 100vh;
-          padding: var(--space-5xl) 0;
+          padding: calc(var(--space-3xl) + 80px) 0 var(--space-3xl) 0;
           position: relative;
           overflow: hidden;
         }
@@ -246,7 +234,7 @@ const Projects = () => {
 
         .section-header {
           text-align: center;
-          margin-bottom: var(--space-5xl);
+          margin-bottom: var(--space-3xl);
         }
 
         .section-badge {
@@ -260,12 +248,12 @@ const Projects = () => {
           font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.1em;
-          margin-bottom: var(--space-xl);
+          margin-bottom: var(--space-lg);
           color: var(--accent-electric);
         }
 
         .section-title {
-          margin-bottom: var(--space-lg);
+          margin-bottom: var(--space-md);
         }
 
         .highlight-line {
@@ -288,7 +276,7 @@ const Projects = () => {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: var(--space-4xl);
+          margin-bottom: var(--space-2xl);
           flex-wrap: wrap;
           gap: var(--space-xl);
         }
@@ -315,7 +303,7 @@ const Projects = () => {
           padding: var(--space-md) var(--space-lg);
           background: transparent;
           border: none;
-          color: var(--text-secondary);
+          color: rgba(255, 255, 255, 0.7);
           font-size: var(--text-sm);
           font-weight: 600;
           border-radius: var(--radius-xl);
@@ -325,6 +313,8 @@ const Projects = () => {
           overflow: hidden;
           text-transform: uppercase;
           letter-spacing: 0.05em;
+          min-width: fit-content;
+          white-space: nowrap;
         }
 
         .filter-icon {
@@ -336,6 +326,7 @@ const Projects = () => {
           justify-content: center;
           color: white;
           font-size: var(--text-sm);
+          flex-shrink: 0;
         }
 
         .filter-glow {
@@ -350,13 +341,14 @@ const Projects = () => {
         }
 
         .filter-tab:hover {
-          color: var(--text-primary);
-          background: var(--background-glass-hover);
+          color: rgba(255, 255, 255, 0.9);
+          background: rgba(255, 255, 255, 0.05);
         }
 
         .filter-tab.active {
-          color: var(--text-primary);
-          background: var(--background-glass-hover);
+          color: rgba(255, 255, 255, 1);
+          background: rgba(255, 255, 255, 0.1);
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
         .view-controls {
@@ -397,7 +389,7 @@ const Projects = () => {
 
         .projects-counter {
           text-align: center;
-          margin-bottom: var(--space-3xl);
+          margin-bottom: var(--space-xl);
         }
 
         .counter-text {
@@ -414,12 +406,12 @@ const Projects = () => {
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-          gap: var(--space-3xl);
+          gap: var(--space-2xl);
         }
 
         .projects-grid.list-view {
           grid-template-columns: 1fr;
-          gap: var(--space-2xl);
+          gap: var(--space-xl);
         }
 
         .project-wrapper {
@@ -428,7 +420,7 @@ const Projects = () => {
 
         .no-projects {
           text-align: center;
-          padding: var(--space-5xl);
+          padding: var(--space-3xl);
           max-width: 500px;
           margin: 0 auto;
         }
@@ -460,13 +452,13 @@ const Projects = () => {
         @media (max-width: 1024px) {
           .projects-grid {
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--space-2xl);
+            gap: var(--space-xl);
           }
         }
 
         @media (max-width: 768px) {
           .projects-section {
-            padding: var(--space-3xl) 0;
+            padding: calc(var(--space-2xl) + 70px) 0 var(--space-2xl) 0;
           }
 
           .projects-controls {
@@ -486,7 +478,7 @@ const Projects = () => {
 
           .projects-grid {
             grid-template-columns: 1fr;
-            gap: var(--space-xl);
+            gap: var(--space-lg);
           }
 
           .bg-blob {
@@ -508,7 +500,7 @@ const Projects = () => {
         }
       `}</style>
     </section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

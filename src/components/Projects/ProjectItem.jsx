@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
-import { FiExternalLink, FiArrowRight, FiCalendar, FiCode, FiEye, FiStar } from "react-icons/fi";
+"use client"
+
+import { useState } from "react"
+import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
+import { FaGithub } from "react-icons/fa"
+import { FiExternalLink, FiArrowRight, FiCalendar, FiCode } from "react-icons/fi"
 
 const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <motion.div 
+    <motion.div
       className={`project-card-modern ${viewMode}`}
       variants={variants}
       whileHover={{ y: -12 }}
@@ -19,7 +21,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
       {/* Project Image */}
       <div className="project-image-container">
         <div className="project-image">
-          <img src={project.image} alt={`${project.title} preview`} />
+          <img src={project.image || "/placeholder.svg"} alt={`${project.title} preview`} />
           <div className="image-overlay">
             <div className="overlay-content">
               <div className="project-links">
@@ -48,20 +50,10 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
                   </motion.a>
                 )}
               </div>
-              <div className="project-stats">
-                <div className="stat-item">
-                  <FiEye />
-                  <span>View</span>
-                </div>
-                <div className="stat-item">
-                  <FiStar />
-                  <span>Featured</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-        
+
         {/* Floating Badge */}
         <div className="project-badge">
           <span>{project.technologies[0]}</span>
@@ -78,49 +70,35 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           </div>
           <div className="project-date">
             <FiCalendar />
-            <span>{project.timeframe.split(' - ')[1] || project.timeframe}</span>
+            <span>{project.timeframe.split(" - ")[1] || project.timeframe}</span>
           </div>
         </div>
 
         {/* Title and Description */}
         <div className="project-info">
           <h3 className="project-title">{project.title}</h3>
-          <p className="project-description">
-            {project.description}
-          </p>
+          <p className="project-description">{project.description}</p>
         </div>
 
         {/* Technologies */}
         <div className="project-tech">
           {project.technologies.slice(0, 4).map((tech, techIndex) => (
-            <motion.span 
-              key={techIndex} 
-              className="tech-tag"
-              whileHover={{ scale: 1.05 }}
-            >
+            <motion.span key={techIndex} className="tech-tag" whileHover={{ scale: 1.05 }}>
               {tech}
             </motion.span>
           ))}
-          {project.technologies.length > 4 && (
-            <span className="tech-more">+{project.technologies.length - 4}</span>
-          )}
+          {project.technologies.length > 4 && <span className="tech-more">+{project.technologies.length - 4}</span>}
         </div>
 
         {/* Actions */}
         <div className="project-actions">
-          <Link 
-            to={`/projectdetails/${project.id}`} 
-            className="btn btn-primary project-btn"
-          >
+          <Link to={`/projectdetails/${project.id}`} className="btn btn-primary project-btn">
             <span>View Details</span>
-            <motion.div
-              animate={{ x: isHovered ? 5 : 0 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
+            <motion.div animate={{ x: isHovered ? 5 : 0 }} transition={{ type: "spring", stiffness: 400 }}>
               <FiArrowRight />
             </motion.div>
           </Link>
-          
+
           <div className="external-links">
             {project.githubLink && (
               <motion.a
@@ -128,7 +106,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline external-btn"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <FaGithub />
@@ -140,7 +118,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline external-btn"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <FiExternalLink />
@@ -269,7 +247,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           background: var(--glass-bg);
           backdrop-filter: blur(20px);
           color: white;
-          border-radius: 50%;
+          border-radius: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -285,17 +263,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
         }
 
         .project-stats {
-          display: flex;
-          gap: var(--space-lg);
-        }
-
-        .stat-item {
-          display: flex;
-          align-items: center;
-          gap: var(--space-xs);
-          color: white;
-          font-size: var(--text-sm);
-          font-weight: 500;
+          display: none;
         }
 
         .project-badge {
@@ -318,6 +286,8 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           display: flex;
           flex-direction: column;
           gap: var(--space-lg);
+          width: 100%;
+          overflow: hidden;
         }
 
         .project-meta {
@@ -326,6 +296,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           align-items: center;
           flex-wrap: wrap;
           gap: var(--space-md);
+          width: 100%;
         }
 
         .project-category,
@@ -338,8 +309,17 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           font-weight: 500;
         }
 
+        .project-date {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 120px;
+        }
+
         .project-info {
           flex: 1;
+          width: 100%;
+          overflow: hidden;
         }
 
         .project-title {
@@ -349,6 +329,9 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           color: var(--text-primary);
           font-family: var(--font-display);
           line-height: 1.2;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          hyphens: auto;
         }
 
         .project-description {
@@ -356,13 +339,20 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           line-height: 1.6;
           margin: 0;
           display: -webkit-box;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
           overflow: hidden;
+          min-height: 4.8em;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          hyphens: auto;
+          width: 100%;
+          max-width: 100%;
         }
 
         .project-card-modern.list .project-description {
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 5;
+          min-height: 6em;
         }
 
         .project-tech {
@@ -410,6 +400,24 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
         .project-btn {
           flex: 1;
           max-width: 200px;
+          padding: var(--space-md) var(--space-lg);
+          font-weight: 600;
+          font-size: var(--text-sm);
+          border-radius: var(--radius-xl);
+          background: var(--gradient-primary);
+          border: none;
+          color: white;
+          transition: all var(--transition-normal);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: var(--space-sm);
+          text-decoration: none;
+        }
+
+        .project-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-neon);
         }
 
         .external-links {
@@ -422,6 +430,18 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           height: 45px;
           padding: 0;
           border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: var(--text-lg);
+          transition: all var(--transition-normal);
+        }
+
+        .external-btn:hover {
+          transform: scale(1.1);
+          background: var(--accent-electric);
+          color: var(--background-primary);
+          box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
         }
 
         @media (max-width: 768px) {
@@ -452,6 +472,11 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
           .external-links {
             justify-content: center;
           }
+
+          .project-date {
+            max-width: none;
+            white-space: normal;
+          }
         }
 
         @media (max-width: 480px) {
@@ -475,7 +500,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
         }
       `}</style>
     </motion.div>
-  );
-};
+  )
+}
 
-export default ProjectItem;
+export default ProjectItem
