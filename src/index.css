@@ -727,6 +727,69 @@ h6 {
   background: var(--gradient-accent);
 }
 
+/* Image Optimization Styles */
+.lazy-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Optimize image rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Prevent layout shift during image loading */
+.project-image,
+.profile-image,
+.skill-icon,
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.project-image-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+/* Improve font loading */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-display: swap;
+}
+
 /* Selection */
 ::selection {
   background: var(--accent-electric);

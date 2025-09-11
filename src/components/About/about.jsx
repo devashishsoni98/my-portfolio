@@ -5,6 +5,8 @@ import SkillsCard from "./skillscard";
 import skillsdata from "./Skillsdata";
 import Marquee from "react-fast-marquee";
 import { FiDownload, FiUser, FiCode, FiAward, FiZap, FiTarget, FiHeart } from "react-icons/fi";
+import LazyImage from "../ImageOptimizer/LazyImage";
+import ImagePreloader from "../ImageOptimizer/ImagePreloader";
 
 const About = () => {
   const containerRef = useRef(null);
@@ -115,7 +117,12 @@ const About = () => {
               <div className="profile-visual">
                 <div className="profile-image-container">
                   <div className="profile-glow"></div>
-                  <img src="19.png" alt="Devashish Soni" className="profile-image" />
+                  <LazyImage 
+                    src="/19.png" 
+                    alt="Devashish Soni" 
+                    className="profile-image"
+                    priority={true}
+                  />
                   <div className="profile-ring"></div>
                 </div>
                 
@@ -255,6 +262,11 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
+      
+      <ImagePreloader 
+        images={['/19.png']} 
+        priority={true} 
+      />
 
       <style jsx>{`
         .about-section {

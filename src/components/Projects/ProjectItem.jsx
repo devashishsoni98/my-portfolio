@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa"
 import { FiExternalLink, FiArrowRight, FiCalendar, FiCode } from "react-icons/fi"
+import LazyImage from "../ImageOptimizer/LazyImage"
 
 const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
   const [isHovered, setIsHovered] = useState(false)
@@ -21,7 +22,12 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
       {/* Project Image */}
       <div className="project-image-container">
         <div className="project-image">
-          <img src={project.image || "/placeholder.svg"} alt={`${project.title} preview`} />
+          <LazyImage 
+            src={project.image || "/placeholder.svg"} 
+            alt={`${project.title} preview`}
+            className="project-image-content"
+            loading="lazy"
+          />
           <div className="image-overlay">
             <div className="overlay-content">
               <div className="project-links">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import LazyImage from "../ImageOptimizer/LazyImage";
 
 
 function Portfolio() {
@@ -34,7 +35,13 @@ function Portfolio() {
       </header>
       <div id="container">
         <div id="image-div">
-          <img src="15.jpg" alt="profile pic" width="300" id="image" />
+          <LazyImage 
+            src="/15.jpg" 
+            alt="profile pic" 
+            className="portfolio-image"
+            style={{ width: '300px' }}
+            loading="lazy"
+          />
           <br />
         </div>
         <h2 id="name">Devashish Soni</h2>

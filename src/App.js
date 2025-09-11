@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
+import ImagePreloader from './components/ImageOptimizer/ImagePreloader';
 
 import About from './components/About/about.jsx';
 import Contact from './components/Contact/contact.jsx';
@@ -44,8 +45,18 @@ function App() {
     window.location.href = "http://localhost:5000/auth/linkedin";
   };
 
+  // Preload critical images on app start
+  const criticalImages = [
+    '/19.png',
+    '/D.png',
+    '/html.png',
+    '/css3.png',
+    '/javascript.png',
+    '/react.png'
+  ];
   return (
     <div className="App">
+      <ImagePreloader images={criticalImages} priority={true} />
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />

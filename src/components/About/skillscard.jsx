@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import LazyImage from "../ImageOptimizer/LazyImage";
 
 const SkillsCard = ({ skills, index }) => {
   return (
@@ -22,7 +23,12 @@ const SkillsCard = ({ skills, index }) => {
       <div className="skill-glow"></div>
       <div className="skill-content">
         <div className="skill-icon-container">
-          <img src={skills.img} alt={`${skills.title} logo`} className="skill-icon" />
+          <LazyImage 
+            src={skills.img} 
+            alt={`${skills.title} logo`} 
+            className="skill-icon"
+            loading="lazy"
+          />
           <div className="skill-icon-bg"></div>
         </div>
         <h4 className="skill-title">{skills.title}</h4>

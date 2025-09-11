@@ -53,6 +53,8 @@
 import { useParams } from "react-router-dom"
 import projectData from "./projectData"
 import GoBack from "../Props/GoBack"
+import LazyImage from "../ImageOptimizer/LazyImage"
+import ImagePreloader from "../ImageOptimizer/ImagePreloader"
 
 const ProjectDetails = () => {
   const { id } = useParams()
@@ -83,10 +85,11 @@ const ProjectDetails = () => {
 
         <div className="project-image-section">
           <div className="project-image-container">
-            <img
-              className="project-main-image"
+            <LazyImage
               src={project.image || "/placeholder.svg"}
               alt={`${project.title} project showcase`}
+              className="project-main-image"
+              priority={true}
             />
           </div>
         </div>
@@ -126,6 +129,11 @@ const ProjectDetails = () => {
           </div>
         </div>
       </div>
+      
+      <ImagePreloader 
+        images={[project.image]} 
+        priority={true} 
+      />
     </div>
   )
 }
