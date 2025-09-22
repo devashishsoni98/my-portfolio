@@ -1,6 +1,28 @@
 const projectData = [
   {
     id: 1,
+    title: "GovIntel",
+    description:
+      "GovIntel is an AI-driven grievance management platform designed to help government organizations efficiently track, analyze, and resolve citizen complaints. It leverages AI/ML to streamline grievance handling, enabling faster resolution and actionable insights.",
+    image: "/govintel.png",
+    context:
+      "This project was developed to create an intelligent grievance management system for government organizations. It integrates AI-powered analysis and real-time dashboards to monitor, categorize, and prioritize complaints, improving transparency and efficiency.",
+    details:
+      "GovIntel uses AI and machine learning to analyze and categorize grievances submitted by citizens. The platform features interactive dashboards, real-time analytics, and role-based access for administrators, enabling efficient complaint tracking, prioritization, and reporting.",
+    timeframe: "May 2025 - July 2025",
+    technologies: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Python",
+      "AI/ML",
+      "REST APIs",
+    ],
+    githubLink: "https://github.com/devashishsoni98/govintel",
+  },
+  {
+    id: 2,
     title: "ATISHA",
     description:
       "ATISHA is an AI-based career counseling platform that provides personalized career recommendations for students based on NEP 2020 guidelines. It features career quizzes, expert guidance, and mentorship opportunities to help students make informed career choices.",
@@ -10,11 +32,18 @@ const projectData = [
     details:
       "ATISHA utilizes AI-based career assessments, personalized career suggestions, and a mentorship network to help students find the best-suited career paths. The platform supports interactive career quizzes, professional mentorship, and a resource library for career development.",
     timeframe: "November 2024 - December 2024",
-    technologies: ["React.js", "TypeScript", "Flask Python", "AI/ML", "PostgreSQL", "Tailwind CSS"],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Flask Python",
+      "AI/ML",
+      "PostgreSQL",
+      "Tailwind CSS",
+    ],
     githubLink: "https://github.com/devashishsoni98/atisha",
   },
   {
-    id: 2,
+    id: 3,
     title: "Shelfly",
     description:
       "Shelfly is a comprehensive inventory management system that streamlines the management of products, orders, and inventory levels. Built using Java full-stack technology, it integrates a Spring Boot backend with a React.js frontend, providing a secure and user-friendly platform for efficient stock tracking, role-based access control, and real-time alerts.",
@@ -24,11 +53,18 @@ const projectData = [
     details:
       "Shelfly's backend is powered by Spring Boot, with React.js as the frontend, and includes features such as product management, real-time inventory tracking, role-based access control, and low stock alerts. Users can manage products, track inventory levels, handle orders, and generate insightful reports. The system is designed with scalability and performance in mind, making it suitable for businesses of any scale.",
     timeframe: "July 2024 - August 2024",
-    technologies: ["React.js", "Spring Boot", "Hibernate", "TypeScript", "MySQL", "Spring Security"],
+    technologies: [
+      "React.js",
+      "Spring Boot",
+      "Hibernate",
+      "TypeScript",
+      "MySQL",
+      "Spring Security",
+    ],
     githubLink: "https://github.com/devashishsoni98/Shelfly",
   },
   {
-    id: 3,
+    id: 4,
     title: "Hand Gesture - PPT",
     description:
       "This project uses hand gestures to control PowerPoint slides. A thumbs up goes to the previous slide, and a hand pointing up advances to the next slide.",
@@ -42,7 +78,7 @@ const projectData = [
     githubLink: "https://github.com/devashishsoni98/PPT-hand-gesture",
   },
   {
-    id: 4,
+    id: 5,
     title: "MovieBazaar",
     description:
       "This is a movie website which displays a list of movies by collecting data from TMDB movie API. It also offers Firebase based Google Sign-In feature and movie search options!",
@@ -57,7 +93,7 @@ const projectData = [
     liveLink: "https://ds-movie-app.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Skyline Hotel Management",
     description:
       "This is a Hotel Management system with lots of features and functionalities.",
@@ -73,7 +109,7 @@ const projectData = [
     // liveLink: "https://skyline1.netlify.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Weather Website",
     description:
       "This is a simple and responsive weather website which shows the live weather for any city!",
@@ -88,7 +124,7 @@ const projectData = [
     liveLink: "https://ds-weather-app.netlify.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Quiz App",
     description: "A quiz app based on NextJs",
     image: "/quizquest.png",
@@ -102,7 +138,7 @@ const projectData = [
     liveLink: "https://quiz-quest-app.netlify.app/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Flight Booking Website",
     description:
       "This is a simple and responsive frontend flight booking website with lots of effects and animations!",
@@ -117,7 +153,7 @@ const projectData = [
     liveLink: "https://ds-flight-app.netlify.app/",
   },
   {
-    id: 9,
+    id: 10,
     title: "FlexStart Clone Website",
     description: "This is a clone for a bootstrap template FlexStart!",
     image: "/flexstart.png",

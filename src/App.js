@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-import ImagePreloader from './components/ImageOptimizer/ImagePreloader';
 
 import About from './components/About/about.jsx';
 import Contact from './components/Contact/contact.jsx';
@@ -15,6 +14,7 @@ import GoTop from './components/Props/GoTop.jsx';
 import ScrollToTop from './components/ScrollToTop.js';
 import ProjectsDetails from './components/Projects/ProjectsDetails.jsx';
 import Blob from './components/Blob/blob.jsx';
+import ImagePreloader from "./components/ImageOptimizer/ImagePreloader.jsx";
 
 function App() {
   const [accessToken, setAccessToken] = useState(null);
