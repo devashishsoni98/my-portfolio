@@ -1,36 +1,77 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import ProjectItem from "./ProjectItem"
-import projectData from "./projectData"
-import { FiFilter, FiGrid, FiList, FiZap, FiCode, FiCpu, FiLayers } from "react-icons/fi"
+import { useState, useRef, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import ProjectItem from "./ProjectItem";
+import projectData from "./projectData";
+import {
+  FiFilter,
+  FiGrid,
+  FiList,
+  FiZap,
+  FiCode,
+  FiCpu,
+  FiLayers,
+} from "react-icons/fi";
 
 const Projects = () => {
-  const [filter, setFilter] = useState("all")
-  const [viewMode, setViewMode] = useState("grid")
-  const containerRef = useRef(null)
-  const isInView = useInView(containerRef, { once: true, amount: 0.1 })
+  const [filter, setFilter] = useState("all");
+  const [viewMode, setViewMode] = useState("grid");
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true, amount: 0.1 });
+  const [forceVisible, setForceVisible] = useState(false);
+
+  // ensure content appears on mount as a fallback (fixes mobile where IO may be blocked)
+  useEffect(() => {
+    // give browser one paint cycle then show — avoids delaying rendering
+    const id = requestAnimationFrame(() => setForceVisible(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  const shouldAnimateVisible = isInView || forceVisible;
 
   const categories = [
-    { id: "all", label: "All Projects", icon: FiLayers, color: "var(--gradient-primary)" },
-    { id: "fullstack", label: "Full Stack", icon: FiCode, color: "var(--gradient-secondary)" },
-    { id: "frontend", label: "Frontend", icon: FiZap, color: "var(--gradient-accent)" },
+    {
+      id: "all",
+      label: "All Projects",
+      icon: FiLayers,
+      color: "var(--gradient-primary)",
+    },
+    {
+      id: "fullstack",
+      label: "Full Stack",
+      icon: FiCode,
+      color: "var(--gradient-secondary)",
+    },
+    {
+      id: "frontend",
+      label: "Frontend",
+      icon: FiZap,
+      color: "var(--gradient-accent)",
+    },
     { id: "ai", label: "AI/ML", icon: FiCpu, color: "var(--gradient-warm)" },
-  ]
+  ];
 
   const getProjectCategory = (project) => {
-    if (project.technologies.includes("Spring Boot") || project.technologies.includes("Flask Python")) {
-      return "fullstack"
+    if (
+      project.technologies.includes("Spring Boot") ||
+      project.technologies.includes("Flask Python")
+    ) {
+      return "fullstack";
     }
-    if (project.technologies.includes("AI/ML") || project.technologies.includes("Python")) {
-      return "ai"
+    if (
+      project.technologies.includes("AI/ML") ||
+      project.technologies.includes("Python")
+    ) {
+      return "ai";
     }
-    return "frontend"
-  }
+    return "frontend";
+  };
 
   const filteredProjects =
-    filter === "all" ? projectData : projectData.filter((project) => getProjectCategory(project) === filter)
+    filter === "all"
+      ? projectData
+      : projectData.filter((project) => getProjectCategory(project) === filter);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,7 +82,7 @@ const Projects = () => {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -53,7 +94,7 @@ const Projects = () => {
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
-  }
+  };
 
   return (
     <section ref={containerRef} className="projects-section">
@@ -69,7 +110,7 @@ const Projects = () => {
           className="projects-content"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={shouldAnimateVisible ? "visible" : "hidden"}
         >
           {/* Header */}
           <motion.div className="section-header" variants={itemVariants}>
@@ -81,8 +122,9 @@ const Projects = () => {
               <span className="highlight-line">Projects</span>
             </h2>
             <p className="section-subtitle">
-              A curated collection of projects that showcase my expertise in modern web development, creative
-              problem-solving, and cutting-edge technologies
+              A curated collection of projects that showcase my expertise in
+              modern web development, creative problem-solving, and cutting-edge
+              technologies
             </p>
           </motion.div>
 
@@ -93,19 +135,27 @@ const Projects = () => {
                 {categories.map((category) => (
                   <motion.button
                     key={category.id}
-                    className={`filter-tab ${filter === category.id ? "active" : ""}`}
+                    className={`filter-tab ${
+                      filter === category.id ? "active" : ""
+                    }`}
                     onClick={() => setFilter(category.id)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <div className="filter-icon" style={{ background: category.color }}>
+                    <div
+                      className="filter-icon"
+                      style={{ background: category.color }}
+                    >
                       <category.icon />
                     </div>
                     <span>{category.label}</span>
                     {filter === category.id && (
                       <motion.div
                         className="filter-glow"
-                        layoutId="filterGlow"
+                        // layoutId="filterGlow"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.12 }}
+                        exit={{ opacity: 0 }}
                         style={{ background: category.color }}
                       />
                     )}
@@ -137,31 +187,51 @@ const Projects = () => {
           {/* Projects Counter */}
           <motion.div className="projects-counter" variants={itemVariants}>
             <span className="counter-text">
-              Showing <span className="counter-number">{filteredProjects.length}</span> projects
+              Showing{" "}
+              <span className="counter-number">{filteredProjects.length}</span>{" "}
+              projects
             </span>
           </motion.div>
 
           {/* Projects Grid */}
           <motion.div
-            className={`projects-grid magazine-grid ${viewMode === "list" ? "list-view" : ""}`}
+            className={`projects-grid magazine-grid ${
+              viewMode === "list" ? "list-view" : ""
+            }`}
             variants={containerVariants}
           >
             {filteredProjects.map((project, index) => (
-              <motion.div key={project.id} className="project-wrapper" variants={itemVariants} layout>
-                <ProjectItem project={project} index={index} viewMode={viewMode} variants={itemVariants} />
+              <motion.div
+                key={project.id}
+                className="project-wrapper"
+                variants={itemVariants}
+                layout
+              >
+                <ProjectItem
+                  project={project}
+                  index={index}
+                  viewMode={viewMode}
+                  variants={itemVariants}
+                />
               </motion.div>
             ))}
           </motion.div>
 
           {/* Empty State */}
           {filteredProjects.length === 0 && (
-            <motion.div className="no-projects glass-card" variants={itemVariants}>
+            <motion.div
+              className="no-projects glass-card"
+              variants={itemVariants}
+            >
               <div className="empty-icon">
                 <FiFilter />
               </div>
               <h3>No projects found</h3>
               <p>Try adjusting your filters to see more projects.</p>
-              <button className="btn btn-primary" onClick={() => setFilter("all")}>
+              <button
+                className="btn btn-primary"
+                onClick={() => setFilter("all")}
+              >
                 Show All Projects
               </button>
             </motion.div>
@@ -194,9 +264,15 @@ const Projects = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background-image: 
-            linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+          background-image: linear-gradient(
+              rgba(255, 255, 255, 0.02) 1px,
+              transparent 1px
+            ),
+            linear-gradient(
+              90deg,
+              rgba(255, 255, 255, 0.02) 1px,
+              transparent 1px
+            );
           background-size: 50px 50px;
           opacity: 0.5;
         }
@@ -486,8 +562,14 @@ const Projects = () => {
             filter: blur(40px);
           }
 
-          .bg-blob-1 { width: 250px; height: 250px; }
-          .bg-blob-2 { width: 200px; height: 200px; }
+          .bg-blob-1 {
+            width: 250px;
+            height: 250px;
+          }
+          .bg-blob-2 {
+            width: 200px;
+            height: 200px;
+          }
         }
 
         @media (max-width: 480px) {
@@ -501,7 +583,7 @@ const Projects = () => {
         }
       `}</style>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

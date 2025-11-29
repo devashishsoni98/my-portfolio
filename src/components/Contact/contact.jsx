@@ -300,7 +300,7 @@ const Contact = () => {
       <style jsx>{`
         .contact-section {
           background: var(--background-primary);
-          padding: 3rem 0;
+          padding: 8rem 0;
           position: relative;
           overflow: hidden;
         }
@@ -714,7 +714,7 @@ const Contact = () => {
 
         @media (max-width: 768px) {
           .contact-section {
-            padding: 2rem 0;
+            padding: 8rem 0;
           }
 
           .contact-card,

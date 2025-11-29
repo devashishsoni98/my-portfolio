@@ -118,7 +118,7 @@ const About = () => {
                 <div className="profile-image-container">
                   <div className="profile-glow"></div>
                   <LazyImage 
-                    src="/19.png" 
+                    src="/yup.jpg" 
                     alt="Devashish Soni" 
                     className="profile-image"
                     priority={true}
@@ -144,7 +144,7 @@ const About = () => {
                 
                 <div className="bio-content">
                   <p className="bio-paragraph">
-                    I am a third-year CSE undergraduate at <span className="highlight">PIET, Jaipur</span>, 
+                    I am a final-year CSE undergraduate at <span className="highlight">PIET, Jaipur</span>, 
                     specializing in software development and data structures & algorithms.
                   </p>
                   
@@ -162,7 +162,7 @@ const About = () => {
                 </div>
 
                 <motion.a
-                  href="/Resume_DEVASHISH_SONI.pdf"
+                  href="/resume.pdf"
                   download="Resume_DevashishSoni"
                   className="btn btn-primary download-btn"
                   target="_blank"
@@ -272,7 +272,7 @@ const About = () => {
         .about-section {
           background: var(--background-primary);
           position: relative;
-          padding: 4rem 0 3rem 0;
+          padding: 8rem 0 3rem 0;
           overflow: hidden;
         }
 
@@ -665,7 +665,7 @@ const About = () => {
 
         @media (max-width: 768px) {
           .about-section {
-            padding: 2.5rem 0;
+            padding: 8rem 0;
           }
 
           .profile-image {

@@ -263,7 +263,7 @@ const Home = () => {
                 </Link>
 
                 <a
-                  href="/Resume_DEVASHISH_SONI.pdf"
+                  href="/resume.pdf"
                   download="Resume_DevashishSoni"
                   className="btn btn-neon"
                   target="_blank"
@@ -392,6 +392,7 @@ const Home = () => {
                   <FiArrowRight />
                 </div>
               </div>
+              
             </div>
           </div>
         </div>
