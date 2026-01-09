@@ -72,8 +72,8 @@ const Contact = () => {
     {
       icon: FiMail,
       label: "Email",
-      value: "devashishsoni0@gmail.com",
-      href: "mailto:devashishsoni0@gmail.com",
+      value: "devashishsoni08@gmail.com",
+      href: "mailto:devashishsoni08@gmail.com",
       color: "var(--gradient-primary)"
     },
     {
@@ -83,13 +83,6 @@ const Contact = () => {
       href: null,
       color: "var(--gradient-secondary)"
     },
-    {
-      icon: FiPhone,
-      label: "Phone",
-      value: "+91 (123) 456-7890",
-      href: "tel:+911234567890",
-      color: "var(--gradient-accent)"
-    }
   ];
 
   return (

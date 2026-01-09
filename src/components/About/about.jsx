@@ -4,7 +4,15 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import SkillsCard from "./skillscard";
 import skillsdata from "./Skillsdata";
 import Marquee from "react-fast-marquee";
-import { FiDownload, FiUser, FiCode, FiAward, FiZap, FiTarget, FiHeart } from "react-icons/fi";
+import {
+  FiDownload,
+  FiUser,
+  FiCode,
+  FiAward,
+  FiZap,
+  FiTarget,
+  FiHeart,
+} from "react-icons/fi";
 import LazyImage from "../ImageOptimizer/LazyImage";
 import ImagePreloader from "../ImageOptimizer/ImagePreloader";
 
@@ -16,14 +24,21 @@ const About = () => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
 
   const [text] = useTypewriter({
-    words: ["Full Stack Developer", "UI/UX Designer", "Problem Solver", "Tech Enthusiast", "Creative Thinker"],
+    words: [
+      "Software Engineer",
+      "Problem Solver",
+      "Technology Enthusiast",
+      "Systems & Application Developer",
+      "Continuous Learner",
+      "Full Stack Developer",
+    ],
     loop: {},
     delaySpeed: 2000,
     typeSpeed: 100,
@@ -54,31 +69,47 @@ const About = () => {
   };
 
   const stats = [
-    { icon: FiCode, label: "Projects Completed", value: "15+", color: "var(--gradient-primary)" },
-    { icon: FiAward, label: "Technologies", value: "10+", color: "var(--gradient-secondary)" },
-    { icon: FiUser, label: "Years Learning", value: "3+", color: "var(--gradient-accent)" },
+    {
+      icon: FiCode,
+      label: "Projects Completed",
+      value: "10+",
+      color: "var(--gradient-primary)",
+    },
+    {
+      icon: FiAward,
+      label: "Technologies",
+      value: "10+",
+      color: "var(--gradient-secondary)",
+    },
+    {
+      icon: FiUser,
+      label: "Years Learning",
+      value: "3+",
+      color: "var(--gradient-accent)",
+    },
   ];
 
-  const experiences = [
-    {
-      icon: FiZap,
-      title: "Full Stack Development",
-      description: "Building end-to-end web applications with modern technologies and scalable architectures",
-      gradient: "var(--gradient-primary)"
-    },
-    {
-      icon: FiTarget,
-      title: "UI/UX Design",
-      description: "Creating intuitive and beautiful user interfaces with focus on user experience",
-      gradient: "var(--gradient-secondary)"
-    },
-    {
-      icon: FiHeart,
-      title: "Performance Optimization",
-      description: "Optimizing applications for speed, scalability, and exceptional user experience",
-      gradient: "var(--gradient-accent)"
-    }
-  ];
+ const experiences = [
+  {
+    icon: FiZap,
+    title: "Software Development",
+    description: "Developing and maintaining software solutions using modern tools and sound engineering principles",
+    gradient: "var(--gradient-primary)"
+  },
+  {
+    icon: FiTarget,
+    title: "System & Application Design",
+    description: "Designing structured, maintainable applications with focus on reliability and clarity",
+    gradient: "var(--gradient-secondary)"
+  },
+  {
+    icon: FiHeart,
+    title: "Optimization & Reliability",
+    description: "Improving performance, stability, and efficiency across applications and systems",
+    gradient: "var(--gradient-accent)"
+  }
+];
+
 
   return (
     <section ref={containerRef} className="about-section">
@@ -106,58 +137,104 @@ const About = () => {
               <span className="highlight-line">Experiences</span>
             </h2>
             <p className="section-subtitle">
-              Get to know more about who I am, what I do, and the passion that drives my work
+              Get to know more about who I am, what I do, and the passion that
+              drives my work
             </p>
           </motion.div>
 
           {/* Main Content */}
           <div className="about-main">
             {/* Profile Section */}
-            <motion.div className="profile-section glass-card" variants={itemVariants}>
+            <motion.div
+              className="profile-section glass-card"
+              variants={itemVariants}
+            >
               <div className="profile-visual">
                 <div className="profile-image-container">
                   <div className="profile-glow"></div>
-                  <LazyImage 
-                    src="/yup.jpg" 
-                    alt="Devashish Soni" 
+                  <LazyImage
+                    src="/yup.png"
+                    alt="Devashish Soni"
                     className="profile-image"
                     priority={true}
                   />
                   <div className="profile-ring"></div>
                 </div>
-                
+
                 <div className="profile-status">
                   <div className="status-indicator"></div>
                   <span>Available for work</span>
                 </div>
               </div>
-              
+
               <div className="profile-content">
                 <h3 className="profile-name">Devashish Soni</h3>
-                
+
                 <div className="typing-container">
                   <span className="typing-text">
                     {text}
-                    <Cursor cursorStyle="|" cursorColor="var(--accent-electric)" />
+                    <Cursor
+                      cursorStyle="|"
+                      cursorColor="var(--accent-electric)"
+                    />
                   </span>
                 </div>
-                
+                {/* 
                 <div className="bio-content">
                   <p className="bio-paragraph">
-                    I am a final-year CSE undergraduate at <span className="highlight">PIET, Jaipur</span>, 
-                    specializing in software development and data structures & algorithms.
+                    I am a final-year CSE undergraduate at{" "}
+                    <span className="highlight">PIET, Jaipur</span>,
+                    specializing in software development and data structures &
+                    algorithms.
                   </p>
-                  
+
                   <p className="bio-paragraph">
-                    Proficient in <span className="highlight">Java, C++, MySQL, Spring Boot and React.js</span>, 
-                    with experience in building scalable web applications and modern user interfaces.
+                    Proficient in{" "}
+                    <span className="highlight">
+                      Java, C++, MySQL, Spring Boot and React.js
+                    </span>
+                    , with experience in building scalable web applications and
+                    modern user interfaces.
                   </p>
-                  
+
                   <p className="bio-paragraph">
-                    Passionate about problem-solving, <span className="highlight">API development</span>, 
-                    and <span className="highlight">version control</span>. I stay updated with industry 
-                    trends and thrive in collaborative environments while working on 
-                    <span className="highlight"> AI and MERN stack projects</span>.
+                    Passionate about problem-solving,{" "}
+                    <span className="highlight">API development</span>, and{" "}
+                    <span className="highlight">version control</span>. I stay
+                    updated with industry trends and thrive in collaborative
+                    environments while working on
+                    <span className="highlight">
+                      {" "}
+                      AI and MERN stack projects
+                    </span>
+                    .
+                  </p>
+                </div> */}
+
+                <div className="bio-content">
+                  <p className="bio-paragraph">
+                    Final-year Computer Science Engineering undergraduate at
+                    <span className="highlight"> PIET, Jaipur</span>, with a
+                    strong foundation in software development and core computer
+                    science concepts.
+                  </p>
+
+                  <p className="bio-paragraph">
+                    Experience working with
+                    <span className="highlight">
+                      {" "}
+                      Java, C++, MySQL, Spring Boot, and React.js
+                    </span>
+                    , focusing on building reliable applications and
+                    well-structured systems.
+                  </p>
+
+                  <p className="bio-paragraph">
+                    Interested in problem-solving,
+                    <span className="highlight"> backend development</span>, and
+                    <span className="highlight"> system-oriented thinking</span>
+                    . Comfortable working in collaborative environments and
+                    learning new technologies as required.
                   </p>
                 </div>
 
@@ -188,7 +265,10 @@ const About = () => {
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <div className="stat-icon" style={{ background: stat.color }}>
+                    <div
+                      className="stat-icon"
+                      style={{ background: stat.color }}
+                    >
                       <stat.icon />
                     </div>
                     <div className="stat-content">
@@ -210,7 +290,10 @@ const About = () => {
                     variants={itemVariants}
                     whileHover={{ scale: 1.02, y: -5 }}
                   >
-                    <div className="experience-icon" style={{ background: exp.gradient }}>
+                    <div
+                      className="experience-icon"
+                      style={{ background: exp.gradient }}
+                    >
                       <exp.icon />
                     </div>
                     <div className="experience-content">
@@ -225,18 +308,20 @@ const About = () => {
           </div>
 
           {/* Skills Section */}
-          <motion.div 
+          <motion.div
             ref={skillsRef}
-            className="skills-section" 
+            className="skills-section"
             variants={itemVariants}
             initial="hidden"
             animate={skillsInView ? "visible" : "hidden"}
           >
             <div className="skills-header">
               <h3 className="skills-title hero-text">Technical Arsenal</h3>
-              <p className="skills-subtitle">Technologies and tools I work with</p>
+              <p className="skills-subtitle">
+                Technologies and tools I work with
+              </p>
             </div>
-            
+
             <div className="skills-marquee">
               <Marquee
                 gradient={false}
@@ -262,11 +347,8 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
-      
-      <ImagePreloader 
-        images={['/19.png']} 
-        priority={true} 
-      />
+
+      <ImagePreloader images={["/19.png"]} priority={true} />
 
       <style jsx>{`
         .about-section {
@@ -692,9 +774,18 @@ const About = () => {
             filter: blur(40px);
           }
 
-          .bg-blob-1 { width: 200px; height: 200px; }
-          .bg-blob-2 { width: 150px; height: 150px; }
-          .bg-blob-3 { width: 100px; height: 100px; }
+          .bg-blob-1 {
+            width: 200px;
+            height: 200px;
+          }
+          .bg-blob-2 {
+            width: 150px;
+            height: 150px;
+          }
+          .bg-blob-3 {
+            width: 100px;
+            height: 100px;
+          }
         }
       `}</style>
     </section>

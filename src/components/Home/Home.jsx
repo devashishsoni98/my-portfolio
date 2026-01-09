@@ -1,49 +1,59 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { FiDownload, FiArrowRight, FiCode, FiZap, FiStar } from "react-icons/fi"
-import { Link } from "react-router-dom"
+import { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedin,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  FiDownload,
+  FiArrowRight,
+  FiCode,
+  FiZap,
+  FiStar,
+} from "react-icons/fi";
+import { Link } from "react-router-dom";
 // import "../index.css"
 
 const Home = () => {
-  const containerRef = useRef(null)
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const blobs = document.querySelectorAll(".interactive-blob")
+      const blobs = document.querySelectorAll(".interactive-blob");
       blobs.forEach((blob, index) => {
-        const speed = (index + 1) * 0.02
-        const x = (e.clientX * speed) / 100
-        const y = (e.clientY * speed) / 100
-        blob.style.transform = `translate(${x}px, ${y}px)`
-      })
-    }
+        const speed = (index + 1) * 0.02;
+        const x = (e.clientX * speed) / 100;
+        const y = (e.clientY * speed) / 100;
+        blob.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    };
 
     const handleScroll = () => {
-      const elements = document.querySelectorAll(".scroll-reveal")
+      const elements = document.querySelectorAll(".scroll-reveal");
       elements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top
-        const elementVisible = 150
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
 
         if (elementTop < window.innerHeight - elementVisible) {
-          element.classList.add("revealed")
+          element.classList.add("revealed");
         }
-      })
-    }
+      });
+    };
 
-    window.addEventListener("mousemove", handleMouseMove)
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
 
     // Initial scroll check
-    handleScroll()
+    handleScroll();
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove)
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -55,9 +65,16 @@ const Home = () => {
       <div className="interactive-blob blob blob-2" />
       <div className="interactive-blob blob blob-3" />
 
-      <section ref={containerRef} className="home-section" style={{ paddingTop: "120px", minHeight: "100vh" }}>
+      <section
+        ref={containerRef}
+        className="home-section"
+        style={{ paddingTop: "120px", minHeight: "100vh" }}
+      >
         <div className="parallax-content">
-          <div className="container" style={{ maxWidth: "1200px", padding: "0 2rem" }}>
+          <div
+            className="container"
+            style={{ maxWidth: "1200px", padding: "0 2rem" }}
+          >
             <div
               className="home-content"
               style={{
@@ -92,7 +109,7 @@ const Home = () => {
                   margin: "0 auto",
                 }}
               >
-                <div className="hero-badge" style={{ marginBottom: "2rem" }}>
+                {/* <div className="hero-badge" style={{ marginBottom: "2rem" }}>
                   <span
                     className="neon-glow"
                     style={{
@@ -107,10 +124,16 @@ const Home = () => {
                   >
                     Available for Work
                   </span>
-                </div>
+                </div> */}
 
-                <h1 className="hero-text" style={{ marginBottom: "2rem", lineHeight: "1.1" }}>
-                  <span className="text-line" style={{ display: "block", marginBottom: "0.5rem" }}>
+                <h1
+                  className="hero-text"
+                  style={{ marginBottom: "2rem", lineHeight: "1.1" }}
+                >
+                  <span
+                    className="text-line"
+                    style={{ display: "block", marginBottom: "0.5rem" }}
+                  >
                     Hi, I'm
                   </span>
                   <span
@@ -118,7 +141,8 @@ const Home = () => {
                     style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+                      background:
+                        "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
@@ -126,8 +150,15 @@ const Home = () => {
                   >
                     Devashish Soni
                   </span>
-                  <span className="text-line" style={{ display: "block", fontSize: "0.8em", opacity: "0.9" }}>
-                    Full-Stack Developer
+                  <span
+                    className="text-line"
+                    style={{
+                      display: "block",
+                      fontSize: "0.8em",
+                      opacity: "0.9",
+                    }}
+                  >
+                    Software Engineer
                   </span>
                 </h1>
 
@@ -142,8 +173,9 @@ const Home = () => {
                       margin: "0 auto",
                     }}
                   >
-                    I craft exceptional digital experiences that blend cutting-edge technology with stunning visual
-                    design. Specializing in React, Node.js, and modern web technologies to bring your ideas to life.
+                    Building reliable and efficient software using modern
+                    technologies. Focused on creating practical solutions that
+                    work well in real-world scenarios.
                   </p>
                 </div>
 
@@ -163,14 +195,15 @@ const Home = () => {
                         display: "block",
                         fontSize: "2.5rem",
                         fontWeight: "800",
-                        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                        background:
+                          "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                         backgroundClip: "text",
                         marginBottom: "0.5rem",
                       }}
                     >
-                      50+
+                      10+
                     </span>
                     <span
                       className="stat-label"
@@ -190,7 +223,8 @@ const Home = () => {
                         display: "block",
                         fontSize: "2.5rem",
                         fontWeight: "800",
-                        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                        background:
+                          "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                         backgroundClip: "text",
@@ -217,14 +251,15 @@ const Home = () => {
                         display: "block",
                         fontSize: "2.5rem",
                         fontWeight: "800",
-                        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                        background:
+                          "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                         backgroundClip: "text",
                         marginBottom: "0.5rem",
                       }}
                     >
-                      15+
+                      10+
                     </span>
                     <span
                       className="stat-label"
@@ -369,7 +404,8 @@ const Home = () => {
                   style={{
                     width: "2px",
                     height: "40px",
-                    background: "linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5), transparent)",
+                    background:
+                      "linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5), transparent)",
                   }}
                 ></div>
                 <span
@@ -380,7 +416,7 @@ const Home = () => {
                     letterSpacing: "0.05em",
                   }}
                 >
-                  Scroll to explore
+                  {/* Scroll to explore */}
                 </span>
                 <div
                   className="scroll-arrow"
@@ -389,16 +425,15 @@ const Home = () => {
                     animation: "bounce 2s infinite",
                   }}
                 >
-                  <FiArrowRight />
+                  {/* <FiArrowRight /> */}
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
