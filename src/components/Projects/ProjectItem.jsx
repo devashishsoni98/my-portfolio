@@ -111,7 +111,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline external-btn"
+                className="project-link"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -123,7 +123,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline external-btn"
+                className="project-link"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >

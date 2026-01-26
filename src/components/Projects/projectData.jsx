@@ -20,6 +20,7 @@ const projectData = [
       "REST APIs",
     ],
     githubLink: "https://github.com/devashishsoni98/govintel",
+    liveLink: "https://gov-intel.netlify.app/",
   },
   {
     id: 2,
