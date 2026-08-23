@@ -4,7 +4,7 @@ This Portfolio serves as an online presence where I can display my latest projec
 
 ## Demo
 
-https://ds-portfolio-website.netlify.app/
+https://devashishsoni.netlify.app/
 
 ## Features
 
