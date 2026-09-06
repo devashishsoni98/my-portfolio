@@ -4,6 +4,7 @@ const LazyImage = ({
   src, 
   alt, 
   className = '', 
+  thumb = null,
   placeholder = '/placeholder.svg',
   loading = 'lazy',
   priority = false,
@@ -53,8 +54,32 @@ const LazyImage = ({
       style={{ position: 'relative', overflow: 'hidden' }}
       {...props}
     >
-      {/* Placeholder/Loading state */}
-      {!isLoaded && (
+      {/* Blurred micro-thumbnail: visible instantly, fades out once the full image is decoded */}
+      {thumb && (
+        <img
+          src={thumb}
+          alt=""
+          aria-hidden="true"
+          draggable="false"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            filter: 'blur(14px)',
+            transform: 'scale(1.1)',
+            opacity: isLoaded ? 0 : 1,
+            transition: 'opacity 0.45s ease',
+            pointerEvents: 'none',
+            zIndex: 1
+          }}
+        />
+      )}
+
+      {/* Placeholder/Loading state (only used when there is no thumbnail) */}
+      {!isLoaded && !thumb && (
         <div 
           className="image-placeholder"
           style={{
@@ -95,7 +120,7 @@ const LazyImage = ({
         />
       )}
 
-      <style jsx>{`
+       <style>{`
         @keyframes shimmer {
           0% {
             background-position: -200% 0;

@@ -47,12 +47,12 @@ function App() {
 
   // Preload critical images on app start
   const criticalImages = [
-    '/19.png',
+    '/19.webp',
     '/D.png',
-    '/html.png',
-    '/css3.png',
-    '/javascript.png',
-    '/react.png'
+    '/html.webp',
+    '/css3.webp',
+    '/javascript.webp',
+    '/react.webp'
   ];
   return (
     <div className="App">

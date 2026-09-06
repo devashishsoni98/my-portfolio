@@ -239,7 +239,7 @@ const Projects = () => {
         </motion.div>
       </div>
 
-      <style jsx>{`
+       <style>{`
         .projects-section {
           background: var(--background-primary);
           min-height: 100vh;

@@ -87,6 +87,7 @@ const ProjectDetails = () => {
           <div className="project-image-container">
             <LazyImage
               src={project.image || "/placeholder.svg"}
+              thumb={project.image ? project.image.replace(/\.(png|jpe?g|webp)$/i, ".thumb.webp") : null}
               alt={`${project.title} project showcase`}
               className="project-main-image"
               priority={true}

@@ -748,10 +748,8 @@ h6 {
   }
 }
 
-/* Optimize image rendering */
+/* GPU compositing hint for images */
 img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
   backface-visibility: hidden;
   transform: translateZ(0);
 }
@@ -1047,6 +1045,21 @@ button:focus-visible {
   /* Reduced bottom margin from 2xl to lg */
   margin-bottom: var(--space-lg);
   background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* About headline: display-text is sized for the hero (up to 8rem, line-height 0.9);
+   scope a smaller, properly-leading version so long titles don't clip */
+.about-section .section-title.display-text {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.15;
+  margin-bottom: var(--space-sm);
+}
+
+.about-section .ai-engineer {
+  background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

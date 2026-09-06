@@ -108,24 +108,7 @@ const Home = () => {
                   width: "100%",
                   margin: "0 auto",
                 }}
-              >
-                {/* <div className="hero-badge" style={{ marginBottom: "2rem" }}>
-                  <span
-                    className="neon-glow"
-                    style={{
-                      padding: "0.75rem 1.5rem",
-                      borderRadius: "2rem",
-                      background: "rgba(0, 255, 255, 0.1)",
-                      border: "1px solid rgba(0, 255, 255, 0.3)",
-                      fontSize: "0.9rem",
-                      fontWeight: "500",
-                      letterSpacing: "0.05em",
-                    }}
-                  >
-                    Available for Work
-                  </span>
-                </div> */}
-
+                >
                 <h1
                   className="hero-text"
                   style={{ marginBottom: "2rem", lineHeight: "1.1" }}
@@ -158,7 +141,7 @@ const Home = () => {
                       opacity: "0.9",
                     }}
                   >
-                    Software Engineer
+                     AI Engineer
                   </span>
                 </h1>
 
@@ -297,7 +280,7 @@ const Home = () => {
                   <FiArrowRight />
                 </Link>
 
-                <a
+                {/* <a
                   href="/resume.pdf"
                   download="Resume_DevashishSoni"
                   className="btn btn-neon"
@@ -311,7 +294,7 @@ const Home = () => {
                 >
                   <FiDownload />
                   <span>Download Resume</span>
-                </a>
+                </a> */}
               </div>
 
               <div
