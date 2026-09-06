@@ -2,27 +2,27 @@ const skillsdata = [
   {
     id: 1,
     title: "Agentic Systems",
-    img: "/agentic-systems.png",
+    img: "/ai system.png",
   },
   {
     id: 2,
     title: "Multi-Agent Workflows",
-    img: "/multi-agent-workflows.png",
+    img: "/multi-agents.png",
   },
   {
     id: 3,
     title: "RAG Pipelines",
-    img: "/rag-pipeline.png",
+    img: "/rag.png",
   },
   {
     id: 4,
     title: "AI Orchestration",
-    img: "/ai-orchestration.png",
+    img: "/ai orchestration.png",
   },
   {
     id: 5,
     title: "Prompt Engineering",
-    img: "/prompt-engineering.png",
+    img: "/prompt.png",
   },
   {
     id: 6,
