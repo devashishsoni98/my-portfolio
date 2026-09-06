@@ -290,7 +290,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <style jsx>{`
+       <style>{`
         .contact-section {
           background: var(--background-primary);
           padding: 8rem 0;

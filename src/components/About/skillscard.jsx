@@ -7,9 +7,9 @@ const SkillsCard = ({ skills, index }) => {
     <motion.div 
       className="skill-card-modern"
       whileHover={{ 
-        scale: 1.1, 
-        y: -10,
-        rotateY: 10,
+        scale: 1.04, 
+        y: -4,
+        rotateY: 5,
       }}
       transition={{ 
         type: "spring", 
@@ -18,7 +18,6 @@ const SkillsCard = ({ skills, index }) => {
       }}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
     >
       <div className="skill-glow"></div>
       <div className="skill-content">
@@ -49,7 +48,7 @@ const SkillsCard = ({ skills, index }) => {
         <div className="particle particle-3"></div>
       </div>
 
-      <style jsx>{`
+       <style>{`
         .skill-card-modern {
           display: flex;
           flex-direction: column;

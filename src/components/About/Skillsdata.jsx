@@ -1,43 +1,68 @@
 const skillsdata = [
   {
     id: 1,
-    title: "HTML",
-    img: "/html.png",
+    title: "Agentic Systems",
+    img: "/agentic-systems.png",
   },
   {
     id: 2,
-    title: "CSS",
-    img: "/css3.png",
+    title: "Multi-Agent Workflows",
+    img: "/multi-agent-workflows.png",
   },
   {
     id: 3,
-    title: "JavaScript",
-    img: "/javascript.png",
+    title: "RAG Pipelines",
+    img: "/rag-pipeline.png",
   },
   {
     id: 4,
-    title: "React JS",
-    img: "/react.png",
+    title: "AI Orchestration",
+    img: "/ai-orchestration.png",
   },
   {
     id: 5,
+    title: "Prompt Engineering",
+    img: "/prompt-engineering.png",
+  },
+  {
+    id: 6,
+    title: "React JS",
+    img: "/react.webp",
+  },
+  {
+    id: 7,
     title: "Next JS",
     img: "/nextjs.png",
   },
   {
-    id: 6,
-    title: "SASS",
-    img: "/sass.png",
-  },
-  {
-    id: 7,
-    title: "Tailwind",
-    img: "/tailwind.png",
-  },
-  {
     id: 8,
+    title: "JavaScript",
+    img: "/javascript.webp",
+  },
+  {
+    id: 9,
     title: "Node JS",
-    img: "/nodejs.png",
+    img: "/nodejs.webp",
+  },
+  {
+    id: 10,
+    title: "HTML",
+    img: "/html.webp",
+  },
+  {
+    id: 11,
+    title: "CSS",
+    img: "/css3.webp",
+  },
+  {
+    id: 12,
+    title: "SASS",
+    img: "/sass.webp",
+  },
+  {
+    id: 13,
+    title: "Tailwind",
+    img: "/tailwind.webp",
   },
 ];
 export default skillsdata;

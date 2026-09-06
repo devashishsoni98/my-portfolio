@@ -12,6 +12,7 @@ import {
   FiZap,
   FiTarget,
   FiHeart,
+  FiCpu,
 } from "react-icons/fi";
 import LazyImage from "../ImageOptimizer/LazyImage";
 import ImagePreloader from "../ImageOptimizer/ImagePreloader";
@@ -30,13 +31,13 @@ const About = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
 
-  const [text] = useTypewriter({
-    words: [
-      "Software Engineer",
-      "Problem Solver",
-      "Technology Enthusiast",
-      "Systems & Application Developer",
-      "Continuous Learner",
+   const [text] = useTypewriter({
+     words: [
+       "Agentic Systems Developer",
+       "AI Engineer",
+       "Multi-Agent Architect",
+       "Automation Specialist",
+       "Continuous Learner",
       "Full Stack Developer",
     ],
     loop: {},
@@ -89,24 +90,24 @@ const About = () => {
     },
   ];
 
- const experiences = [
-  {
-    icon: FiZap,
-    title: "Software Development",
-    description: "Developing and maintaining software solutions using modern tools and sound engineering principles",
-    gradient: "var(--gradient-primary)"
-  },
-  {
-    icon: FiTarget,
-    title: "System & Application Design",
-    description: "Designing structured, maintainable applications with focus on reliability and clarity",
-    gradient: "var(--gradient-secondary)"
-  },
-  {
-    icon: FiHeart,
-    title: "Optimization & Reliability",
-    description: "Improving performance, stability, and efficiency across applications and systems",
-    gradient: "var(--gradient-accent)"
+  const experiences = [
+   {
+     icon: FiCpu,
+     title: "AI & Automation",
+     description: "Building agentic systems, RAG pipelines, and AI-driven automation for real-world org challenges",
+     gradient: "var(--gradient-primary)"
+   },
+   {
+     icon: FiZap,
+     title: "Software Development",
+     description: "Developing and maintaining software solutions using modern tools and sound engineering principles",
+     gradient: "var(--gradient-secondary)"
+   },
+   {
+     icon: FiHeart,
+     title: "Optimization & Reliability",
+     description: "Improving performance, stability, and efficiency across applications and systems",
+     gradient: "var(--gradient-accent)"
   }
 ];
 
@@ -133,12 +134,13 @@ const About = () => {
               <span className="neon-glow">About Me</span>
             </div>
             <h2 className="section-title display-text">
-              Crafting Digital
-              <span className="highlight-line">Experiences</span>
+              Agentic Systems Developer
             </h2>
-            <p className="section-subtitle">
-              Get to know more about who I am, what I do, and the passion that
-              drives my work
+            <h2 className="section-title display-text ai-engineer">
+              AI Engineer
+            </h2>
+            <p className="section-subtitle" style={{ marginTop: "1rem", marginBottom: "1.5rem" }}>
+              AI Intern at Webspiders Interweb, building agentic systems and internal tools. Focused on automation and making AI work for real-world organizations.
             </p>
           </motion.div>
 
@@ -154,16 +156,12 @@ const About = () => {
                   <div className="profile-glow"></div>
                   <LazyImage
                     src="/yup.png"
+                    thumb="/yup.thumb.webp"
                     alt="Devashish Soni"
                     className="profile-image"
                     priority={true}
                   />
                   <div className="profile-ring"></div>
-                </div>
-
-                <div className="profile-status">
-                  <div className="status-indicator"></div>
-                  <span>Available for work</span>
                 </div>
               </div>
 
@@ -213,10 +211,9 @@ const About = () => {
 
                 <div className="bio-content">
                   <p className="bio-paragraph">
-                    Final-year Computer Science Engineering undergraduate at
-                    <span className="highlight"> PIET, Jaipur</span>, with a
-                    strong foundation in software development and core computer
-                    science concepts.
+                    Building agentic systems and internal tools at Webspiders Interweb. My work spans{" "}
+                    <span className="highlight">multi-agent automation</span>, RAG pipelines, and deploying AI solutions that solve real org challenges. I thrive in collaborative environments where code meets creativity, and I'm always learning new skills in{" "}
+                    <span className="highlight">agentic workflows</span>, sub-agents, and AI orchestration.
                   </p>
 
                   <p className="bio-paragraph">
@@ -228,17 +225,9 @@ const About = () => {
                     , focusing on building reliable applications and
                     well-structured systems.
                   </p>
-
-                  <p className="bio-paragraph">
-                    Interested in problem-solving,
-                    <span className="highlight"> backend development</span>, and
-                    <span className="highlight"> system-oriented thinking</span>
-                    . Comfortable working in collaborative environments and
-                    learning new technologies as required.
-                  </p>
                 </div>
 
-                <motion.a
+                {/* <motion.a
                   href="/resume.pdf"
                   download="Resume_DevashishSoni"
                   className="btn btn-primary download-btn"
@@ -249,7 +238,7 @@ const About = () => {
                 >
                   <FiDownload />
                   <span>Download Resume</span>
-                </motion.a>
+                </motion.a> */}
               </div>
             </motion.div>
 
@@ -307,7 +296,30 @@ const About = () => {
             </motion.div>
           </div>
 
-          {/* Skills Section */}
+          {/* Work Experience */}
+          <motion.div className="experience-section" style={{ marginBottom: "3rem" }} variants={itemVariants}>
+            <div className="experience-grid">
+              <h4 className="experience-title">Where I've Worked</h4>
+              <motion.div
+                className="experience-card glass-card"
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, y: -5 }}
+              >
+                <div
+                  className="experience-icon"
+                  style={{ background: "var(--gradient-accent)" }}
+                >
+                  <FiCpu />
+                </div>
+                <div className="experience-content">
+                  <h5 className="experience-name">AI Engineer Intern</h5>
+                  <p className="experience-company">Webspiders Interweb Pvt Ltd, Jaipur</p>
+                  <p className="experience-desc">Building agentic systems, multi-agent automations, RAG pipelines, and internal tools for organizational use.</p>
+                </div>
+                <div className="experience-glow"></div>
+              </motion.div>
+            </div>
+          </motion.div>
           <motion.div
             ref={skillsRef}
             className="skills-section"
@@ -343,14 +355,14 @@ const About = () => {
                   />
                 ))}
               </Marquee>
-            </div>
+           </div>
           </motion.div>
         </motion.div>
       </div>
 
-      <ImagePreloader images={["/19.png"]} priority={true} />
+      <ImagePreloader images={["/19.webp"]} priority={true} />
 
-      <style jsx>{`
+       <style>{`
         .about-section {
           background: var(--background-primary);
           position: relative;
@@ -686,8 +698,14 @@ const About = () => {
         .experience-name {
           font-size: 1.125rem;
           font-weight: 600;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.25rem;
           color: var(--text-primary);
+        }
+
+        .experience-company {
+          color: var(--text-muted);
+          font-size: 0.875rem;
+          margin-bottom: 0.75rem;
         }
 
         .experience-desc {

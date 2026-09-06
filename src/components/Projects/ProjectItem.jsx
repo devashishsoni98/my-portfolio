@@ -24,6 +24,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
         <div className="project-image">
           <LazyImage 
             src={project.image || "/placeholder.svg"} 
+            thumb={project.image ? project.image.replace(/\.(png|jpe?g|webp)$/i, ".thumb.webp") : null}
             alt={`${project.title} preview`}
             className="project-image-content"
             loading="lazy"
@@ -137,7 +138,7 @@ const ProjectItem = ({ project, index, viewMode = "grid", variants }) => {
       {/* Glow Effect */}
       <div className="project-glow"></div>
 
-      <style jsx>{`
+       <style>{`
         .project-card-modern {
           background: var(--glass-bg);
           backdrop-filter: blur(20px);
